@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LoginComplete" xml:space="preserve">
+    <value>登录成功</value>
+    <comment>00200</comment>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>操作执行成功</value>
+    <comment>200</comment>
+  </data>
+  <data name="Unexpected" xml:space="preserve">
+    <value>非预期异常</value>
+    <comment>10001</comment>
+  </data>
+  <data name="ArgumentsMiss" xml:space="preserve">
+    <value>缺少必要参数</value>
+    <comment>10002</comment>
+  </data>
+  <data name="SignInvalid" xml:space="preserve">
+    <value>签名校验错误</value>
+    <comment>10010</comment>
+  </data>
+  <data name="OperationFaild" xml:space="preserve">
+    <value>操作失败</value>
+    <comment>10011</comment>
+  </data>
+  <data name="SystemError" xml:space="preserve">
+    <value>服务器执行错误</value>
+    <comment>10012</comment>
+  </data>
+  <data name="AccountOverdue" xml:space="preserve">
+    <value>当前账号已过期</value>
+    <comment>10013</comment>
+  </data>
+  <data name="NotPost" xml:space="preserve">
+    <value>请使用Post请求</value>
+    <comment>10014</comment>
+  </data>
+  <data name="DBError" xml:space="preserve">
+    <value>数据库执行错误</value>
+    <comment>20010</comment>
+  </data>
+  <data name="DataNotFound" xml:space="preserve">
+    <value>没有找到相应的记录</value>
+    <comment>20012</comment>
+  </data>
+  <data name="DataRepeated" xml:space="preserve">
+    <value>记录已存在</value>
+    <comment>20013</comment>
+  </data>
+  <data name="UpdateFaild" xml:space="preserve">
+    <value>记录更新失败</value>
+    <comment>20014</comment>
+  </data>
+  <data name="AddFaild" xml:space="preserve">
+    <value>记录添加失败</value>
+    <comment>20015</comment>
+  </data>
+  <data name="DeleteFaild" xml:space="preserve">
+    <value>记录删除失败</value>
+    <comment>20016</comment>
+  </data>
+  <data name="NotStockCard" xml:space="preserve">
+    <value>操作失败 该卡不是库存卡</value>
+    <comment>20017</comment>
+  </data>
+  <data name="NotDelCardDiscountType" xml:space="preserve">
+    <value>删除失败 已使用中的折扣类型不能删除</value>
+    <comment>20018</comment>
+  </data>
+  <data name="NameExisted" xml:space="preserve">
+    <value>名称已存在</value>
+    <comment>20019</comment>
+  </data>
+  <data name="CardNumNotExist" xml:space="preserve">
+    <value>卡号不存在</value>
+    <comment>20020</comment>
+  </data>
+  <data name="ProductExistedOrNumExceeded" xml:space="preserve">
+    <value>产品已存在或超出套餐最大数量</value>
+    <comment>20021</comment>
+  </data>
+  <data name="MemberExisted" xml:space="preserve">
+    <value>会员已存在</value>
+    <comment>20022</comment>
+  </data>
+  <data name="CardMoneyInsufficient" xml:space="preserve">
+    <value>会员卡余额不足</value>
+    <comment>20023</comment>
+  </data>
+  <data name="CardIntegralInsufficient" xml:space="preserve">
+    <value>会员卡积分不足</value>
+    <comment>20024</comment>
+  </data>
+  <data name="OrderComplated" xml:space="preserve">
+    <value>订单已完成,不允许重复结帐</value>
+    <comment>20025</comment>
+  </data>
+  <data name="MerchantIdLost" xml:space="preserve">
+    <value>商家ID不能为空</value>
+    <comment>20026</comment>
+  </data>
+  <data name="ShopIdLost" xml:space="preserve">
+    <value>店铺ID不能为空</value>
+    <comment>20027</comment>
+  </data>
+  <data name="CardIdLost" xml:space="preserve">
+    <value>会员卡ID不能为空</value>
+    <comment>20028</comment>
+  </data>
+  <data name="MemberIdLost" xml:space="preserve">
+    <value>会员ID不能为空</value>
+    <comment>20029</comment>
+  </data>
+  <data name="CodeExisted" xml:space="preserve">
+    <value>编号已存在</value>
+    <comment>20030</comment>
+  </data>
+  <data name="ProductComboHasProduct" xml:space="preserve">
+    <value>存在产品属于套餐产品,请先删除套餐下的该产品</value>
+    <comment>20031</comment>
+  </data>
+  <data name="ProductComboUsed" xml:space="preserve">
+    <value>存在产品,正被店铺使用,请先删除店铺产品</value>
+    <comment>20032</comment>
+  </data>
+  <data name="CardStatusNotIsOpen" xml:space="preserve">
+    <value>非正常状态的卡不允许挂失</value>
+    <comment>20033</comment>
+  </data>
+  <data name="CardStatusNotIsReportLoss" xml:space="preserve">
+    <value>非挂失状态的卡不允许撤销挂失</value>
+    <comment>20034</comment>
+  </data>
+  <data name="ExtensionTypeNotSupported" xml:space="preserve">
+    <value>不支持的扩展名类型</value>
+    <comment>20035</comment>
+  </data>
+  <data name="ProductComboGroupUsed" xml:space="preserve">
+    <value> 存在套餐组,正被产品使用,请先删除产品</value>
+    <comment>20036</comment>
+  </data>
+  <data name="OldPasswordWrong" xml:space="preserve">
+    <value>原始密码不正确</value>
+    <comment>30011</comment>
+  </data>
+  <data name="MerhcantCodeWrong" xml:space="preserve">
+    <value>商家编号不正确</value>
+    <comment>30012</comment>
+  </data>
+  <data name="LoginFaild" xml:space="preserve">
+    <value>登录失败</value>
+    <comment>30013</comment>
+  </data>
+  <data name="NotLoginCRM" xml:space="preserve">
+    <value>登录失败,该帐号不允许登录CRM</value>
+    <comment>30014</comment>
+  </data>
+  <data name="NotLoginPOS" xml:space="preserve">
+    <value>登录失败,该帐号不允许登录POS</value>
+    <comment>30015</comment>
+  </data>
+  <data name="NotLoginKFT" xml:space="preserve">
+    <value>登录失败,该帐号不允许登录KFT</value>
+    <comment>30016</comment>
+  </data>
+   <data name="PasswordWrong" xml:space="preserve">
+    <value>密码错误</value>
+    <comment>30017</comment>
+  </data>
+  <data name="AccountInexistence" xml:space="preserve">
+    <value>帐号不存在</value>
+    <comment>30018</comment>
+  </data>
+  <data name="AccountOrPasswordWrong" xml:space="preserve">
+    <value>帐号或密码错误</value>
+    <comment>30019</comment>
+  </data>
+  <data name="ImportDateNotAdjust" xml:space="preserve">
+    <value>导入数据不允许调整</value>
+    <comment>30020</comment>
+  </data>
+  <data name="EimeIntervalLessThan1" xml:space="preserve">
+    <value>统计时间间隔不能少于1</value>
+    <comment>30021</comment>
+  </data>
+  <data name="GiveCouponOverdue" xml:space="preserve">
+    <value>营销方案的赠送优惠券中存在已过期优惠券</value>
+    <comment>30022</comment>
+  </data>
+  <data name="OrderInexistence" xml:space="preserve">
+    <value>订单不存在</value>
+    <comment>40001</comment>
+  </data>
+</root>

@@ -1,0 +1,1938 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InkeServer.API</name>
+    </assembly>
+    <members>
+        <member name="M:InkeServer.API.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:InkeServer.API.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:InkeServer.API.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:InkeServer.API.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:InkeServer.API.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:InkeServer.API.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,InkeServer.API.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,InkeServer.API.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:InkeServer.API.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},InkeServer.API.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:InkeServer.API.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:InkeServer.API.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:InkeServer.API.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.#ctor(InkeServer.API.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:InkeServer.API.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,InkeServer.API.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:InkeServer.API.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:InkeServer.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InkeServer.API.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:InkeServer.API.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:InkeServer.API.Controllers.AutoPromotionController">
+            <summary>
+            自动促销
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.Controllers.BaseController">
+            <summary>
+            Controller基类，继承获得公用特性
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AutoPromotionController.GetAutoPromotionPageList(InkeServer.Model.AutoPromotionQueryRequest)">
+            <summary>
+            分页查询自动促销集合
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AutoPromotionController.AddAutoPromotion(InkeServer.Model.AddAndUpdatePromotionRequest)">
+            <summary>
+            添加自动促销记录
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AutoPromotionController.UpdateAutoPromotion(InkeServer.Model.AddAndUpdatePromotionRequest)">
+            <summary>
+            修改自动促销
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AutoPromotionController.DeleteAutoPromotion(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除自动促销
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AutoPromotionController.SetEnableAutoPromotion(InkeServer.Model.RecordIDAndStatusRequest)">
+            <summary>
+            启用/停用自动促销
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AutoPromotionController.GetAutoPromotionInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            获取自动促销详细信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AutoPromotionController.GetAutoPromotionNameList(InkeServer.Model.MerchantIdRequest)">
+            <summary>
+            获取自动促销名称集合
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AutoPromotionController.GetAutoPromotionRecord(InkeServer.Model.PromotionRecordSearch)">
+             <summary>
+            分页查询 自动促销发放记录集合
+             </summary>
+             <param name="param"></param>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AutoPromotionController.GetAutoPromotionCouponUsedRecord(InkeServer.Model.PromotionRecordSearch)">
+             <summary>
+            自动促销使用记录集合
+             </summary>
+             <param name="param"></param>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AutoPromotionController.GetPromotionStatisticsTable(InkeServer.Model.PromotionStatisticsRequest)">
+             <summary>
+            自动促销首页统计
+             </summary>
+             <param name="param"></param>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AutoPromotionController.GetPromotionRecordStatisticsTable(InkeServer.Model.PromotionRecordSearch)">
+             <summary>
+            自动促销发放使用统计
+             </summary>
+             <param name="param"></param>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.MarketAnalysisController">
+            <summary>
+            营销分析以及自定义营销中心 
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.GetMarketAnalysisPageList(InkeServer.Model.MarketAnalysisQueryRequest)">
+            <summary>
+            分页查询营销分析集合
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.AddMarketAnalysis(InkeServer.Model.MarketAnalysisAddOrUpdateRequest)">
+            <summary>
+            添加营销分析记录
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.UpdateMarketAnalysis(InkeServer.Model.MarketAnalysisAddOrUpdateRequest)">
+            <summary>
+            修改营销分析记录
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.DeleteMarketAnalysis(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除营销分析记录
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.SetEnableMarketAnalysis(InkeServer.Model.RecordIDAndStatusRequest)">
+            <summary>
+            启用/停用营销分析记录
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.UpdateStatisticsTotal(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            更新最新筛选结果
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.GetMarketAnalysisInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            获取营销分析记录详细信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.GetMarketingAnalyzeNameList(InkeServer.Model.MarketingAnalyzeNameRequest)">
+            <summary>
+            获取营销分析记录名称集合
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.GetMarketingAnalyzeResult(InkeServer.Model.MarketingAnalyzeDetailsRequest)">
+            <summary>
+            营销分析结果明细
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.GetMarketingAnalyzeResultDistinct(InkeServer.Model.MarketingAnalyzeResultDistinctRequest)">
+            <summary>
+            营销分析结果明细 筛选重复名称
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.CheckMarketAnalyzeExecutable(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            检查营销方案的可执行性,返回过期优惠券集合
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.MarketingAnalyzeExec(InkeServer.Model.MarketingAnalyzeExecRequest)">
+            <summary>
+            营销分析发放
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.GetMarketingAnalyzeRecord(InkeServer.Model.MarketingAnalyzeRecordRequest)">
+            <summary>
+            分页查询营销分析发放记录集合
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.GetMarketAnalysisCouponUsedRecord(InkeServer.Model.MarketingAnalyzeRecordRequest)">
+            <summary>
+            分页查询营销分析使用记录集合
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.GetMarketingAnalyzeStatisticsTable(InkeServer.Model.PromotionStatisticsRequest)">
+             <summary>
+            营销分析首页统计
+             </summary>
+             <param name="query"></param>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MarketAnalysisController.GetMarketingAnalyzeRecordStatistics(InkeServer.Model.MarketingAnalyzeRecordRequest)">
+             <summary>
+            营销分析发放使用统计
+             </summary>
+             <param name="query"></param>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.MemberCardController">
+            <summary>
+            会员卡记录
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MemberCardController.GetMemberCardPage(InkeServer.Model.MemberCardRequest)">
+            <summary>
+            分页查询会员卡记录
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.MemberController">
+            <summary>
+            会员
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MemberController.GetMemberPageList(InkeServer.Model.MemberQueryRequest)">
+            <summary>
+            分页查询会员集合
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.ThirdPayController">
+            <summary>
+            第三方支付记录
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ThirdPayController.GetThirdPayInfo(InkeServer.Model.ThirdPayRequest)">
+            <summary>
+            获取第三方支付分页信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.BossPhoneController">
+            <summary>
+            老板手机报表
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.BossPhoneController.GetBossPhoneReport(InkeServer.Model.MerchantIdRequest)">
+            <summary>
+             获取老板手机报表列表
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.BossPhoneController.ShopSeatInsert(InkeServer.Model.BossPhoneInsert)">
+            <summary>
+             新增老板手机报表
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.BossPhoneController.ShopSeatUpdate(InkeServer.Model.BossPhoneUpdate)">
+            <summary>
+             修改老板手机报表
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.BossPhoneController.ShopSeatDelete(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+             删除老板手机报表
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.BossPhoneController.GetBossPhoneReportInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            根据ID查询老板报表信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.BusinessReportController">
+            <summary>
+            营业报表
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.BusinessReportController.GetGetBusinessReportReport(InkeServer.Model.BusinessReportRequest)">
+            <summary>
+             获取营业报表信息
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.BusinessStatisticsController">
+            <summary>
+            营业报表统计
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.BusinessStatisticsController.BusinessHours(InkeServer.Model.BusinessHoursRequest)">
+            <summary>
+            营业报表时间段
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.BusinessStatisticsController.BusinessDates(InkeServer.Model.BusinessHoursRequest)">
+            <summary>
+            营业日期报表统计
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.BusinessStatisticsController.CouponMemoryUsage(InkeServer.Model.CouponMemoryUsageRequest)">
+            <summary>
+            优惠券使用统计(表格和饼状图)
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.BusinessStatisticsController.CouponMemoryUsageBar(InkeServer.Model.CouponMemoryUsageBarRequest)">
+            <summary>
+            优惠券使用统计(柱状图)
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.BusinessStatisticsController.ReportProductSalse(InkeServer.Model.ProductSaleRequest)">
+            <summary>
+            产品统计
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.CrossShopSettlementController">
+            <summary>
+            跨店结算
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CrossShopSettlementController.RechargeDeductionSettlement(InkeServer.Model.StatisticsByTImeRequest)">
+            <summary>
+            充值扣费结算
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CrossShopSettlementController.CouponSettlement(InkeServer.Model.StatisticsByTImeRequest)">
+            <summary>
+            优惠券结算
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.StoreDataAnalysisController">
+            <summary>
+            门店数据分析
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StoreDataAnalysisController.GetStoreTurnoverAnalysisInfo(InkeServer.Model.StoreTurnoverAnalysisRequest)">
+            <summary>
+             查询门店营业额统计信息
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StoreDataAnalysisController.GetProductSalesRankingInfo(InkeServer.Model.ProductSalesRankingRequest)">
+            <summary>
+             查询菜品销售排行
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StoreDataAnalysisController.GetCustomerStreamInfo(InkeServer.Model.CustomerStreamAnalysisRequest)">
+            <summary>
+            获取客流量走势
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StoreDataAnalysisController.GetBusinessTimeSlotInfo(InkeServer.Model.BusinessTimeSlotRequest)">
+            <summary>
+            获取时间段营业报表
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StoreDataAnalysisController.GetMembershipGrowthReport(InkeServer.Model.MembershipGrowthRequest)">
+            <summary>
+            获取会员增长统计信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StoreDataAnalysisController.GetPayTypeAnalysisReport(InkeServer.Model.PayTypeAnalysisRequest)">
+            <summary>
+            获取结算类型信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StoreDataAnalysisController.GetNumberOfDinersReport(InkeServer.Model.NumberOfDinersRequest)">
+            <summary>
+            获取就餐人数信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StoreDataAnalysisController.GetTableTurnoverRateReport(InkeServer.Model.TableTurnoverRateRequest)">
+            <summary>
+            获取翻台率信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.AccountController">
+            <summary>
+            账号设置
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AccountController.GetAccountPageList(InkeServer.Model.AccountQueryRequest)">
+            <summary>
+            分页查询员工账号集合
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AccountController.AddAccount(InkeServer.Model.AddOrUpdateAccountRequest)">
+            <summary>
+            添加员工账号
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AccountController.UpdateAccount(InkeServer.Model.AddOrUpdateAccountRequest)">
+            <summary>
+            修改员工账号
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AccountController.DeleteAccount(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除员工账号
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.AccountController.GetAccountInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            获取员工账号详细信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.ArrearsRecordController">
+            <summary>
+            挂账记录
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ArrearsRecordController.GetArrearsList(InkeServer.Model.ArrearsRecordRequest)">
+            <summary>
+            获取挂账记录分页信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ArrearsRecordController.GetArrearsListbyID(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            根据ID获取挂账记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CacheController.CrmCache(InkeServer.Model.CacheRequest)">
+            <summary>
+             缓存查询
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.CardDiscountTypeController">
+            <summary>
+            会员卡折扣类型设置
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CardDiscountTypeController.GetCardDiscountTypePageList(InkeServer.Model.MerchantIdPageRequest)">
+            <summary>
+            分页查询会员卡折扣类型
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CardDiscountTypeController.GetCardDiscountTypeInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            获取会员卡折扣类型信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CardDiscountTypeController.AddCardDiscountType(InkeServer.Model.CardDiscountTypeAddOrUpdate)">
+            <summary>
+            添加会员卡折扣类型
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CardDiscountTypeController.UpdateCardDiscountType(InkeServer.Model.CardDiscountTypeAddOrUpdate)">
+            <summary>
+            修改会员卡折扣类型
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CardDiscountTypeController.DeleteCardDiscountType(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除会员卡折扣类型
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CardDiscountTypeController.GetCardDiscountTypeList(InkeServer.Model.MerchantIdRequest)">
+            <summary>
+            获取商家下的会员卡折扣类型列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.MembershipCardController">
+            <summary>
+            会员卡记录
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MembershipCardController.GetMembershipCardPage(InkeServer.Model.MembershipCardPageRequest)">
+            <summary>
+            分页查询会员卡记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MembershipCardController.GetMembershipCardbyID(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            根据ID获取会员卡记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.CardRechargeController">
+            <summary>
+            充值记录
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CardRechargeController.GetRechargeRecordPage(InkeServer.Model.CardRechargeRecordPageRequest)">
+            <summary>
+            分页查询充值记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CardRechargeController.GetRechargeRecordInfo(InkeServer.Model.CardRechargeRecordInfoRequest)">
+            <summary>
+            查看具体的充值记录信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.ComboGroupController">
+            <summary>
+            套餐组类别
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboGroupController.GetComboGroupPageList(InkeServer.Model.MerchantIdPageRequest)">
+            <summary>
+            分页查询套餐组别 
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboGroupController.GetComboGroupList(InkeServer.Model.MerchantIdRequest)">
+            <summary>
+            查询套餐组别 
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboGroupController.GetComboGroupInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            获取套餐组别信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboGroupController.AddComboGroup(InkeServer.Model.AddOrUpdateComboGroupRequest)">
+            <summary>
+            添加套餐组别
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboGroupController.UpdateComboGroup(InkeServer.Model.AddOrUpdateComboGroupRequest)">
+            <summary>
+            修改套餐组类别
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboGroupController.DeleteComboGroup(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除套餐组类别
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboGroupController.GetProductComboListAndMerchantComboList(InkeServer.Model.GetProductInfoRequest)">
+            <summary>
+            获取套餐产品的套餐分组及商家的套餐分组列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.ComboProductController">
+            <summary>
+            套餐组产品
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboProductController.GetComboProductList(InkeServer.Model.GetComboProductListRequest)">
+            <summary>
+            获取指定套餐组下的套餐产品列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboProductController.GetComboProductListPage(InkeServer.Model.GetComboProductPageRequest)">
+            <summary>
+            分页获取指定套餐组下的套餐产品
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboProductController.GetComboProductInfo(InkeServer.Model.ComboGroupProductInfoRequest)">
+            <summary>
+            获取套餐产品信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboProductController.AddComboProduct(InkeServer.Model.AddOrUpdateComboProduct)">
+            <summary>
+            添加套餐产品
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboProductController.UpdateComboProduct(InkeServer.Model.AddOrUpdateComboProduct)">
+            <summary>
+            修改套餐产品
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ComboProductController.DeleteComboProduct(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除套餐产品
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.ConsumeRecordController">
+            <summary>
+            消费记录
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ConsumeRecordController.GetConsumeRecordData(InkeServer.Model.ConsumeRecordRequest)">
+            <summary>
+             获得查询消费记录
+             </summary>
+             <param name="query"></param>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ConsumeRecordController.GetConsumeRecordInfo(InkeServer.Model.ConsumeRecordInfoRequest)">
+            <summary>
+             获得消费记录详细信息
+             </summary>
+             <param name="query"></param>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.CouponRecordController">
+            <summary>
+            优惠券记录
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CouponRecordController.GetCouponRechargePage(InkeServer.Model.CouponRechargePageRequest)">
+            <summary>
+            获取优惠券记录分页信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CouponRecordController.GetCouponRechargeInfoList(InkeServer.Model.CouponRechargeRecordInfoRequest)">
+            <summary>
+            获取优惠券信息根据记录ID获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.CouponsController">
+            <summary>
+            优惠券
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CouponsController.GetCouponsPageList(InkeServer.Model.CouponsQueryRequest)">
+            <summary>
+            分页查询优惠券集合
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CouponsController.AddCoupons(InkeServer.Model.AddOrUpdateCouponsRequest)">
+            <summary>
+            添加优惠券
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CouponsController.UpdateCoupons(InkeServer.Model.AddOrUpdateCouponsRequest)">
+            <summary>
+            修改商家积分产品
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CouponsController.DeleteCoupons(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除优惠券
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CouponsController.GetCouponsInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            获取优惠券详细信息
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CouponsController.GetCouponList(InkeServer.Model.MerchantIdRequest)">
+            <summary>
+            获取商家所有优惠券列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.CouponsController.GetAvailableCouponList(InkeServer.Model.AvailableCouponQueryRequest)">
+            <summary>
+            获取可用优惠券集合
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.Common.FileUploadController.FileUpload(System.String,System.Int32)">
+            <summary>
+            文件上传
+            </summary>
+            <param name="id">业务ID</param>
+            <param name="type">文件业务类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.EmployeeController">
+            <summary>
+            店铺员工
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.EmployeeController.GetShopEmployeePageList(InkeServer.Model.EmploeeQueryRequest)">
+            <summary>
+            分页查询店铺员工
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.EmployeeController.GetShopEmployeeInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            获取店铺员工信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.EmployeeController.AddShopEmployee(InkeServer.Model.EmployeeAddOrUpdateRequest)">
+            <summary>
+            添加店铺员工
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.EmployeeController.UpdateShopEmployee(InkeServer.Model.EmployeeAddOrUpdateRequest)">
+            <summary>
+            修改店铺员工
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.EmployeeController.DeleteShopEmployee(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除店铺员工
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.EmployeeController.GetShopEmployeeList(InkeServer.Model.MerchantAndShopIdRequest)">
+            <summary>
+            获取店铺员工列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.EmployeeController.GetShopEmployeeListNoHasAccountID(InkeServer.Model.MerchantAndShopIdRequest)">
+            <summary>
+            取得指定店铺所有未绑定账号的员工列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.IntegralAdjustController">
+            <summary>
+            积分调整记录
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.IntegralAdjustController.GetIntegralAdjustPage(InkeServer.Model.IntegralAdjustPageRequest)">
+            <summary>
+            分页查询积分调整记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.IntegralExchangeController">
+            <summary>
+            积分兑换记录
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.IntegralExchangeController.GetIntegralExchangePage(InkeServer.Model.IntegralExchangePageRequest)">
+            <summary>
+            分页查询积分兑换记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.LoginController">
+            <summary>
+            登录控制器
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.LoginController.Login(InkeServer.Model.LoginRequest)">
+            <summary>
+             登录查询
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.MerchantBaseController">
+            <summary>
+            基础设置
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantBaseController.GetMerchantBaseInfo(InkeServer.Model.MerchantBasePageQueryRequest)">
+            <summary>
+            分页查询基础信息列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantBaseController.GetMerchantBaseInfoList(InkeServer.Model.MerchantBaseQueryRequest)">
+            <summary>
+            获取基础信息列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantBaseController.GetMerchantBaseInfobyID(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            通过id获取单条基础信息列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantBaseController.MerchantBaseInfoInsert(InkeServer.Model.MerchantBaseInsert)">
+            <summary>
+             新增基础资料
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantBaseController.MerchantBaseInfoUpdate(InkeServer.Model.MerchantBaseUpdate)">
+            <summary>
+             修改基础资料
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantBaseController.MerchantBaseInfoDelete(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+             删除基础资料
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.MerchantConfigController">
+            <summary>
+            商家设置
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantConfigController.GetMerchantconfig(InkeServer.Model.MerchantIdRequest)">
+            <summary>
+            获取商家设置详细信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantConfigController.UpdageMerchantConfigPc(InkeServer.Model.MerchantConfigUpdateRequest)">
+            <summary>
+            PC端修改一条商家配置记录
+            </summary>
+             <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.MerchantImgController">
+            <summary>
+            商家图片
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantImgController.AddMerchantImg(InkeServer.Model.AddOrUpdateMerchantImg)">
+            <summary>
+            添加商家图片 
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantImgController.UpdateMerchantImg(InkeServer.Model.AddOrUpdateMerchantImg)">
+            <summary>
+            修改商家图片 
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantImgController.DeleteMerchantImg(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除商家图片 
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantImgController.DeleteMerchantImgByUrl(InkeServer.Model.MerchantImgDelete)">
+            <summary>
+            根据图片地址删除商家图片 
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantImgController.GetMerchantImgList(InkeServer.Model.MerchantImgListRequest)">
+            <summary>
+            获取商家图片列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantImgController.GetMerchantImgInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            获取商家图片信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.MerchantProductController">
+            <summary>
+            商家产品
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantProductController.GetMerchantProductPageList(InkeServer.Model.MerchantProductQueryRequest)">
+            <summary>
+            分页查询商家产品集合
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantProductController.GetMerchantProductList(InkeServer.Model.MerchantAndBaseInfoRequest)">
+            <summary>
+            根据商家ID和类型获取商家产品列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantProductController.DeleteMerchantProducts(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除商家产品记录
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantProductController.GetMerchantProductInfo(InkeServer.Model.GetProductInfoRequest)">
+            <summary>
+            获取商家产品详细信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantProductController.AddMerchantProduct(InkeServer.Model.AddOrUpdateMerchantProduct)">
+            <summary>
+            添加商家产品
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantProductController.UpdateMerchantProduct(InkeServer.Model.AddOrUpdateMerchantProduct)">
+            <summary>
+            修改商家产品
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantProductController.GetMerchantProductByShopID(InkeServer.Model.MerchantShopAndBaseInfo)">
+            <summary>
+            获取店铺尚未拥有的商家产品列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.MerchantScoreProductController">
+            <summary>
+            商家积分产品
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantScoreProductController.GetMerchantScoreProductPageList(InkeServer.Model.MerchantScoreProductQueyRequest)">
+            <summary>
+            分页查询商家积分产品集合
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantScoreProductController.AddMerchantScoreProduct(InkeServer.Model.AddOrUpdateMerchantScoreProduct)">
+            <summary>
+            添加商家积分产品
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantScoreProductController.UpdateMerchantScoreProduct(InkeServer.Model.AddOrUpdateMerchantScoreProduct)">
+            <summary>
+            修改商家积分产品
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantScoreProductController.DeleteMerchantScoreProduct(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除商家积分产品
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantScoreProductController.GetMerchantScoreProductInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            获取商家积分产品详细信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.MerchantScoreProductController.GetMerchantScoreProductByShopID(InkeServer.Model.MerchantShopAndBaseInfo)">
+            <summary>
+            获取店铺尚未拥有的商家积分产品列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.PositionController">
+            <summary>
+            商家职位
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.PositionController.GetMerchantPositionPageList(InkeServer.Model.MerchantIdPageRequest)">
+            <summary>
+            分页查询商家职位
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.PositionController.AddMerchantPosition(InkeServer.Model.PositionAddOrUpdateRequest)">
+            <summary>
+            新增商家职位
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.PositionController.UpdateMerchantPosition(InkeServer.Model.PositionAddOrUpdateRequest)">
+            <summary>
+            修改商家职位
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.PositionController.DeleteMerchantPosition(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除商家职位
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.PositionController.GetMerchantPositionList(InkeServer.Model.MerchantIdRequest)">
+            <summary>
+            获取商家职位 列表
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.PositionController.GetPositionPowerInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+              获取职位详细信息 包括（职位菜单权限）
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.PositionController.GetAllSysPowerInfo(InkeServer.Model.MerchantIdRequest)">
+            <summary>
+             查询商家对应的所有菜单权限
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.RecordCenterIndexController">
+            <summary>
+            记录中心首页信息
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.RecordCenterIndexController.RecordCenterIndexInfo(InkeServer.Model.RecordCenterIndexRequest)">
+            <summary>
+            获取记录中心首页信息
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.SeatClassController.GetSeatClassInfo(InkeServer.Model.SeatClassQueryRequest)">
+            <summary>
+            分页查询座位类型信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.SeatClassController.SeatClassInfoInsert(InkeServer.Model.SeatClassInsert)">
+            <summary>
+             新增座位类型
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.SeatClassController.SeatClassInfoUpdate(InkeServer.Model.SeatClassUpdate)">
+            <summary>
+             修改座位类型
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.SeatClassController.SeatClassInfoDelete(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+             删除座位类型
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.SeatClassController.GetShopIdAndName(InkeServer.Model.RecordIDRequest)">
+            <summary>
+             获取座位ID及名称
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.ShopBookController">
+            <summary>
+            预约设置
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopBookController.GetShopBookInfo(InkeServer.Model.ShopIdRequest)">
+            <summary>
+            获取相关预约信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopBookController.ShopBookUpdate(InkeServer.Model.ShopBookUpdate)">
+            <summary>
+             修改店铺预约信息
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.ShopController">
+            <summary>
+            店铺设置
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopController.GetShopIdAndName(InkeServer.Model.MerchantIdRequest)">
+            <summary>
+            获取指定商家的店铺列表(店铺名、 ID)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopController.GetShopIdAndName(InkeServer.Model.ShopIdRequest)">
+            <summary>
+             获取店铺信息
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopController.ShopInfoUpdate(InkeServer.Model.ShopUpdate)">
+            <summary>
+             店铺设置修改保存
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.ShopIntegralController">
+            <summary>
+            店铺积分产品
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopIntegralController.GetShopIntegralProductsPage(InkeServer.Model.ShopProductsRequest)">
+            <summary>
+            获取积分产品相关详细信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopIntegralController.GetShopIntegralProductsInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            根据ID获取积分产品相关详细信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopIntegralController.ShopIntegralProductInsert(InkeServer.Model.ShopProductInsert)">
+            <summary>
+             批量新增店铺积分产品
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopIntegralController.ShopIntegralProductDelete(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+             批量删除店铺积分产品
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopIntegralController.ShopIntegralProductUpdate(InkeServer.Model.ShopIntegralProductsUpdate)">
+            <summary>
+             修改店铺积分产品
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.ShopProductsController">
+            <summary>
+            店铺产品设置
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopProductsController.GetShopProductsPage(InkeServer.Model.ShopProductsRequest)">
+            <summary>
+            分页获取店铺产品相关详细信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopProductsController.GetShopAndProductNotExists(InkeServer.Model.ShopProductsRequest)">
+            <summary>
+            分页获取没有该店铺的产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopProductsController.GetShopProductsInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            根据ID获取店铺产品相关详细信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopProductsController.ShopProductInsert(InkeServer.Model.ShopProductInsert)">
+            <summary>
+             新增店铺产品
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopProductsController.AddShopProductList(InkeServer.Model.ShopProductInsertList)">
+            <summary>
+             批量新增店铺产品
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopProductsController.ShopProductDelete(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+             批量删除店铺产品
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopProductsController.ShopProductUpdate(InkeServer.Model.ShopProductUpdate)">
+            <summary>
+             修改店铺产品
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.ShopSeatController">
+            <summary>
+            座位设置
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopSeatController.QueryShopSeatClass(InkeServer.Model.MerchantAndShopIdRequest)">
+            <summary>
+             查询店铺及座位类型列表
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopSeatController.GetShopSeatInfoPage(InkeServer.Model.ShopSeatInfoRequest)">
+            <summary>
+            分页查询店铺及座位信息列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopSeatController.ShopSeatInsert(InkeServer.Model.ShopSeatInsert)">
+            <summary>
+             新增座位资料
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopSeatController.ShopSeatUpdate(InkeServer.Model.ShopSeatUpdate)">
+            <summary>
+             修改座位资料
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopSeatController.ShopSeatDelete(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+             删除座位资料
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.ShopSeatController.QuerySeatInfobyID(InkeServer.Model.RecordIDRequest)">
+            <summary>
+             根据ID查询座位信息列表
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.SmsTemplateController">
+            <summary>
+            短信设置
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.SmsTemplateController.SmsTemplateIDAndName(InkeServer.Model.MerchantIdRequest)">
+            <summary>
+             短信模板ID与名称列表
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.SmsTemplateController.GetSmsTemplateInfo(InkeServer.Model.SmsTemplateRequest)">
+            <summary>
+             短信模板详细信息查询
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.SmsTemplateController.SmsTemplateListQuery(InkeServer.Model.MerchantIdRequest)">
+            <summary>
+             短信模板列表查询
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.SmsTemplateController.SmsTemplateUpdata(InkeServer.Model.SmsTemplateUpdate)">
+            <summary>
+             短信模板修改保存
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.TakeOutController">
+            <summary>
+            外卖设置
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.TakeOutController.GetTakeOutInfo(InkeServer.Model.ShopIdRequest)">
+            <summary>
+            获取相关外卖信息
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.TakeOutController.ShopTakeOutUpdate(InkeServer.Model.TakeOutUpdate)">
+            <summary>
+             修改店铺外卖信息
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.Controllers.StockController">
+            <summary>
+            库存中心
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StockController.GetStockPageList(InkeServer.Model.StockQueryRequest)">
+            <summary>
+            分页查询入库记录集合
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StockController.AddStock(InkeServer.Model.AddOrUpdateStockRequest)">
+            <summary>
+            添加入库记录
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StockController.UpdateStock(InkeServer.Model.AddOrUpdateStockRequest)">
+            <summary>
+            修改入库记录
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StockController.DeleteStock(InkeServer.Model.OperationBaseRequest)">
+            <summary>
+            删除入库记录
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StockController.GetStockInfo(InkeServer.Model.RecordIDRequest)">
+            <summary>
+            获取入库单详细记录
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.StockController.GetStorageStatisticsData(InkeServer.Model.StockQueryRequest)">
+            <summary>
+            产品库存统计
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InkeServer.API.Controllers.SysLogController.SysLogQuery(InkeServer.Model.SysLogQueryRequest)">
+            <summary>
+            分页查询日志列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:InkeServer.API.DI.InjectMember">
+            <summary>
+            注入成员拦截器
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.DI.UnityAppContext.Current">
+            <summary>
+            Using Singleton pattern get one and only instance of the class.
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.DI.ContainerHelper">
+            <summary>
+            依赖注入容器配置读取
+            </summary>
+        </member>
+        <member name="F:InkeServer.API.Filters.CrossSiteAttribute.AccessControlAllowOrigin">
+            <summary>
+            Access-Control-Allow-Origin是HTML5中定义的一种服务器端返回Response header，用来解决资源（比如字体）的跨域权限问题。
+            </summary>
+        </member>
+        <member name="F:InkeServer.API.Filters.CrossSiteAttribute.originHeaderdefault">
+            <summary>
+             originHeaderdefault的值可以使 URL 或 *，如果是 URL 则只会允许来自该 URL 的请求，* 则允许任何域的请求
+            </summary>
+        </member>
+        <member name="M:InkeServer.API.Filters.CrossSiteAttribute.OnActionExecuted(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            该方法允许api支持跨域调用
+            </summary>
+            <param name="actionExecutedContext"> 初始化 System.Web.Http.Filters.HttpActionExecutedContext 类的新实例。</param>
+        </member>
+        <member name="T:InkeServer.API.Filters.ExceptionFilter">
+            <summary>
+            异常拦截器
+            </summary>
+        </member>
+        <!-- 对于成员“T:InkeServer.API.Filters.OperationLog”忽略有格式错误的 XML 注释 -->
+        <member name="P:InkeServer.API.Filters.OperationLog.OperationMsg">
+            <summary>
+            操作信息
+            </summary>
+        </member>
+        <member name="T:InkeServer.API.Filters.SignaturerFilter">
+            <summary>
+            签名验证拦截
+            </summary>
+        </member>
+        <member name="P:InkeServer.API.Filters.SignaturerFilter.SignValidationEnabled">
+            <summary>
+            是否进行接口签名校检
+            </summary>
+        </member>
+    </members>
+</doc>

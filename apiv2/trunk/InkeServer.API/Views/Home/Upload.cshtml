@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Upload";
+}
+
+<h2>Upload</h2>
+
+<div id="body">
+    <h1>多文件上传模式</h1>
+    <section class="main-content clear-fix">
+        <form name="form1" method="post" enctype="multipart/form-data" action="/api/v2/FileUpload">
+            <fieldset>
+                <legend>File Upload Example</legend>
+                <div>
+                    <label for="caption">File1</label>
+                    <input name="file1" type="file" />
+                </div>
+                <div>
+                    <label for="image1">File2</label>
+                    <input name="file2" type="file" />
+                </div>
+                <div>
+                    <input type="submit" value="Submit" />
+                </div>
+            </fieldset>
+        </form>
+    </section>
+</div>

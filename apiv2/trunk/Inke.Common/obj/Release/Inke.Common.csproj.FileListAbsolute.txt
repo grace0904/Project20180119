@@ -1,0 +1,7 @@
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\bin\Release\Inke.Common.dll
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\bin\Release\Inke.Common.pdb
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\bin\Release\Newtonsoft.Json.dll
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\bin\Release\Newtonsoft.Json.xml
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\obj\Release\Inke.Common.csprojResolveAssemblyReference.cache
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\obj\Release\Inke.Common.dll
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\obj\Release\Inke.Common.pdb

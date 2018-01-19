@@ -1,0 +1,2246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InkeServerDataMappingModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Bas_ActivityImages">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ActivityImages">
+        <MappingFragment StoreEntitySet="Bas_ActivityImages">
+          <ScalarProperty Name="ActivityImageID" ColumnName="ActivityImageID" />
+          <ScalarProperty Name="ActivityID" ColumnName="ActivityID" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="IsSort" ColumnName="IsSort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_AppClients">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_AppClients">
+        <MappingFragment StoreEntitySet="Bas_AppClients">
+          <ScalarProperty Name="App_ID" ColumnName="App_ID" />
+          <ScalarProperty Name="App_Name" ColumnName="App_Name" />
+          <ScalarProperty Name="App_Key" ColumnName="App_Key" />
+          <ScalarProperty Name="App_Secret" ColumnName="App_Secret" />
+          <ScalarProperty Name="App_Linkman" ColumnName="App_Linkman" />
+          <ScalarProperty Name="App_LinkPhone" ColumnName="App_LinkPhone" />
+          <ScalarProperty Name="App_Memo" ColumnName="App_Memo" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_AutoPromotion">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_AutoPromotion">
+        <MappingFragment StoreEntitySet="Bas_AutoPromotion">
+          <ScalarProperty Name="Promotion_ID" ColumnName="Promotion_ID" />
+          <ScalarProperty Name="Merchant_Id" ColumnName="Merchant_Id" />
+          <ScalarProperty Name="Shop_Id" ColumnName="Shop_Id" />
+          <ScalarProperty Name="PromotionName" ColumnName="PromotionName" />
+          <ScalarProperty Name="PromotionType" ColumnName="PromotionType" />
+          <ScalarProperty Name="MultiplePromotion" ColumnName="MultiplePromotion" />
+          <ScalarProperty Name="BirthDayStartDate" ColumnName="BirthDayStartDate" />
+          <ScalarProperty Name="BirthDayEndDate" ColumnName="BirthDayEndDate" />
+          <ScalarProperty Name="ValidityBirthDay" ColumnName="ValidityBirthDay" />
+          <ScalarProperty Name="ValidityType" ColumnName="ValidityType" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+          <ScalarProperty Name="ConsumeFrom" ColumnName="ConsumeFrom" />
+          <ScalarProperty Name="ConsumeTo" ColumnName="ConsumeTo" />
+          <ScalarProperty Name="IntegralTotalFrom" ColumnName="IntegralTotalFrom" />
+          <ScalarProperty Name="IntegralTotalTo" ColumnName="IntegralTotalTo" />
+          <ScalarProperty Name="ChargeAmountFrom" ColumnName="ChargeAmountFrom" />
+          <ScalarProperty Name="ChargeAmountTo" ColumnName="ChargeAmountTo" />
+          <ScalarProperty Name="TotalDateStart" ColumnName="TotalDateStart" />
+          <ScalarProperty Name="TotalDateEnd" ColumnName="TotalDateEnd" />
+          <ScalarProperty Name="FestivalName" ColumnName="FestivalName" />
+          <ScalarProperty Name="FestivalDate" ColumnName="FestivalDate" />
+          <ScalarProperty Name="BeforeDays" ColumnName="BeforeDays" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductQuantityFrom" ColumnName="ProductQuantityFrom" />
+          <ScalarProperty Name="ProductQuantityTo" ColumnName="ProductQuantityTo" />
+          <ScalarProperty Name="PromotionShopIds" ColumnName="PromotionShopIds" />
+          <ScalarProperty Name="PromotionGender" ColumnName="PromotionGender" />
+          <ScalarProperty Name="PromotionCardTypeIds" ColumnName="PromotionCardTypeIds" />
+          <ScalarProperty Name="MemberType" ColumnName="MemberType" />
+          <ScalarProperty Name="Coupon_Id" ColumnName="Coupon_Id" />
+          <ScalarProperty Name="CouponQuantity" ColumnName="CouponQuantity" />
+          <ScalarProperty Name="GivenIntegral" ColumnName="GivenIntegral" />
+          <ScalarProperty Name="GivenIntegralMultiple" ColumnName="GivenIntegralMultiple" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="StartUseDate" ColumnName="StartUseDate" />
+          <ScalarProperty Name="LastExecDate" ColumnName="LastExecDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_AutoPromotionTime">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_AutoPromotionTime">
+        <MappingFragment StoreEntitySet="Bas_AutoPromotionTime">
+          <ScalarProperty Name="AutoPromotionTime_Id" ColumnName="AutoPromotionTime_Id" />
+          <ScalarProperty Name="AutoPromotion_Id" ColumnName="AutoPromotion_Id" />
+          <ScalarProperty Name="TimeType" ColumnName="TimeType" />
+          <ScalarProperty Name="Weekday" ColumnName="Weekday" />
+          <ScalarProperty Name="MonthDay" ColumnName="MonthDay" />
+          <ScalarProperty Name="YearMonth" ColumnName="YearMonth" />
+          <ScalarProperty Name="YearDay" ColumnName="YearDay" />
+          <ScalarProperty Name="HourBegin" ColumnName="HourBegin" />
+          <ScalarProperty Name="MinuteBegin" ColumnName="MinuteBegin" />
+          <ScalarProperty Name="HourEnd" ColumnName="HourEnd" />
+          <ScalarProperty Name="MinuteEnd" ColumnName="MinuteEnd" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_BonusRecord">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_BonusRecord">
+        <MappingFragment StoreEntitySet="Bas_BonusRecord">
+          <ScalarProperty Name="BonusRecord_ID" ColumnName="BonusRecord_ID" />
+          <ScalarProperty Name="BonusClass" ColumnName="BonusClass" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="BonusCash" ColumnName="BonusCash" />
+          <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_BonusSet">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_BonusSet">
+        <MappingFragment StoreEntitySet="Bas_BonusSet">
+          <ScalarProperty Name="BonusSet_ID" ColumnName="BonusSet_ID" />
+          <ScalarProperty Name="BonusClass" ColumnName="BonusClass" />
+          <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+          <ScalarProperty Name="Position_ID" ColumnName="Position_ID" />
+          <ScalarProperty Name="ComputingMethod" ColumnName="ComputingMethod" />
+          <ScalarProperty Name="BonusCash" ColumnName="BonusCash" />
+          <ScalarProperty Name="BonusProportion" ColumnName="BonusProportion" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_BossReport">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_BossReport">
+        <MappingFragment StoreEntitySet="Bas_BossReport">
+          <ScalarProperty Name="BossReport_ID" ColumnName="BossReport_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="BossReportName" ColumnName="BossReportName" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReceiveMobilePhone" ColumnName="ReceiveMobilePhone" />
+          <ScalarProperty Name="ShopList" ColumnName="ShopList" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="BusinessBeginHour" ColumnName="BusinessBeginHour" />
+          <ScalarProperty Name="BusinessBeginMinute" ColumnName="BusinessBeginMinute" />
+          <ScalarProperty Name="BusinessDate" ColumnName="BusinessDate" />
+          <ScalarProperty Name="BusinessEndHour" ColumnName="BusinessEndHour" />
+          <ScalarProperty Name="BusinessEndMinute" ColumnName="BusinessEndMinute" />
+          <ScalarProperty Name="SendCycle" ColumnName="SendCycle" />
+          <ScalarProperty Name="MemberIncrease" ColumnName="MemberIncrease" />
+          <ScalarProperty Name="CardIncrease" ColumnName="CardIncrease" />
+          <ScalarProperty Name="ConsumeTotal" ColumnName="ConsumeTotal" />
+          <ScalarProperty Name="MemberConsumeTotal" ColumnName="MemberConsumeTotal" />
+          <ScalarProperty Name="MemberRechargeTotal" ColumnName="MemberRechargeTotal" />
+          <ScalarProperty Name="MemberRechargeGiveTotal" ColumnName="MemberRechargeGiveTotal" />
+          <ScalarProperty Name="IndividualConsumeTotal" ColumnName="IndividualConsumeTotal" />
+          <ScalarProperty Name="MemberReductionTotal" ColumnName="MemberReductionTotal" />
+          <ScalarProperty Name="CouponRechargeQuantity" ColumnName="CouponRechargeQuantity" />
+          <ScalarProperty Name="CouponUseQuantity" ColumnName="CouponUseQuantity" />
+          <ScalarProperty Name="MemberAddIntegral" ColumnName="MemberAddIntegral" />
+          <ScalarProperty Name="MemberReductionIntegral" ColumnName="MemberReductionIntegral" />
+          <ScalarProperty Name="MemberMoneyTotal" ColumnName="MemberMoneyTotal" />
+          <ScalarProperty Name="MemberIntegralTotal" ColumnName="MemberIntegralTotal" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="LastExecDate" ColumnName="LastExecDate" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_Card">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_Card">
+        <MappingFragment StoreEntitySet="Bas_Card">
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_Num" ColumnName="Card_Num" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="Card_Status" ColumnName="Card_Status" />
+          <ScalarProperty Name="CardBatch_ID" ColumnName="CardBatch_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Card_Cash" ColumnName="Card_Cash" />
+          <ScalarProperty Name="Card_Integral" ColumnName="Card_Integral" />
+          <ScalarProperty Name="Card_Password" ColumnName="Card_Password" />
+          <ScalarProperty Name="Discount_ID" ColumnName="Discount_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Card_Validity" ColumnName="Card_Validity" />
+          <ScalarProperty Name="Card_FDate" ColumnName="Card_FDate" />
+          <ScalarProperty Name="Card_LDate" ColumnName="Card_LDate" />
+          <ScalarProperty Name="Card_OpenDate" ColumnName="Card_OpenDate" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Card_Pic" ColumnName="Card_Pic" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_CardBatch">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_CardBatch">
+        <MappingFragment StoreEntitySet="Bas_CardBatch">
+          <ScalarProperty Name="CardBatch_ID" ColumnName="CardBatch_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Batch_Name" ColumnName="Batch_Name" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_CardDiscountType">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_CardDiscountType">
+        <MappingFragment StoreEntitySet="Bas_CardDiscountType">
+          <ScalarProperty Name="Discount_ID" ColumnName="Discount_ID" />
+          <ScalarProperty Name="Discount_Name" ColumnName="Discount_Name" />
+          <ScalarProperty Name="ConsumeGetIntegral" ColumnName="ConsumeGetIntegral" />
+          <ScalarProperty Name="ConsumeCash" ColumnName="ConsumeCash" />
+          <ScalarProperty Name="RechargeGetIntegral" ColumnName="RechargeGetIntegral" />
+          <ScalarProperty Name="RechargeCash" ColumnName="RechargeCash" />
+          <ScalarProperty Name="OpenCardGetIntegral" ColumnName="OpenCardGetIntegral" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Apply" ColumnName="Apply" />
+          <ScalarProperty Name="Card_Pic" ColumnName="Card_Pic" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="RechargeAutoUpdate" ColumnName="RechargeAutoUpdate" />
+          <ScalarProperty Name="RechargeMoney" ColumnName="RechargeMoney" />
+          <ScalarProperty Name="RechargeUpdateTo" ColumnName="RechargeUpdateTo" />
+          <ScalarProperty Name="ConsumeAutoUpdate" ColumnName="ConsumeAutoUpdate" />
+          <ScalarProperty Name="ConsumeMoney" ColumnName="ConsumeMoney" />
+          <ScalarProperty Name="ConsumeUpdateTo" ColumnName="ConsumeUpdateTo" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_ComboGroup">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ComboGroup">
+        <MappingFragment StoreEntitySet="Bas_ComboGroup">
+          <ScalarProperty Name="ComboGroup_ID" ColumnName="ComboGroup_ID" />
+          <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
+          <ScalarProperty Name="MaxNum" ColumnName="MaxNum" />
+          <ScalarProperty Name="MinNum" ColumnName="MinNum" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_ComboProduct">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ComboProduct">
+        <MappingFragment StoreEntitySet="Bas_ComboProduct">
+          <ScalarProperty Name="ComboProduct_ID" ColumnName="ComboProduct_ID" />
+          <ScalarProperty Name="ComboGroup_ID" ColumnName="ComboGroup_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="OptionalNum" ColumnName="OptionalNum" />
+          <ScalarProperty Name="InfluencePrice" ColumnName="InfluencePrice" />
+          <ScalarProperty Name="IsRequired" ColumnName="IsRequired" />
+          <ScalarProperty Name="IsSelected" ColumnName="IsSelected" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_Coupon">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_Coupon">
+        <MappingFragment StoreEntitySet="Bas_Coupon">
+          <ScalarProperty Name="Coupon_ID" ColumnName="Coupon_ID" />
+          <ScalarProperty Name="MerchantBaseInfo_ID" ColumnName="MerchantBaseInfo_ID" />
+          <ScalarProperty Name="Coupon_Name" ColumnName="Coupon_Name" />
+          <ScalarProperty Name="Coupon_Code" ColumnName="Coupon_Code" />
+          <ScalarProperty Name="Coupon_BriefCode" ColumnName="Coupon_BriefCode" />
+          <ScalarProperty Name="Coupon_Class" ColumnName="Coupon_Class" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Coupon_ConsumeClass" ColumnName="Coupon_ConsumeClass" />
+          <ScalarProperty Name="Coupon_Cash" ColumnName="Coupon_Cash" />
+          <ScalarProperty Name="Coupon_UserNum" ColumnName="Coupon_UserNum" />
+          <ScalarProperty Name="Coupon_Unit" ColumnName="Coupon_Unit" />
+          <ScalarProperty Name="Coupon_BuyPrice" ColumnName="Coupon_BuyPrice" />
+          <ScalarProperty Name="Coupon_DeductionPrice" ColumnName="Coupon_DeductionPrice" />
+          <ScalarProperty Name="Coupon_Validity" ColumnName="Coupon_Validity" />
+          <ScalarProperty Name="Coupon_FDate" ColumnName="Coupon_FDate" />
+          <ScalarProperty Name="Coupon_LDate" ColumnName="Coupon_LDate" />
+          <ScalarProperty Name="Coupon_DateNum" ColumnName="Coupon_DateNum" />
+          <ScalarProperty Name="Coupon_IntegralExchange" ColumnName="Coupon_IntegralExchange" />
+          <ScalarProperty Name="Coupon_Integral" ColumnName="Coupon_Integral" />
+          <ScalarProperty Name="Coupon_BPic" ColumnName="Coupon_BPic" />
+          <ScalarProperty Name="Coupon_SPic" ColumnName="Coupon_SPic" />
+          <ScalarProperty Name="Coupon_Status" ColumnName="Coupon_Status" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_DeliveryAddress">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_DeliveryAddress">
+        <MappingFragment StoreEntitySet="Bas_DeliveryAddress">
+          <ScalarProperty Name="Address_ID" ColumnName="Address_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Consignee" ColumnName="Consignee" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_GivenCoupon">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_GivenCoupon">
+        <MappingFragment StoreEntitySet="Bas_GivenCoupon">
+          <ScalarProperty Name="GivenCoupon_ID" ColumnName="GivenCoupon_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+          <ScalarProperty Name="GivenCoupon_Type" ColumnName="GivenCoupon_Type" />
+          <ScalarProperty Name="Coupon_ID" ColumnName="Coupon_ID" />
+          <ScalarProperty Name="CouponQuantity" ColumnName="CouponQuantity" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_IntegralProducts">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_IntegralProducts">
+        <MappingFragment StoreEntitySet="Bas_IntegralProducts">
+          <ScalarProperty Name="IntegralProduct_ID" ColumnName="IntegralProduct_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Dictionary_ID" ColumnName="Dictionary_ID" />
+          <ScalarProperty Name="IntegralProduct_Name" ColumnName="IntegralProduct_Name" />
+          <ScalarProperty Name="IntegralProduct_Code" ColumnName="IntegralProduct_Code" />
+          <ScalarProperty Name="IntegralProduct_SpellCode" ColumnName="IntegralProduct_SpellCode" />
+          <ScalarProperty Name="IntegralProduct_Unit" ColumnName="IntegralProduct_Unit" />
+          <ScalarProperty Name="IntegralProduct_Price" ColumnName="IntegralProduct_Price" />
+          <ScalarProperty Name="IntegralProduct_BPic" ColumnName="IntegralProduct_BPic" />
+          <ScalarProperty Name="IntegralProduct_SPic" ColumnName="IntegralProduct_SPic" />
+          <ScalarProperty Name="IntegralProduct_Memo" ColumnName="IntegralProduct_Memo" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_MarketingAnalyze">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_MarketingAnalyze">
+        <MappingFragment StoreEntitySet="Bas_MarketingAnalyze">
+          <ScalarProperty Name="MarketingAnalyze_ID" ColumnName="MarketingAnalyze_ID" />
+          <ScalarProperty Name="MarketingAnalyze_Name" ColumnName="MarketingAnalyze_Name" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="AutoExec" ColumnName="AutoExec" />
+          <ScalarProperty Name="AgeStart" ColumnName="AgeStart" />
+          <ScalarProperty Name="AgeEnd" ColumnName="AgeEnd" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="CardDiscountType_ID" ColumnName="CardDiscountType_ID" />
+          <ScalarProperty Name="ResidueIntegralStart" ColumnName="ResidueIntegralStart" />
+          <ScalarProperty Name="ResidueIntegralEnd" ColumnName="ResidueIntegralEnd" />
+          <ScalarProperty Name="ResidueMoneyStart" ColumnName="ResidueMoneyStart" />
+          <ScalarProperty Name="ResidueMoneyEnd" ColumnName="ResidueMoneyEnd" />
+          <ScalarProperty Name="OpenCardValidity" ColumnName="OpenCardValidity" />
+          <ScalarProperty Name="OpenCardDateStart" ColumnName="OpenCardDateStart" />
+          <ScalarProperty Name="OpenCardDateEnd" ColumnName="OpenCardDateEnd" />
+          <ScalarProperty Name="BirthdayValidity" ColumnName="BirthdayValidity" />
+          <ScalarProperty Name="BirthdayStart" ColumnName="BirthdayStart" />
+          <ScalarProperty Name="BirthdayEnd" ColumnName="BirthdayEnd" />
+          <ScalarProperty Name="ConsumeDateStart" ColumnName="ConsumeDateStart" />
+          <ScalarProperty Name="ConsumeDateEnd" ColumnName="ConsumeDateEnd" />
+          <ScalarProperty Name="ConsumeCountStart" ColumnName="ConsumeCountStart" />
+          <ScalarProperty Name="ConsumeCountEnd" ColumnName="ConsumeCountEnd" />
+          <ScalarProperty Name="SimpleConsumeMoneyStart" ColumnName="SimpleConsumeMoneyStart" />
+          <ScalarProperty Name="SimpleConsumeMoneyEnd" ColumnName="SimpleConsumeMoneyEnd" />
+          <ScalarProperty Name="CountCunsumeMoneyStart" ColumnName="CountCunsumeMoneyStart" />
+          <ScalarProperty Name="CountCunsumeMoneyEnd" ColumnName="CountCunsumeMoneyEnd" />
+          <ScalarProperty Name="RechargeCountStart" ColumnName="RechargeCountStart" />
+          <ScalarProperty Name="RechargeCountEnd" ColumnName="RechargeCountEnd" />
+          <ScalarProperty Name="SimpleRechargeMoneyStart" ColumnName="SimpleRechargeMoneyStart" />
+          <ScalarProperty Name="SimpleRechargeMoneyEnd" ColumnName="SimpleRechargeMoneyEnd" />
+          <ScalarProperty Name="CountRechargeMoneyStart" ColumnName="CountRechargeMoneyStart" />
+          <ScalarProperty Name="CountRechargeMoneyEnd" ColumnName="CountRechargeMoneyEnd" />
+          <ScalarProperty Name="SimpleConsumePeopleStart" ColumnName="SimpleConsumePeopleStart" />
+          <ScalarProperty Name="SimpleConsumePeopleEnd" ColumnName="SimpleConsumePeopleEnd" />
+          <ScalarProperty Name="CountIntegralDeductionStart" ColumnName="CountIntegralDeductionStart" />
+          <ScalarProperty Name="CountIntegralDeductionEnd" ColumnName="CountIntegralDeductionEnd" />
+          <ScalarProperty Name="NotConsumeDay" ColumnName="NotConsumeDay" />
+          <ScalarProperty Name="IntegralTotalStart" ColumnName="IntegralTotalStart" />
+          <ScalarProperty Name="IntegralTotalEnd" ColumnName="IntegralTotalEnd" />
+          <ScalarProperty Name="ConsumeProduct_ID" ColumnName="ConsumeProduct_ID" />
+          <ScalarProperty Name="CountConsumeProductStart" ColumnName="CountConsumeProductStart" />
+          <ScalarProperty Name="CountConsumeProductEnd" ColumnName="CountConsumeProductEnd" />
+          <ScalarProperty Name="ConsumeCoupon_ID" ColumnName="ConsumeCoupon_ID" />
+          <ScalarProperty Name="StatisticsTotal" ColumnName="StatisticsTotal" />
+          <ScalarProperty Name="IssueTotal" ColumnName="IssueTotal" />
+          <ScalarProperty Name="GivenIntegral" ColumnName="GivenIntegral" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="LastExeTime" ColumnName="LastExeTime" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_Member">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_Member">
+        <MappingFragment StoreEntitySet="Bas_Member">
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Member_Name" ColumnName="Member_Name" />
+          <ScalarProperty Name="Member_Sex" ColumnName="Member_Sex" />
+          <ScalarProperty Name="Member_MobilePhone" ColumnName="Member_MobilePhone" />
+          <ScalarProperty Name="Member_HomePhone" ColumnName="Member_HomePhone" />
+          <ScalarProperty Name="Member_Code" ColumnName="Member_Code" />
+          <ScalarProperty Name="Member_Birthday" ColumnName="Member_Birthday" />
+          <ScalarProperty Name="Member_Email" ColumnName="Member_Email" />
+          <ScalarProperty Name="Member_Logo" ColumnName="Member_Logo" />
+          <ScalarProperty Name="Member_RegisterTime" ColumnName="Member_RegisterTime" />
+          <ScalarProperty Name="Member_Memo" ColumnName="Member_Memo" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_Merchant">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_Merchant">
+        <MappingFragment StoreEntitySet="Bas_Merchant">
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Server_ID" ColumnName="Server_ID" />
+          <ScalarProperty Name="Merchant_Name" ColumnName="Merchant_Name" />
+          <ScalarProperty Name="Merchant_ShortName" ColumnName="Merchant_ShortName" />
+          <ScalarProperty Name="MerchantClass_ID" ColumnName="MerchantClass_ID" />
+          <ScalarProperty Name="Merchant_Linkman" ColumnName="Merchant_Linkman" />
+          <ScalarProperty Name="Merchant_Tel" ColumnName="Merchant_Tel" />
+          <ScalarProperty Name="Merchant_Fax" ColumnName="Merchant_Fax" />
+          <ScalarProperty Name="Merchant_Email" ColumnName="Merchant_Email" />
+          <ScalarProperty Name="Merchant_QQ" ColumnName="Merchant_QQ" />
+          <ScalarProperty Name="Merchant_Prov" ColumnName="Merchant_Prov" />
+          <ScalarProperty Name="Merchant_City" ColumnName="Merchant_City" />
+          <ScalarProperty Name="Merchant_Area" ColumnName="Merchant_Area" />
+          <ScalarProperty Name="Merchant_Address" ColumnName="Merchant_Address" />
+          <ScalarProperty Name="Merchant_FDate" ColumnName="Merchant_FDate" />
+          <ScalarProperty Name="Merchant_LDate" ColumnName="Merchant_LDate" />
+          <ScalarProperty Name="Merchant_Status" ColumnName="Merchant_Status" />
+          <ScalarProperty Name="Merchant_OpenApp" ColumnName="Merchant_OpenApp" />
+          <ScalarProperty Name="Merchant_OpenWeb" ColumnName="Merchant_OpenWeb" />
+          <ScalarProperty Name="Merchant_OpenWeixin" ColumnName="Merchant_OpenWeixin" />
+          <ScalarProperty Name="Merchant_Number" ColumnName="Merchant_Number" />
+          <ScalarProperty Name="Merchant_Password" ColumnName="Merchant_Password" />
+          <ScalarProperty Name="Merchant_Memo" ColumnName="Merchant_Memo" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_MerchantBaseInfo">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_MerchantBaseInfo">
+        <MappingFragment StoreEntitySet="Bas_MerchantBaseInfo">
+          <ScalarProperty Name="MerchantBaseInfo_ID" ColumnName="MerchantBaseInfo_ID" />
+          <ScalarProperty Name="MerchantBaseInfo_Name" ColumnName="MerchantBaseInfo_Name" />
+          <ScalarProperty Name="BaseInfoClass" ColumnName="BaseInfoClass" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_MerchantConfig">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_MerchantConfig">
+        <MappingFragment StoreEntitySet="Bas_MerchantConfig">
+          <ScalarProperty Name="MerchantConfig_ID" ColumnName="MerchantConfig_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="BusinessScope_ID" ColumnName="BusinessScope_ID" />
+          <ScalarProperty Name="SmsCount" ColumnName="SmsCount" />
+          <ScalarProperty Name="ConsumeAutoUpdate" ColumnName="ConsumeAutoUpdate" />
+          <ScalarProperty Name="RechargeAutoUpdate" ColumnName="RechargeAutoUpdate" />
+          <ScalarProperty Name="Pop" ColumnName="Pop" />
+          <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+          <ScalarProperty Name="IntegralRate" ColumnName="IntegralRate" />
+          <ScalarProperty Name="CashRate" ColumnName="CashRate" />
+          <ScalarProperty Name="IntegraClear" ColumnName="IntegraClear" />
+          <ScalarProperty Name="IntegraEndTime" ColumnName="IntegraEndTime" />
+          <ScalarProperty Name="IntegraClearTime" ColumnName="IntegraClearTime" />
+          <ScalarProperty Name="IntegraClearBeforeSms" ColumnName="IntegraClearBeforeSms" />
+          <ScalarProperty Name="IntegraClearBeforeDate" ColumnName="IntegraClearBeforeDate" />
+          <ScalarProperty Name="IntegraClearFinishSms" ColumnName="IntegraClearFinishSms" />
+          <ScalarProperty Name="SpanMonthAdjust" ColumnName="SpanMonthAdjust" />
+          <ScalarProperty Name="ConsumeInputType" ColumnName="ConsumeInputType" />
+          <ScalarProperty Name="DeductMoneyAutoInput" ColumnName="DeductMoneyAutoInput" />
+          <ScalarProperty Name="ShowAffirm" ColumnName="ShowAffirm" />
+          <ScalarProperty Name="OnlyCardConsume" ColumnName="OnlyCardConsume" />
+          <ScalarProperty Name="NotEditRate" ColumnName="NotEditRate" />
+          <ScalarProperty Name="CanCloseIntegra" ColumnName="CanCloseIntegra" />
+          <ScalarProperty Name="MemberMultiCard" ColumnName="MemberMultiCard" />
+          <ScalarProperty Name="CardNumberNull" ColumnName="CardNumberNull" />
+          <ScalarProperty Name="IntegraConvertManualInput" ColumnName="IntegraConvertManualInput" />
+          <ScalarProperty Name="OpenTakeAway" ColumnName="OpenTakeAway" />
+          <ScalarProperty Name="OpenReservation" ColumnName="OpenReservation" />
+          <ScalarProperty Name="OpenSelfOrder" ColumnName="OpenSelfOrder" />
+          <ScalarProperty Name="OpenSelfPay" ColumnName="OpenSelfPay" />
+          <ScalarProperty Name="taste" ColumnName="taste" />
+          <ScalarProperty Name="MainScope" ColumnName="MainScope" />
+          <ScalarProperty Name="SpecialRequire" ColumnName="SpecialRequire" />
+          <ScalarProperty Name="Introduce" ColumnName="Introduce" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="ReduceMantissaSet" ColumnName="ReduceMantissaSet" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_MerchantPosition">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_MerchantPosition">
+        <MappingFragment StoreEntitySet="Bas_MerchantPosition">
+          <ScalarProperty Name="Position_ID" ColumnName="Position_ID" />
+          <ScalarProperty Name="Position_Code" ColumnName="Position_Code" />
+          <ScalarProperty Name="Position_Name" ColumnName="Position_Name" />
+          <ScalarProperty Name="Position_Parent" ColumnName="Position_Parent" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_MerchantProducts">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_MerchantProducts">
+        <MappingFragment StoreEntitySet="Bas_MerchantProducts">
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="MerchantBaseInfo_ID" ColumnName="MerchantBaseInfo_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Product_SpellCode" ColumnName="Product_SpellCode" />
+          <ScalarProperty Name="Product_Unit" ColumnName="Product_Unit" />
+          <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
+          <ScalarProperty Name="Product_BPic" ColumnName="Product_BPic" />
+          <ScalarProperty Name="Product_SPic" ColumnName="Product_SPic" />
+          <ScalarProperty Name="Product_Discount" ColumnName="Product_Discount" />
+          <ScalarProperty Name="Combo" ColumnName="Combo" />
+          <ScalarProperty Name="Product_Memo" ColumnName="Product_Memo" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_ProductCombo">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ProductCombo">
+        <MappingFragment StoreEntitySet="Bas_ProductCombo">
+          <ScalarProperty Name="ProductCombo_ID" ColumnName="ProductCombo_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="ComboGroup_ID" ColumnName="ComboGroup_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_Shop">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_Shop">
+        <MappingFragment StoreEntitySet="Bas_Shop">
+          <ScalarProperty Name="TakeOutSmsEmployeeID" ColumnName="TakeOutSmsEmployeeID" />
+          <ScalarProperty Name="TakeOutSmsTel" ColumnName="TakeOutSmsTel" />
+          <ScalarProperty Name="BookSmsEmployeeID" ColumnName="BookSmsEmployeeID" />
+          <ScalarProperty Name="BookSmsTel" ColumnName="BookSmsTel" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Shop_Name" ColumnName="Shop_Name" />
+          <ScalarProperty Name="Shop_Tel" ColumnName="Shop_Tel" />
+          <ScalarProperty Name="Shop_LinkMan" ColumnName="Shop_LinkMan" />
+          <ScalarProperty Name="Prov_ID" ColumnName="Prov_ID" />
+          <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+          <ScalarProperty Name="Area_ID" ColumnName="Area_ID" />
+          <ScalarProperty Name="Shop_Address" ColumnName="Shop_Address" />
+          <ScalarProperty Name="CommerceGroup_ID" ColumnName="CommerceGroup_ID" />
+          <ScalarProperty Name="Shop_RechargePassword" ColumnName="Shop_RechargePassword" />
+          <ScalarProperty Name="Shop_OpenDate" ColumnName="Shop_OpenDate" />
+          <ScalarProperty Name="Shop_EndDate" ColumnName="Shop_EndDate" />
+          <ScalarProperty Name="Shop_SmsCount" ColumnName="Shop_SmsCount" />
+          <ScalarProperty Name="Shop_Logo" ColumnName="Shop_Logo" />
+          <ScalarProperty Name="Shop_longitude" ColumnName="Shop_longitude" />
+          <ScalarProperty Name="Shop_latitude" ColumnName="Shop_latitude" />
+          <ScalarProperty Name="Shop_BusinessTime" ColumnName="Shop_BusinessTime" />
+          <ScalarProperty Name="Shop_Status" ColumnName="Shop_Status" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+          <ScalarProperty Name="Deliveryamount" ColumnName="Deliveryamount" />
+          <ScalarProperty Name="Takeoutcost" ColumnName="Takeoutcost" />
+          <ScalarProperty Name="TakeOutTimeBegin" ColumnName="TakeOutTimeBegin" />
+          <ScalarProperty Name="TakeOutTimeEnd" ColumnName="TakeOutTimeEnd" />
+          <ScalarProperty Name="TakeOutStatus" ColumnName="TakeOutStatus" />
+          <ScalarProperty Name="PayOnDelivery" ColumnName="PayOnDelivery" />
+          <ScalarProperty Name="BookStatus" ColumnName="BookStatus" />
+          <ScalarProperty Name="BookBasketStatus" ColumnName="BookBasketStatus" />
+          <ScalarProperty Name="AnticipationType" ColumnName="AnticipationType" />
+          <ScalarProperty Name="AnticipationAmount" ColumnName="AnticipationAmount" />
+          <ScalarProperty Name="AnticipationRate" ColumnName="AnticipationRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_ShopEmployee">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ShopEmployee">
+        <MappingFragment StoreEntitySet="Bas_ShopEmployee">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_Code" ColumnName="Employee_Code" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Employee_Sex" ColumnName="Employee_Sex" />
+          <ScalarProperty Name="Employee_birthday" ColumnName="Employee_birthday" />
+          <ScalarProperty Name="Employee_Tel" ColumnName="Employee_Tel" />
+          <ScalarProperty Name="Employee_Address" ColumnName="Employee_Address" />
+          <ScalarProperty Name="Employee_Pic" ColumnName="Employee_Pic" />
+          <ScalarProperty Name="Employee_Salary" ColumnName="Employee_Salary" />
+          <ScalarProperty Name="Position_ID" ColumnName="Position_ID" />
+          <ScalarProperty Name="Employee_Lead_ID" ColumnName="Employee_Lead_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_ShopIntegralProducts">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ShopIntegralProducts">
+        <MappingFragment StoreEntitySet="Bas_ShopIntegralProducts">
+          <ScalarProperty Name="ShopIntegralProduct_ID" ColumnName="ShopIntegralProduct_ID" />
+          <ScalarProperty Name="IntegralProduct_ID" ColumnName="IntegralProduct_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Dictionary_ID" ColumnName="Dictionary_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="SpellCode" ColumnName="SpellCode" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="BPic" ColumnName="BPic" />
+          <ScalarProperty Name="SPic" ColumnName="SPic" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="ProductNum" ColumnName="ProductNum" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_ShopPositionPower">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ShopPositionPower">
+        <MappingFragment StoreEntitySet="Bas_ShopPositionPower">
+          <ScalarProperty Name="ShopPostitionPowerID" ColumnName="ShopPostitionPowerID" />
+          <ScalarProperty Name="Position_ID" ColumnName="Position_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PowerString" ColumnName="PowerString" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_ShopProducts">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ShopProducts">
+        <MappingFragment StoreEntitySet="Bas_ShopProducts">
+          <ScalarProperty Name="ShopProduct_ID" ColumnName="ShopProduct_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="MerchantBaseInfo_ID" ColumnName="MerchantBaseInfo_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="SpellCode" ColumnName="SpellCode" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="BPic" ColumnName="BPic" />
+          <ScalarProperty Name="SPic" ColumnName="SPic" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Combo" ColumnName="Combo" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="GuQing" ColumnName="GuQing" />
+          <ScalarProperty Name="ProductNum" ColumnName="ProductNum" />
+          <ScalarProperty Name="UseRepertory" ColumnName="UseRepertory" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_ShopSeat">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ShopSeat">
+        <MappingFragment StoreEntitySet="Bas_ShopSeat">
+          <ScalarProperty Name="Seat_ID" ColumnName="Seat_ID" />
+          <ScalarProperty Name="Seat_Name" ColumnName="Seat_Name" />
+          <ScalarProperty Name="Seat_Num" ColumnName="Seat_Num" />
+          <ScalarProperty Name="ShopSeatClass_ID" ColumnName="ShopSeatClass_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Seat_Order" ColumnName="Seat_Order" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OptionTime" ColumnName="OptionTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_ShopSeatClass">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ShopSeatClass">
+        <MappingFragment StoreEntitySet="Bas_ShopSeatClass">
+          <ScalarProperty Name="ShopSeatClass_ID" ColumnName="ShopSeatClass_ID" />
+          <ScalarProperty Name="ShopSeatClass_Name" ColumnName="ShopSeatClass_Name" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_SmsTemplateCustom">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_SmsTemplateCustom">
+        <MappingFragment StoreEntitySet="Bas_SmsTemplateCustom">
+          <ScalarProperty Name="Custom_ID" ColumnName="Custom_ID" />
+          <ScalarProperty Name="Custom_Content" ColumnName="Custom_Content" />
+          <ScalarProperty Name="Custom_Status" ColumnName="Custom_Status" />
+          <ScalarProperty Name="Custom_Send" ColumnName="Custom_Send" />
+          <ScalarProperty Name="Custom_SendDate" ColumnName="Custom_SendDate" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="SmsTemplate_ID" ColumnName="SmsTemplate_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_UsableShop">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_UsableShop">
+        <MappingFragment StoreEntitySet="Bas_UsableShop">
+          <ScalarProperty Name="UsableShop_ID" ColumnName="UsableShop_ID" />
+          <ScalarProperty Name="UsableClass" ColumnName="UsableClass" />
+          <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_User">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_User">
+        <MappingFragment StoreEntitySet="Bas_User">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="User_LoginName" ColumnName="User_LoginName" />
+          <ScalarProperty Name="User_LoginPassword" ColumnName="User_LoginPassword" />
+          <ScalarProperty Name="User_MobilePhone" ColumnName="User_MobilePhone" />
+          <ScalarProperty Name="User_NickName" ColumnName="User_NickName" />
+          <ScalarProperty Name="User_Email" ColumnName="User_Email" />
+          <ScalarProperty Name="User_Pic" ColumnName="User_Pic" />
+          <ScalarProperty Name="User_RegTime" ColumnName="User_RegTime" />
+          <ScalarProperty Name="User_RegIP" ColumnName="User_RegIP" />
+          <ScalarProperty Name="User_Status" ColumnName="User_Status" />
+          <ScalarProperty Name="WeChat_Open_Id" ColumnName="WeChat_Open_Id" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_UserAddress">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_UserAddress">
+        <MappingFragment StoreEntitySet="Bas_UserAddress">
+          <ScalarProperty Name="Address_ID" ColumnName="Address_ID" />
+          <ScalarProperty Name="LinkMan" ColumnName="LinkMan" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_WeChat">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_WeChat">
+        <MappingFragment StoreEntitySet="Bas_WeChat">
+          <ScalarProperty Name="WeChat_ID" ColumnName="WeChat_ID" />
+          <ScalarProperty Name="Original_ID" ColumnName="Original_ID" />
+          <ScalarProperty Name="WeChatType" ColumnName="WeChatType" />
+          <ScalarProperty Name="WeChatName" ColumnName="WeChatName" />
+          <ScalarProperty Name="WechatNumber" ColumnName="WechatNumber" />
+          <ScalarProperty Name="APPID" ColumnName="APPID" />
+          <ScalarProperty Name="AppSecret" ColumnName="AppSecret" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="EncodingAESKey" ColumnName="EncodingAESKey" />
+          <ScalarProperty Name="Mch_ID" ColumnName="Mch_ID" />
+          <ScalarProperty Name="PayKey" ColumnName="PayKey" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_WeChatOpenID">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_WeChatOpenID">
+        <MappingFragment StoreEntitySet="Bas_WeChatOpenID">
+          <ScalarProperty Name="WeChatOpen_ID" ColumnName="WeChatOpen_ID" />
+          <ScalarProperty Name="Open_ID" ColumnName="Open_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_WeChatToken">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_WeChatToken">
+        <MappingFragment StoreEntitySet="Bas_WeChatToken">
+          <ScalarProperty Name="WeChatToken_ID" ColumnName="WeChatToken_ID" />
+          <ScalarProperty Name="WeChat_ID" ColumnName="WeChat_ID" />
+          <ScalarProperty Name="Original_ID" ColumnName="Original_ID" />
+          <ScalarProperty Name="AccessToken" ColumnName="AccessToken" />
+          <ScalarProperty Name="Access_Time" ColumnName="Access_Time" />
+          <ScalarProperty Name="JsApiTicket" ColumnName="JsApiTicket" />
+          <ScalarProperty Name="Ticket_Time" ColumnName="Ticket_Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BizSeqNos">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.BizSeqNos">
+        <MappingFragment StoreEntitySet="BizSeqNos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BizSeqValue" ColumnName="BizSeqValue" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UseTime" ColumnName="UseTime" />
+          <ScalarProperty Name="Formula" ColumnName="Formula" />
+          <ScalarProperty Name="BizSeqType" ColumnName="BizSeqType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_Advance">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_Advance">
+        <MappingFragment StoreEntitySet="Bus_Advance">
+          <ScalarProperty Name="Advance_ID" ColumnName="Advance_ID" />
+          <ScalarProperty Name="BusinessClass" ColumnName="BusinessClass" />
+          <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+          <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_AppInstruction">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_AppInstruction">
+        <MappingFragment StoreEntitySet="Bus_AppInstruction">
+          <ScalarProperty Name="Instruction_ID" ColumnName="Instruction_ID" />
+          <ScalarProperty Name="InstructionType" ColumnName="InstructionType" />
+          <ScalarProperty Name="InstructionData" ColumnName="InstructionData" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SendCallBack" ColumnName="SendCallBack" />
+          <ScalarProperty Name="SendCallBackClient_ID" ColumnName="SendCallBackClient_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_Arrears">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_Arrears">
+        <MappingFragment StoreEntitySet="Bus_Arrears">
+          <ScalarProperty Name="Arrears_ID" ColumnName="Arrears_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Arrears_Money" ColumnName="Arrears_Money" />
+          <ScalarProperty Name="Arrears_Status" ColumnName="Arrears_Status" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+          <ScalarProperty Name="Pay_Card_ID" ColumnName="Pay_Card_ID" />
+          <ScalarProperty Name="PayMemo" ColumnName="PayMemo" />
+          <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_AutoPromotionRecord">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_AutoPromotionRecord">
+        <MappingFragment StoreEntitySet="Bus_AutoPromotionRecord">
+          <ScalarProperty Name="PromotionRecord_ID" ColumnName="PromotionRecord_ID" />
+          <ScalarProperty Name="Promotion_ID" ColumnName="Promotion_ID" />
+          <ScalarProperty Name="PromotionName" ColumnName="PromotionName" />
+          <ScalarProperty Name="PromotionType" ColumnName="PromotionType" />
+          <ScalarProperty Name="GivenIntegral" ColumnName="GivenIntegral" />
+          <ScalarProperty Name="Coupon_ID" ColumnName="Coupon_ID" />
+          <ScalarProperty Name="CouponQuantity" ColumnName="CouponQuantity" />
+          <ScalarProperty Name="BusinessClass" ColumnName="BusinessClass" />
+          <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="ExecuteYear" ColumnName="ExecuteYear" />
+          <ScalarProperty Name="ExecuteTime" ColumnName="ExecuteTime" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_BackOrders">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_BackOrders">
+        <MappingFragment StoreEntitySet="Bus_BackOrders">
+          <ScalarProperty Name="Apply_ID" ColumnName="Apply_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ApplyTime" ColumnName="ApplyTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_BalanceChange">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_BalanceChange">
+        <MappingFragment StoreEntitySet="Bus_BalanceChange">
+          <ScalarProperty Name="BalanceChange_ID" ColumnName="BalanceChange_ID" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="BusinessClass" ColumnName="BusinessClass" />
+          <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+          <ScalarProperty Name="CashAdd" ColumnName="CashAdd" />
+          <ScalarProperty Name="CashReduce" ColumnName="CashReduce" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_BookBasket">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_BookBasket">
+        <MappingFragment StoreEntitySet="Bus_BookBasket">
+          <ScalarProperty Name="BookBasket_ID" ColumnName="BookBasket_ID" />
+          <ScalarProperty Name="Book_ID" ColumnName="Book_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="ShopProduct_ID" ColumnName="ShopProduct_ID" />
+          <ScalarProperty Name="Units" ColumnName="Units" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Zuofa" ColumnName="Zuofa" />
+          <ScalarProperty Name="Combo" ColumnName="Combo" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_BookOrders">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_BookOrders">
+        <MappingFragment StoreEntitySet="Bus_BookOrders">
+          <ScalarProperty Name="Book_ID" ColumnName="Book_ID" />
+          <ScalarProperty Name="Business_Num" ColumnName="Business_Num" />
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Contacts" ColumnName="Contacts" />
+          <ScalarProperty Name="People" ColumnName="People" />
+          <ScalarProperty Name="BookTime" ColumnName="BookTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="ShopSeatClass_ID" ColumnName="ShopSeatClass_ID" />
+          <ScalarProperty Name="Seat_ID" ColumnName="Seat_ID" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Terminal" ColumnName="Terminal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_CardCoupon">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_CardCoupon">
+        <MappingFragment StoreEntitySet="Bus_CardCoupon">
+          <ScalarProperty Name="CardCoupon_ID" ColumnName="CardCoupon_ID" />
+          <ScalarProperty Name="Coupon_ID" ColumnName="Coupon_ID" />
+          <ScalarProperty Name="Coupon_Name" ColumnName="Coupon_Name" />
+          <ScalarProperty Name="BusinessClass" ColumnName="BusinessClass" />
+          <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FDate" ColumnName="FDate" />
+          <ScalarProperty Name="LDate" ColumnName="LDate" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_CardRechargeRecord">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_CardRechargeRecord">
+        <MappingFragment StoreEntitySet="Bus_CardRechargeRecord">
+          <ScalarProperty Name="RechargeRecord_ID" ColumnName="RechargeRecord_ID" />
+          <ScalarProperty Name="Business_Num" ColumnName="Business_Num" />
+          <ScalarProperty Name="RechargeMoney" ColumnName="RechargeMoney" />
+          <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+          <ScalarProperty Name="GivenMoney" ColumnName="GivenMoney" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="GivenIntegral" ColumnName="GivenIntegral" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_CouponRechargeRecord">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_CouponRechargeRecord">
+        <MappingFragment StoreEntitySet="Bus_CouponRechargeRecord">
+          <ScalarProperty Name="CouponRecord_ID" ColumnName="CouponRecord_ID" />
+          <ScalarProperty Name="Business_Num" ColumnName="Business_Num" />
+          <ScalarProperty Name="Coupon_Record" ColumnName="Coupon_Record" />
+          <ScalarProperty Name="Coupon_Total" ColumnName="Coupon_Total" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="PayCash" ColumnName="PayCash" />
+          <ScalarProperty Name="CardPayCash" ColumnName="CardPayCash" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_IntegralAdjust">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_IntegralAdjust">
+        <MappingFragment StoreEntitySet="Bus_IntegralAdjust">
+          <ScalarProperty Name="IntegralAdjust_ID" ColumnName="IntegralAdjust_ID" />
+          <ScalarProperty Name="Business_Num" ColumnName="Business_Num" />
+          <ScalarProperty Name="AdjustType" ColumnName="AdjustType" />
+          <ScalarProperty Name="AdjustIntegral" ColumnName="AdjustIntegral" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BussinessID" ColumnName="Card_BussinessID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_IntegralChange">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_IntegralChange">
+        <MappingFragment StoreEntitySet="Bus_IntegralChange">
+          <ScalarProperty Name="IntegralChange_ID" ColumnName="IntegralChange_ID" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="BusinessClass" ColumnName="BusinessClass" />
+          <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+          <ScalarProperty Name="IntegralIncome" ColumnName="IntegralIncome" />
+          <ScalarProperty Name="IntegralConsume" ColumnName="IntegralConsume" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_IntegralExchange">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_IntegralExchange">
+        <MappingFragment StoreEntitySet="Bus_IntegralExchange">
+          <ScalarProperty Name="Exchange_ID" ColumnName="Exchange_ID" />
+          <ScalarProperty Name="Business_Num" ColumnName="Business_Num" />
+          <ScalarProperty Name="IntegralProduct_ID" ColumnName="IntegralProduct_ID" />
+          <ScalarProperty Name="ShopIntegralProduct_ID" ColumnName="ShopIntegralProduct_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+          <ScalarProperty Name="Coupon_ID" ColumnName="Coupon_ID" />
+          <ScalarProperty Name="Coupon_Name" ColumnName="Coupon_Name" />
+          <ScalarProperty Name="Coupon_Price" ColumnName="Coupon_Price" />
+          <ScalarProperty Name="CouponQuantity" ColumnName="CouponQuantity" />
+          <ScalarProperty Name="Exchange_Cash" ColumnName="Exchange_Cash" />
+          <ScalarProperty Name="DeductIntegral" ColumnName="DeductIntegral" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Terminal" ColumnName="Terminal" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_MarketingAnalyzeRecord">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_MarketingAnalyzeRecord">
+        <MappingFragment StoreEntitySet="Bus_MarketingAnalyzeRecord">
+          <ScalarProperty Name="MarketingAnalyzeRecord_ID" ColumnName="MarketingAnalyzeRecord_ID" />
+          <ScalarProperty Name="MarketingAnalyze_ID" ColumnName="MarketingAnalyze_ID" />
+          <ScalarProperty Name="MarketingAnalyze_Name" ColumnName="MarketingAnalyze_Name" />
+          <ScalarProperty Name="MarketingAnalyzeType" ColumnName="MarketingAnalyzeType" />
+          <ScalarProperty Name="GivenIntegral" ColumnName="GivenIntegral" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="ExecuteTime" ColumnName="ExecuteTime" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_OrderBasket">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_OrderBasket">
+        <MappingFragment StoreEntitySet="Bus_OrderBasket">
+          <ScalarProperty Name="Bask_ID" ColumnName="Bask_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="ShopProduct_ID" ColumnName="ShopProduct_ID" />
+          <ScalarProperty Name="Bask_Units" ColumnName="Bask_Units" />
+          <ScalarProperty Name="Bask_Price" ColumnName="Bask_Price" />
+          <ScalarProperty Name="Bask_Count" ColumnName="Bask_Count" />
+          <ScalarProperty Name="Bask_Discount" ColumnName="Bask_Discount" />
+          <ScalarProperty Name="Bask_Total" ColumnName="Bask_Total" />
+          <ScalarProperty Name="Bask_Zuofa" ColumnName="Bask_Zuofa" />
+          <ScalarProperty Name="Bask_Status" ColumnName="Bask_Status" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Bask_PrintStatus" ColumnName="Bask_PrintStatus" />
+          <ScalarProperty Name="Bask_Terminal" ColumnName="Bask_Terminal" />
+          <ScalarProperty Name="Bask_ScCount" ColumnName="Bask_ScCount" />
+          <ScalarProperty Name="Bask_GivenCount" ColumnName="Bask_GivenCount" />
+          <ScalarProperty Name="Bask_ReturnCount" ColumnName="Bask_ReturnCount" />
+          <ScalarProperty Name="Combo" ColumnName="Combo" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_OrderDeliverys">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_OrderDeliverys">
+        <MappingFragment StoreEntitySet="Bus_OrderDeliverys">
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Consignee" ColumnName="Consignee" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PayOnDelivery" ColumnName="PayOnDelivery" />
+          <ScalarProperty Name="ExpectTime" ColumnName="ExpectTime" />
+          <ScalarProperty Name="DeliveryFee" ColumnName="DeliveryFee" />
+          <ScalarProperty Name="DeliveryTime" ColumnName="DeliveryTime" />
+          <ScalarProperty Name="DeliveryMan" ColumnName="DeliveryMan" />
+          <ScalarProperty Name="DeliveryPhone" ColumnName="DeliveryPhone" />
+          <ScalarProperty Name="EstimateTime" ColumnName="EstimateTime" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_OrderPay">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_OrderPay">
+        <MappingFragment StoreEntitySet="Bus_OrderPay">
+          <ScalarProperty Name="OrderPay_ID" ColumnName="OrderPay_ID" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+          <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Pay_JyNum" ColumnName="Pay_JyNum" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_Orders">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_Orders">
+        <MappingFragment StoreEntitySet="Bus_Orders">
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Business_Num" ColumnName="Business_Num" />
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="Order_Class" ColumnName="Order_Class" />
+          <ScalarProperty Name="Order_Process" ColumnName="Order_Process" />
+          <ScalarProperty Name="Order_Status" ColumnName="Order_Status" />
+          <ScalarProperty Name="Seat_ID" ColumnName="Seat_ID" />
+          <ScalarProperty Name="Order_People" ColumnName="Order_People" />
+          <ScalarProperty Name="ConsumeMoney" ColumnName="ConsumeMoney" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="DiscountMoney" ColumnName="DiscountMoney" />
+          <ScalarProperty Name="CouponMoney" ColumnName="CouponMoney" />
+          <ScalarProperty Name="IntegralMoney" ColumnName="IntegralMoney" />
+          <ScalarProperty Name="ReduceMantissaMoney" ColumnName="ReduceMantissaMoney" />
+          <ScalarProperty Name="FinalMoney" ColumnName="FinalMoney" />
+          <ScalarProperty Name="ActualIncomeMoney" ColumnName="ActualIncomeMoney" />
+          <ScalarProperty Name="IsGuaZhang" ColumnName="IsGuaZhang" />
+          <ScalarProperty Name="GuaZhangMoney" ColumnName="GuaZhangMoney" />
+          <ScalarProperty Name="Order_GetIntegral" ColumnName="Order_GetIntegral" />
+          <ScalarProperty Name="CloseIntegral" ColumnName="CloseIntegral" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="OpenSeatTime" ColumnName="OpenSeatTime" />
+          <ScalarProperty Name="FinalTime" ColumnName="FinalTime" />
+          <ScalarProperty Name="Order_Password" ColumnName="Order_Password" />
+          <ScalarProperty Name="Order_Invoice" ColumnName="Order_Invoice" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Terminal" ColumnName="Terminal" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_Reservation">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_Reservation">
+        <MappingFragment StoreEntitySet="Bus_Reservation">
+          <ScalarProperty Name="Reservation_ID" ColumnName="Reservation_ID" />
+          <ScalarProperty Name="Reservation_MobilePhone" ColumnName="Reservation_MobilePhone" />
+          <ScalarProperty Name="Reservation_Name" ColumnName="Reservation_Name" />
+          <ScalarProperty Name="Reservation_People" ColumnName="Reservation_People" />
+          <ScalarProperty Name="Reservation_Time" ColumnName="Reservation_Time" />
+          <ScalarProperty Name="Reservation_Status" ColumnName="Reservation_Status" />
+          <ScalarProperty Name="Reservation_Change" ColumnName="Reservation_Change" />
+          <ScalarProperty Name="Seat_ID" ColumnName="Seat_ID" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Terminal" ColumnName="Terminal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_ReservationBasket">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_ReservationBasket">
+        <MappingFragment StoreEntitySet="Bus_ReservationBasket">
+          <ScalarProperty Name="ReservationBask_ID" ColumnName="ReservationBask_ID" />
+          <ScalarProperty Name="BusinessClass" ColumnName="BusinessClass" />
+          <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="ShopProduct_ID" ColumnName="ShopProduct_ID" />
+          <ScalarProperty Name="Units" ColumnName="Units" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Zuofa" ColumnName="Zuofa" />
+          <ScalarProperty Name="Combo" ColumnName="Combo" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_Sms">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_Sms">
+        <MappingFragment StoreEntitySet="Bus_Sms">
+          <ScalarProperty Name="Sms_ID" ColumnName="Sms_ID" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="SmsContent" ColumnName="SmsContent" />
+          <ScalarProperty Name="SmsQuantity" ColumnName="SmsQuantity" />
+          <ScalarProperty Name="SmsType" ColumnName="SmsType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_SmsBusiness">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_SmsBusiness">
+        <MappingFragment StoreEntitySet="Bus_SmsBusiness">
+          <ScalarProperty Name="SmsBusiness_Id" ColumnName="SmsBusiness_Id" />
+          <ScalarProperty Name="SmsType" ColumnName="SmsType" />
+          <ScalarProperty Name="BusinessClass" ColumnName="BusinessClass" />
+          <ScalarProperty Name="Business_Num" ColumnName="Business_Num" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="SmsContent" ColumnName="SmsContent" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="SmsSendQuantity" ColumnName="SmsSendQuantity" />
+          <ScalarProperty Name="SmsOkQuantity" ColumnName="SmsOkQuantity" />
+          <ScalarProperty Name="Back_SmsId" ColumnName="Back_SmsId" />
+          <ScalarProperty Name="Back_Status" ColumnName="Back_Status" />
+          <ScalarProperty Name="Back_DTime" ColumnName="Back_DTime" />
+          <ScalarProperty Name="Back_Desc" ColumnName="Back_Desc" />
+          <ScalarProperty Name="FailMsg" ColumnName="FailMsg" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_SmsMember">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_SmsMember">
+        <MappingFragment StoreEntitySet="Bus_SmsMember">
+          <ScalarProperty Name="SmsMember_ID" ColumnName="SmsMember_ID" />
+          <ScalarProperty Name="Sms_ID" ColumnName="Sms_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="BackStatus" ColumnName="BackStatus" />
+          <ScalarProperty Name="FailMsg" ColumnName="FailMsg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_SmsYZM">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_SmsYZM">
+        <MappingFragment StoreEntitySet="Bus_SmsYZM">
+          <ScalarProperty Name="SmsYZM_Id" ColumnName="SmsYZM_Id" />
+          <ScalarProperty Name="SmsYZM_Mob" ColumnName="SmsYZM_Mob" />
+          <ScalarProperty Name="SmsYZM_Time" ColumnName="SmsYZM_Time" />
+          <ScalarProperty Name="SmsYZM_YZM" ColumnName="SmsYZM_YZM" />
+          <ScalarProperty Name="SmsYZM_Memo" ColumnName="SmsYZM_Memo" />
+          <ScalarProperty Name="SmsYZM_Status" ColumnName="SmsYZM_Status" />
+          <ScalarProperty Name="SmsYZM_Terminal" ColumnName="SmsYZM_Terminal" />
+          <ScalarProperty Name="SmsYZM_ReturnCode" ColumnName="SmsYZM_ReturnCode" />
+          <ScalarProperty Name="SmsYZM_Error" ColumnName="SmsYZM_Error" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bus_SmsYZMRecord">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.bus_SmsYZMRecord">
+        <MappingFragment StoreEntitySet="bus_SmsYZMRecord">
+          <ScalarProperty Name="YZM_ID" ColumnName="YZM_ID" />
+          <ScalarProperty Name="YZM_MobilePhone" ColumnName="YZM_MobilePhone" />
+          <ScalarProperty Name="YZM_Value" ColumnName="YZM_Value" />
+          <ScalarProperty Name="YZM_Class" ColumnName="YZM_Class" />
+          <ScalarProperty Name="YZM_Status" ColumnName="YZM_Status" />
+          <ScalarProperty Name="YZM_Time" ColumnName="YZM_Time" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Terminal" ColumnName="Terminal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_ThirdPay">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_ThirdPay">
+        <MappingFragment StoreEntitySet="Bus_ThirdPay">
+          <ScalarProperty Name="ThirdPay_ID" ColumnName="ThirdPay_ID" />
+          <ScalarProperty Name="BusinessClass" ColumnName="BusinessClass" />
+          <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="PayBussinessNum" ColumnName="PayBussinessNum" />
+          <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+          <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="PayOverTime" ColumnName="PayOverTime" />
+          <ScalarProperty Name="BusinessJSON" ColumnName="BusinessJSON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log_CardOperationLogs">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Log_CardOperationLogs">
+        <MappingFragment StoreEntitySet="Log_CardOperationLogs">
+          <ScalarProperty Name="Log_Id" ColumnName="Log_Id" />
+          <ScalarProperty Name="Merchant_Id" ColumnName="Merchant_Id" />
+          <ScalarProperty Name="Shop_Id" ColumnName="Shop_Id" />
+          <ScalarProperty Name="Log_Type" ColumnName="Log_Type" />
+          <ScalarProperty Name="Log_Content" ColumnName="Log_Content" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Member_Id" ColumnName="Member_Id" />
+          <ScalarProperty Name="Card_Id" ColumnName="Card_Id" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log_MerchantLog">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Log_MerchantLog">
+        <MappingFragment StoreEntitySet="Log_MerchantLog">
+          <ScalarProperty Name="MerchantLog_ID" ColumnName="MerchantLog_ID" />
+          <ScalarProperty Name="MerchantLog_Type" ColumnName="MerchantLog_Type" />
+          <ScalarProperty Name="MerchantLog_Content" ColumnName="MerchantLog_Content" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log_SysLog">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Log_SysLog">
+        <MappingFragment StoreEntitySet="Log_SysLog">
+          <ScalarProperty Name="SysLog_ID" ColumnName="SysLog_ID" />
+          <ScalarProperty Name="SysLog_Type" ColumnName="SysLog_Type" />
+          <ScalarProperty Name="SysLog_Content" ColumnName="SysLog_Content" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mob_Activity">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Mob_Activity">
+        <MappingFragment StoreEntitySet="Mob_Activity">
+          <ScalarProperty Name="Activity_ID" ColumnName="Activity_ID" />
+          <ScalarProperty Name="Activity_Title" ColumnName="Activity_Title" />
+          <ScalarProperty Name="Activity_Pic" ColumnName="Activity_Pic" />
+          <ScalarProperty Name="Activity_Summary" ColumnName="Activity_Summary" />
+          <ScalarProperty Name="Activity_Content" ColumnName="Activity_Content" />
+          <ScalarProperty Name="Activity_Status" ColumnName="Activity_Status" />
+          <ScalarProperty Name="Activity_IsInke" ColumnName="Activity_IsInke" />
+          <ScalarProperty Name="Activity_StartTime" ColumnName="Activity_StartTime" />
+          <ScalarProperty Name="Activity_EndTime" ColumnName="Activity_EndTime" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mob_CardApply">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Mob_CardApply">
+        <MappingFragment StoreEntitySet="Mob_CardApply">
+          <ScalarProperty Name="Apply_ID" ColumnName="Apply_ID" />
+          <ScalarProperty Name="Apply_Time" ColumnName="Apply_Time" />
+          <ScalarProperty Name="Discount_ID" ColumnName="Discount_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Apply_Status" ColumnName="Apply_Status" />
+          <ScalarProperty Name="Member_Name" ColumnName="Member_Name" />
+          <ScalarProperty Name="Member_Sex" ColumnName="Member_Sex" />
+          <ScalarProperty Name="Member_MobilePhone" ColumnName="Member_MobilePhone" />
+          <ScalarProperty Name="IsSend" ColumnName="IsSend" />
+          <ScalarProperty Name="Apply_Address" ColumnName="Apply_Address" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Admins">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_Admins">
+        <MappingFragment StoreEntitySet="Sys_Admins">
+          <ScalarProperty Name="Admin_Id" ColumnName="Admin_Id" />
+          <ScalarProperty Name="Admin_Name" ColumnName="Admin_Name" />
+          <ScalarProperty Name="Admin_Password" ColumnName="Admin_Password" />
+          <ScalarProperty Name="Admin_TrueName" ColumnName="Admin_TrueName" />
+          <ScalarProperty Name="Admin_Status" ColumnName="Admin_Status" />
+          <ScalarProperty Name="Grop_IdGroup" ColumnName="Grop_IdGroup" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Area">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_Area">
+        <MappingFragment StoreEntitySet="Sys_Area">
+          <ScalarProperty Name="Area_Id" ColumnName="Area_Id" />
+          <ScalarProperty Name="Area_Code" ColumnName="Area_Code" />
+          <ScalarProperty Name="Area_Name" ColumnName="Area_Name" />
+          <ScalarProperty Name="Father" ColumnName="Father" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_BaseInfo">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_BaseInfo">
+        <MappingFragment StoreEntitySet="Sys_BaseInfo">
+          <ScalarProperty Name="BaseInfo_ID" ColumnName="BaseInfo_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BaseInfoClass" ColumnName="BaseInfoClass" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_BonusClass">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_BonusClass">
+        <MappingFragment StoreEntitySet="Sys_BonusClass">
+          <ScalarProperty Name="BonusClass_ID" ColumnName="BonusClass_ID" />
+          <ScalarProperty Name="BonusClass_Code" ColumnName="BonusClass_Code" />
+          <ScalarProperty Name="BonusClass_Value" ColumnName="BonusClass_Value" />
+          <ScalarProperty Name="BonusClass_Name" ColumnName="BonusClass_Name" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_City">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_City">
+        <MappingFragment StoreEntitySet="Sys_City">
+          <ScalarProperty Name="City_Id" ColumnName="City_Id" />
+          <ScalarProperty Name="City_Code" ColumnName="City_Code" />
+          <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+          <ScalarProperty Name="Father" ColumnName="Father" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_CommerceGroup">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_CommerceGroup">
+        <MappingFragment StoreEntitySet="Sys_CommerceGroup">
+          <ScalarProperty Name="CommerceGroup_ID" ColumnName="CommerceGroup_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Prov_ID" ColumnName="Prov_ID" />
+          <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+          <ScalarProperty Name="Area_ID" ColumnName="Area_ID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_MenuFunction">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_MenuFunction">
+        <MappingFragment StoreEntitySet="Sys_MenuFunction">
+          <ScalarProperty Name="FunctionID" ColumnName="FunctionID" />
+          <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_MerchantContract">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_MerchantContract">
+        <MappingFragment StoreEntitySet="Sys_MerchantContract">
+          <ScalarProperty Name="Contract_Id" ColumnName="Contract_Id" />
+          <ScalarProperty Name="Contract_Num" ColumnName="Contract_Num" />
+          <ScalarProperty Name="Contract_CompanyLinkMan" ColumnName="Contract_CompanyLinkMan" />
+          <ScalarProperty Name="Contract_MerchantLinkMan" ColumnName="Contract_MerchantLinkMan" />
+          <ScalarProperty Name="Contract_FDate" ColumnName="Contract_FDate" />
+          <ScalarProperty Name="Contract_LDate" ColumnName="Contract_LDate" />
+          <ScalarProperty Name="Contract_Status" ColumnName="Contract_Status" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Merchant_Id" ColumnName="Merchant_Id" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_MerchantModule">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_MerchantModule">
+        <MappingFragment StoreEntitySet="Sys_MerchantModule">
+          <ScalarProperty Name="MerchantModule_ID" ColumnName="MerchantModule_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Module_ID" ColumnName="Module_ID" />
+          <ScalarProperty Name="Module_Code" ColumnName="Module_Code" />
+          <ScalarProperty Name="Module_Name" ColumnName="Module_Name" />
+          <ScalarProperty Name="Module_Perent" ColumnName="Module_Perent" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Power">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_Power">
+        <MappingFragment StoreEntitySet="Sys_Power">
+          <ScalarProperty Name="Power_ID" ColumnName="Power_ID" />
+          <ScalarProperty Name="Power_Code" ColumnName="Power_Code" />
+          <ScalarProperty Name="Power_Name" ColumnName="Power_Name" />
+          <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="OperateButtonString" ColumnName="OperateButtonString" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_SystemModule">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_SystemModule">
+        <MappingFragment StoreEntitySet="Sys_SystemModule">
+          <ScalarProperty Name="Module_ID" ColumnName="Module_ID" />
+          <ScalarProperty Name="Module_Name" ColumnName="Module_Name" />
+          <ScalarProperty Name="Module_Code" ColumnName="Module_Code" />
+          <ScalarProperty Name="TerminalType" ColumnName="TerminalType" />
+          <ScalarProperty Name="Module_Perent" ColumnName="Module_Perent" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_CommerceGroup">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_CommerceGroup">
+        <MappingFragment StoreEntitySet="Bas_CommerceGroup">
+          <ScalarProperty Name="CommerceGroup_ID" ColumnName="CommerceGroup_ID" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_MemberAddress">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_MemberAddress">
+        <MappingFragment StoreEntitySet="Bas_MemberAddress">
+          <ScalarProperty Name="Addres_Id" ColumnName="Addres_Id" />
+          <ScalarProperty Name="Member_Name" ColumnName="Member_Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_MerchantClass">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_MerchantClass">
+        <MappingFragment StoreEntitySet="Sys_MerchantClass">
+          <ScalarProperty Name="MerchantClass_Id" ColumnName="MerchantClass_Id" />
+          <ScalarProperty Name="MerchantClass_Name" ColumnName="MerchantClass_Name" />
+          <ScalarProperty Name="MerchantClass_Del" ColumnName="MerchantClass_Del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Province">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_Province">
+        <MappingFragment StoreEntitySet="Sys_Province">
+          <ScalarProperty Name="Prov_Id" ColumnName="Prov_Id" />
+          <ScalarProperty Name="Prov_Code" ColumnName="Prov_Code" />
+          <ScalarProperty Name="Prov_Name" ColumnName="Prov_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_SmsTemplate">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Sys_SmsTemplate">
+        <MappingFragment StoreEntitySet="Sys_SmsTemplate">
+          <ScalarProperty Name="SmsTemplate_ID" ColumnName="SmsTemplate_ID" />
+          <ScalarProperty Name="SmsTemplate_Name" ColumnName="SmsTemplate_Name" />
+          <ScalarProperty Name="SmsTemplate_EnName" ColumnName="SmsTemplate_EnName" />
+          <ScalarProperty Name="SmsTemplate_Content" ColumnName="SmsTemplate_Content" />
+          <ScalarProperty Name="SmsTemplate_BeforeDate" ColumnName="SmsTemplate_BeforeDate" />
+          <ScalarProperty Name="SmsType" ColumnName="SmsType" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcArrears" FunctionImportName="CalcArrears">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcArrears_Result">
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcCardRecharge" FunctionImportName="CalcCardRecharge">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcCardRecharge_Result">
+          <ScalarProperty Name="Cash" ColumnName="Cash" />
+          <ScalarProperty Name="CashGivenMoney" ColumnName="CashGivenMoney" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="BankGivenMoney" ColumnName="BankGivenMoney" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcConsumption" FunctionImportName="CalcConsumption">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcConsumption_Result">
+          <ScalarProperty Name="Consumption" ColumnName="Consumption" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcCustomerStream" FunctionImportName="CalcCustomerStream">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcCustomerStream_Result">
+          <ScalarProperty Name="MemberTotal" ColumnName="MemberTotal" />
+          <ScalarProperty Name="CustomerTotal" ColumnName="CustomerTotal" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcCustomerStreamByAge" FunctionImportName="CalcCustomerStreamByAge">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcCustomerStreamByAge_Result">
+          <ScalarProperty Name="AgeRange" ColumnName="AgeRange" />
+          <ScalarProperty Name="Turnover" ColumnName="Turnover" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcCustomerStreamBySex" FunctionImportName="CalcCustomerStreamBySex">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcCustomerStreamBySex_Result">
+          <ScalarProperty Name="ManTotal" ColumnName="ManTotal" />
+          <ScalarProperty Name="WomanTotal" ColumnName="WomanTotal" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcDiscountDeduction" FunctionImportName="CalcDiscountDeduction">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcDiscountDeduction_Result">
+          <ScalarProperty Name="DiscountMoney" ColumnName="DiscountMoney" />
+          <ScalarProperty Name="CouponMoney" ColumnName="CouponMoney" />
+          <ScalarProperty Name="ReduceMantissaMoney" ColumnName="ReduceMantissaMoney" />
+          <ScalarProperty Name="IntegralMoney" ColumnName="IntegralMoney" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcPayByType" FunctionImportName="CalcPayByType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcPayByType_Result">
+          <ScalarProperty Name="Cash" ColumnName="Cash" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="Member" ColumnName="Member" />
+          <ScalarProperty Name="Alipay" ColumnName="Alipay" />
+          <ScalarProperty Name="Wechat" ColumnName="Wechat" />
+          <ScalarProperty Name="GroupCoupon" ColumnName="GroupCoupon" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcPeopleAndAVG" FunctionImportName="CalcPeopleAndAVG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcPeopleAndAVG_Result">
+          <ScalarProperty Name="OrderCount" ColumnName="OrderCount" />
+          <ScalarProperty Name="Order_People" ColumnName="Order_People" />
+          <ScalarProperty Name="PeopleAVG" ColumnName="PeopleAVG" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcProductPrice" FunctionImportName="CalcProductPrice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcProductPrice_Result">
+          <ScalarProperty Name="MerchantBaseInfo_Name" ColumnName="MerchantBaseInfo_Name" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcTurnover" FunctionImportName="CalcTurnover">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcTurnover_Result">
+          <ScalarProperty Name="MemberTotal" ColumnName="MemberTotal" />
+          <ScalarProperty Name="CustomerTotal" ColumnName="CustomerTotal" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcTurnoverByAge" FunctionImportName="CalcTurnoverByAge">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcTurnoverByAge_Result">
+          <ScalarProperty Name="AgeRange" ColumnName="AgeRange" />
+          <ScalarProperty Name="Turnover" ColumnName="Turnover" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.CalcTurnoverBySex" FunctionImportName="CalcTurnoverBySex">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.CalcTurnoverBySex_Result">
+          <ScalarProperty Name="ManTotal" ColumnName="ManTotal" />
+          <ScalarProperty Name="WomanTotal" ColumnName="WomanTotal" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.DateSplit" FunctionImportName="DateSplit">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.DateSplit_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="begintime" ColumnName="begintime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.DateSplitByDMY" FunctionImportName="DateSplitByDMY">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.DateSplitByDMY_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="begintime" ColumnName="begintime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.NumSplit" FunctionImportName="NumSplit">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.NumSplit_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BeginNum" ColumnName="BeginNum" />
+          <ScalarProperty Name="EndNum" ColumnName="EndNum" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.StrToTable" FunctionImportName="StrToTable">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.StrToTable_Result">
+          <ScalarProperty Name="str2table" ColumnName="str2table" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="InkeServer.DataMapping.Model.Store.TimeSplit" FunctionImportName="TimeSplit">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.TimeSplit_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BeginTime" ColumnName="BeginTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Biz_GetSeqNo" FunctionName="InkeServer.DataMapping.Model.Store.Biz_GetSeqNo" />
+    <FunctionImportMapping FunctionImportName="Rpt_BossReport" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_BossReport" />
+    <FunctionImportMapping FunctionImportName="Rpt_BusinessDates" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_BusinessDates" />
+    <FunctionImportMapping FunctionImportName="Rpt_BusinessHours" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_BusinessHours" />
+    <FunctionImportMapping FunctionImportName="Rpt_BusinessTimeSlot" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_BusinessTimeSlot">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_BusinessTimeSlot_Result">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="TotalPercent" ColumnName="TotalPercent" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="CustomerPercent" ColumnName="CustomerPercent" />
+          <ScalarProperty Name="Member" ColumnName="Member" />
+          <ScalarProperty Name="MemberPercent" ColumnName="MemberPercent" />
+          <ScalarProperty Name="TotalMoney" ColumnName="TotalMoney" />
+          <ScalarProperty Name="TotalMoneyPercent" ColumnName="TotalMoneyPercent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_CouponMemoryUsage" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_CouponMemoryUsage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_CouponMemoryUsage_Result">
+          <ScalarProperty Name="Coupon_ID" ColumnName="Coupon_ID" />
+          <ScalarProperty Name="Coupon_BuyPrice" ColumnName="Coupon_BuyPrice" />
+          <ScalarProperty Name="Coupon_Name" ColumnName="Coupon_Name" />
+          <ScalarProperty Name="Unused" ColumnName="Unused" />
+          <ScalarProperty Name="UnusedPercent" ColumnName="UnusedPercent" />
+          <ScalarProperty Name="Used" ColumnName="Used" />
+          <ScalarProperty Name="UsedPercent" ColumnName="UsedPercent" />
+          <ScalarProperty Name="Overdue" ColumnName="Overdue" />
+          <ScalarProperty Name="OverduePercent" ColumnName="OverduePercent" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="TotalPercent" ColumnName="TotalPercent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_CouponMemoryUsageByCouponID" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_CouponMemoryUsageByCouponID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_CouponMemoryUsageByCouponID_Result">
+          <ScalarProperty Name="Coupon_ID" ColumnName="Coupon_ID" />
+          <ScalarProperty Name="Coupon_Name" ColumnName="Coupon_Name" />
+          <ScalarProperty Name="Unused" ColumnName="Unused" />
+          <ScalarProperty Name="Used" ColumnName="Used" />
+          <ScalarProperty Name="Overdue" ColumnName="Overdue" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_CouponSettlement" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_CouponSettlement">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_CouponSettlement_Result">
+          <ScalarProperty Name="Shop_Name" ColumnName="Shop_Name" />
+          <ScalarProperty Name="Coupon_Name" ColumnName="Coupon_Name" />
+          <ScalarProperty Name="Unused" ColumnName="Unused" />
+          <ScalarProperty Name="Used" ColumnName="Used" />
+          <ScalarProperty Name="Overdue" ColumnName="Overdue" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_CustomerStreamAnalysis" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_CustomerStreamAnalysis">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_CustomerStreamAnalysis_Result">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="MemberTotal" ColumnName="MemberTotal" />
+          <ScalarProperty Name="CustomerTotal" ColumnName="CustomerTotal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_MarketingAnalysisByCard" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_MarketingAnalysisByCard">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_MarketingAnalysisByCard_Result">
+          <ScalarProperty Name="MarketingAnalyze_Name" ColumnName="MarketingAnalyze_Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="Card_Num" ColumnName="Card_Num" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Member_Name" ColumnName="Member_Name" />
+          <ScalarProperty Name="Member_MobilePhone" ColumnName="Member_MobilePhone" />
+          <ScalarProperty Name="Member_Birthday" ColumnName="Member_Birthday" />
+          <ScalarProperty Name="Member_RegisterTime" ColumnName="Member_RegisterTime" />
+          <ScalarProperty Name="Member_Sex" ColumnName="Member_Sex" />
+          <ScalarProperty Name="LastConsumeTime" ColumnName="LastConsumeTime" />
+          <ScalarProperty Name="Card_Cash" ColumnName="Card_Cash" />
+          <ScalarProperty Name="Card_Integral" ColumnName="Card_Integral" />
+          <ScalarProperty Name="ConsumeCount" ColumnName="ConsumeCount" />
+          <ScalarProperty Name="ConsumeMoney" ColumnName="ConsumeMoney" />
+          <ScalarProperty Name="DeductionCount" ColumnName="DeductionCount" />
+          <ScalarProperty Name="DeductionMoney" ColumnName="DeductionMoney" />
+          <ScalarProperty Name="RechargeCount" ColumnName="RechargeCount" />
+          <ScalarProperty Name="RechargeMoney" ColumnName="RechargeMoney" />
+          <ScalarProperty Name="UnusedCoupon" ColumnName="UnusedCoupon" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_MembershipGrowth" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_MembershipGrowth">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_MembershipGrowth_Result">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_NumberOfDiners" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_NumberOfDiners">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_NumberOfDiners_Result">
+          <ScalarProperty Name="Min0Max3" ColumnName="Min0Max3" />
+          <ScalarProperty Name="Min4Max6" ColumnName="Min4Max6" />
+          <ScalarProperty Name="Min7Max9" ColumnName="Min7Max9" />
+          <ScalarProperty Name="Min10Max13" ColumnName="Min10Max13" />
+          <ScalarProperty Name="Min14" ColumnName="Min14" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_PayTypeAnalysis" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_PayTypeAnalysis">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_PayTypeAnalysis_Result">
+          <ScalarProperty Name="Cash" ColumnName="Cash" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="Member" ColumnName="Member" />
+          <ScalarProperty Name="Alipay" ColumnName="Alipay" />
+          <ScalarProperty Name="Wechat" ColumnName="Wechat" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_ProductSalesRanking" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_ProductSalesRanking">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_ProductSalesRanking_Result">
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Ranking" ColumnName="Ranking" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Percent" ColumnName="Percent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_RechargeDeductionSettlement" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_RechargeDeductionSettlement">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_RechargeDeductionSettlement_Result">
+          <ScalarProperty Name="Recharge" ColumnName="Recharge" />
+          <ScalarProperty Name="Deduction" ColumnName="Deduction" />
+          <ScalarProperty Name="Settlement" ColumnName="Settlement" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_ReportClose" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_ReportClose" />
+    <FunctionImportMapping FunctionImportName="Rpt_StoreTurnoverAnalysis" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_StoreTurnoverAnalysis">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_StoreTurnoverAnalysis_Result">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="MemberTotal" ColumnName="MemberTotal" />
+          <ScalarProperty Name="CustomerTotal" ColumnName="CustomerTotal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_TableTurnoverRate" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_TableTurnoverRate" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="InkeServer.DataMapping.Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="InkeServer.DataMapping.Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="InkeServer.DataMapping.Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="InkeServer.DataMapping.Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="InkeServer.DataMapping.Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="InkeServer.DataMapping.Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="InkeServer.DataMapping.Model.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="SyncOrderInformation" FunctionName="InkeServer.DataMapping.Model.Store.SyncOrderInformation" />
+    <EntitySetMapping Name="IBoxPaySerial">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.IBoxPaySerial">
+        <MappingFragment StoreEntitySet="IBoxPaySerial">
+          <ScalarProperty Name="ThirdPay_ID" ColumnName="ThirdPay_ID" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_RecordCenterIndex" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_RecordCenterIndex">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_RecordCenterIndex_Result">
+          <ScalarProperty Name="TotalConsume" ColumnName="TotalConsume" />
+          <ScalarProperty Name="CustomConsume" ColumnName="CustomConsume" />
+          <ScalarProperty Name="MemberConsume" ColumnName="MemberConsume" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Bus_BookOrderPay">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bus_BookOrderPay">
+        <MappingFragment StoreEntitySet="Bus_BookOrderPay">
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Adjust" ColumnName="Adjust" />
+          <ScalarProperty Name="Pay_JyNum" ColumnName="Pay_JyNum" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Card_BusinessID" ColumnName="Card_BusinessID" />
+          <ScalarProperty Name="Card_ID" ColumnName="Card_ID" />
+          <ScalarProperty Name="Book_ID" ColumnName="Book_ID" />
+          <ScalarProperty Name="PayTime" ColumnName="PayTime" />
+          <ScalarProperty Name="PayMoney" ColumnName="PayMoney" />
+          <ScalarProperty Name="PayType" ColumnName="PayType" />
+          <ScalarProperty Name="BookOrderPay_ID" ColumnName="BookOrderPay_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_MerchantImg">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_MerchantImg">
+        <MappingFragment StoreEntitySet="Bas_MerchantImg">
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Img_IsIndex" ColumnName="Img_IsIndex" />
+          <ScalarProperty Name="Img_Type" ColumnName="Img_Type" />
+          <ScalarProperty Name="Img_Url" ColumnName="Img_Url" />
+          <ScalarProperty Name="Img_ID" ColumnName="Img_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_ProductSalse" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_ProductSalse">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_ProductSalse_Result">
+          <ScalarProperty Name="MerchantBaseInfo_Name" ColumnName="MerchantBaseInfo_Name" />
+          <ScalarProperty Name="Shop_Name" ColumnName="Shop_Name" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Product_Price" ColumnName="Product_Price" />
+          <ScalarProperty Name="ProductNum" ColumnName="ProductNum" />
+          <ScalarProperty Name="SalesQuantity" ColumnName="SalesQuantity" />
+          <ScalarProperty Name="GivenQuantity" ColumnName="GivenQuantity" />
+          <ScalarProperty Name="ReturnQuantity" ColumnName="ReturnQuantity" />
+          <ScalarProperty Name="SalesMoney" ColumnName="SalesMoney" />
+          <ScalarProperty Name="StorageQuantity" ColumnName="StorageQuantity" />
+          <ScalarProperty Name="StoragePrice" ColumnName="StoragePrice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_ReportBusiness" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_ReportBusiness" />
+    <FunctionImportMapping FunctionImportName="AddMerchantModule" FunctionName="InkeServer.DataMapping.Model.Store.AddMerchantModule" />
+    <FunctionImportMapping FunctionImportName="Rpt_RecordCenter" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_RecordCenter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_RecordCenter_Result">
+          <ScalarProperty Name="CustomerConsume" ColumnName="CustomerConsume" />
+          <ScalarProperty Name="MemberConsume" ColumnName="MemberConsume" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Bas_ProductStorage">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ProductStorage">
+        <MappingFragment StoreEntitySet="Bas_ProductStorage">
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Opertaor" ColumnName="Opertaor" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="LowerLimit" ColumnName="LowerLimit" />
+          <ScalarProperty Name="ProductStorageBatch_ID" ColumnName="ProductStorageBatch_ID" />
+          <ScalarProperty Name="StarageTime" ColumnName="StarageTime" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="StorageNum" ColumnName="StorageNum" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="ShopProduct_ID" ColumnName="ShopProduct_ID" />
+          <ScalarProperty Name="ProductStorage_ID" ColumnName="ProductStorage_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bas_ProductStorageBatch">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_ProductStorageBatch">
+        <MappingFragment StoreEntitySet="Bas_ProductStorageBatch">
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="StorageTime" ColumnName="StorageTime" />
+          <ScalarProperty Name="Handler" ColumnName="Handler" />
+          <ScalarProperty Name="StorageBatch_Num" ColumnName="StorageBatch_Num" />
+          <ScalarProperty Name="ProductStorageBatch_ID" ColumnName="ProductStorageBatch_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Rpt_ProductStorageStatistics" FunctionName="InkeServer.DataMapping.Model.Store.Rpt_ProductStorageStatistics">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InkeServer.DataMapping.Model.Rpt_ProductStorageStatistics_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="MerchantBaseInfo_Name" ColumnName="MerchantBaseInfo_Name" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Product_Unit" ColumnName="Product_Unit" />
+          <ScalarProperty Name="Shop_Name" ColumnName="Shop_Name" />
+          <ScalarProperty Name="StorageTotal" ColumnName="StorageTotal" />
+          <ScalarProperty Name="SaleTotal" ColumnName="SaleTotal" />
+          <ScalarProperty Name="InitialStorageTotal" ColumnName="InitialStorageTotal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Bas_Account">
+      <EntityTypeMapping TypeName="InkeServer.DataMapping.Model.Bas_Account">
+        <MappingFragment StoreEntitySet="Bas_Account">
+          <ScalarProperty Name="Account_LoginINPOS" ColumnName="Account_LoginINPOS" />
+          <ScalarProperty Name="OptionTimestamp" ColumnName="OptionTimestamp" />
+          <ScalarProperty Name="Del" ColumnName="Del" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="OperationTime" ColumnName="OperationTime" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="Shop_ID" ColumnName="Shop_ID" />
+          <ScalarProperty Name="Merchant_ID" ColumnName="Merchant_ID" />
+          <ScalarProperty Name="Position_ID" ColumnName="Position_ID" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Account_LoginCRM" ColumnName="Account_LoginCRM" />
+          <ScalarProperty Name="Account_LoginKFT" ColumnName="Account_LoginKFT" />
+          <ScalarProperty Name="Account_LoginPOS" ColumnName="Account_LoginPOS" />
+          <ScalarProperty Name="Account_Status" ColumnName="Account_Status" />
+          <ScalarProperty Name="Account_Memo" ColumnName="Account_Memo" />
+          <ScalarProperty Name="Account_Password" ColumnName="Account_Password" />
+          <ScalarProperty Name="Account_Login" ColumnName="Account_Login" />
+          <ScalarProperty Name="Account_ID" ColumnName="Account_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

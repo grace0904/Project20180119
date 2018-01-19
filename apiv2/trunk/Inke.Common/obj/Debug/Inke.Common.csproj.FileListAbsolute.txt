@@ -1,0 +1,7 @@
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\bin\Debug\Inke.Common.XML
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\bin\Debug\Inke.Common.dll
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\bin\Debug\Inke.Common.pdb
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\bin\Debug\Newtonsoft.Json.dll
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\bin\Debug\Newtonsoft.Json.xml
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\obj\Debug\Inke.Common.dll
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\Inke.Common\obj\Debug\Inke.Common.pdb

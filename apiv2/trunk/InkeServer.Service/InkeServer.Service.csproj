@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8EA6491-E7DD-4649-A2FF-26FDD6038F69}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InkeServer.Service</RootNamespace>
+    <AssemblyName>InkeServer.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MarketingCenter\IAutoPromotionService.cs" />
+    <Compile Include="MarketingCenter\IMarketAnalysisService.cs" />
+    <Compile Include="MemberCard\IMemberCardService.cs" />
+    <Compile Include="MemberManage\IMemberService.cs" />
+    <Compile Include="RecordCenter\IThirdPayService.cs" />
+    <Compile Include="ReportCenter\IBossPhoneService.cs" />
+    <Compile Include="ReportCenter\IBusinessReportService.cs" />
+    <Compile Include="ReportCenter\IBusinessStatisticsService.cs" />
+    <Compile Include="ReportCenter\ICrossShopSettlementService.cs" />
+    <Compile Include="ReportCenter\IStoreDataAnalysisService.cs" />
+    <Compile Include="SeetingCenter\IAccountService.cs" />
+    <Compile Include="SeetingCenter\IEmployeeService.cs" />
+    <Compile Include="SeetingCenter\IMerchantImgService.cs" />
+    <Compile Include="SeetingCenter\IPositionService.cs" />
+    <Compile Include="OrderManage\IOrderService.cs" />
+    <Compile Include="RecordCenter\IArrearsRecordService.cs" />
+    <Compile Include="RecordCenter\IMembershipCardService.cs" />
+    <Compile Include="RecordCenter\ICardRechargeService.cs" />
+    <Compile Include="SeetingCenter\IShopBookService.cs" />
+    <Compile Include="SeetingCenter\IShopProductsService.cs" />
+    <Compile Include="Bases\ILoginService.cs" />
+    <Compile Include="SeetingCenter\IMerchantBaseService.cs" />
+    <Compile Include="SeetingCenter\ISeatClassService.cs" />
+    <Compile Include="SeetingCenter\IShopIntegralService.cs" />
+    <Compile Include="SeetingCenter\IShopSeatService.cs" />
+    <Compile Include="SeetingCenter\IShopService.cs" />
+    <Compile Include="Bases\ISignaturerService.cs" />
+    <Compile Include="SeetingCenter\ISmsTemplateService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bases\ISysLogService.cs" />
+    <Compile Include="Bases\ICacheService.cs" />
+    <Compile Include="SeetingCenter\IComboGroupService.cs" />
+    <Compile Include="SeetingCenter\ICardDiscountTypeService.cs" />
+    <Compile Include="SeetingCenter\IComboProductService.cs" />
+    <Compile Include="SeetingCenter\ICouponsService.cs" />
+    <Compile Include="SeetingCenter\IMerchantConfigService.cs" />
+    <Compile Include="SeetingCenter\IMerchantProductService.cs" />
+    <Compile Include="SeetingCenter\IMerchantScoreProductService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordCenter\IConsumeRecordService.cs" />
+    <Compile Include="RecordCenter\ICouponRechargeSercice.cs" />
+    <Compile Include="RecordCenter\IIntegralAdjustService.cs" />
+    <Compile Include="RecordCenter\IIntegralExchangeService.cs" />
+    <Compile Include="RecordCenter\IRecordCenterIndexService.cs" />
+    <Compile Include="SeetingCenter\ITakeOutService.cs" />
+    <Compile Include="StockManage\IStockServie.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inke.Common\Inke.Common.csproj">
+      <Project>{b0ff1ef7-0f82-4f7b-86fb-48023bd945dd}</Project>
+      <Name>Inke.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InkeServer.Model\InkeServer.Model.csproj">
+      <Project>{3ec908a0-7aa1-4418-a6da-9a5937bb2053}</Project>
+      <Name>InkeServer.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InkeServer\InkeServer.csproj">
+      <Project>{6a4a1ebc-42bd-479d-951f-52b4e9ac417f}</Project>
+      <Name>InkeServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

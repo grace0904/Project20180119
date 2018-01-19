@@ -1,0 +1,573 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Inke.Common</name>
+    </assembly>
+    <members>
+        <member name="T:System.Collections.Generic.CollectionExtensions">
+            <summary>
+            集合扩展
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.CollectionExtensions.AppendTo``1(``0,System.Collections.Generic.List{``0})">
+            <summary>
+            把对象追加到集合中
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:System.Collections.Generic.CollectionExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            集合循环
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable"></param>
+            <param name="action"></param>
+        </member>
+        <member name="T:System.EnumExtensions">
+            <summary>
+            枚举运算扩展
+            </summary>
+        </member>
+        <member name="M:System.EnumExtensions.Value(System.Enum)">
+            <summary>
+            获取枚举的Int转换值
+            </summary>
+            <param name="value">枚举值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.Value``1(System.Enum)">
+            <summary>
+            获取枚举的T转换值
+            </summary>
+            <param name="value">枚举值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.ToEnum``1(System.Int32)">
+            <summary>
+            将Int类型转换为枚举类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.ToEnum``1(System.Int64)">
+            <summary>
+            将long类型转换为枚举类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.ToEnum``1(System.Int16)">
+            <summary>
+            将short类型转换为枚举类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.ToEnum``1(System.Byte)">
+            <summary>
+            将Byte类型转换为枚举类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.ToEnum``1(System.String)">
+            <summary>
+            将String类型转换为枚举类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.Contains(System.Enum,System.Enum)">
+            <summary>
+            判断"枚举组"中是否包含"枚举值"
+            <para>1."枚举组"及"枚举值"必须为int类型或可转换为int类型</para>
+            <para>2."枚举组"可作为位域（即一组标志）处理，即应用[Flags]标签</para>
+            </summary>
+            <param name="group">枚举组</param>
+            <param name="value">枚举值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.Contains(System.Enum,System.Int32)">
+            <summary>
+            判断"枚举组"中是否包含"枚举值"
+            <para>1."枚举组"及"枚举值"必须为int类型或可转换为int类型</para>
+            <para>2."枚举组"可作为位域（即一组标志）处理，即应用[Flags]标签</para>
+            </summary>
+            <param name="group">枚举组</param>
+            <param name="value">枚举值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.Contains(System.Int32,System.Int32)">
+            <summary>
+            判断"枚举组"中是否包含"枚举值"
+            <para>1."枚举组"及"枚举值"必须为int类型或可转换为int类型</para>
+            <para>2."枚举组"可作为位域（即一组标志）处理，即应用[Flags]标签</para>
+            </summary>
+            <param name="group">枚举组值</param>
+            <param name="value">枚举值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.Members``1(System.Enum)">
+            <summary>
+            获取"枚举组的值"中的所有成员
+            </summary>
+            <typeparam name="T">成员的枚举类型</typeparam>
+            <param name="group">枚举组的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.Members``1(System.Int32)">
+            <summary>
+            获取"枚举组的值"中的所有成员
+            </summary>
+            <typeparam name="T">成员的枚举类型</typeparam>
+            <param name="group">枚举组的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.EnumExtensions.Members``2(System.String)">
+            <summary>
+            获取"枚举组的值"中的所有成员
+            </summary>
+            <typeparam name="T">成员的枚举类型</typeparam>
+            <param name="group">枚举组的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.ExceptionExtensions.MustNotNull``1(``0,System.String)">
+            <summary>
+            不允许为空验证，为空则抛出BusinessException异常，传入错误码生成对应的错误返回信息。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="code"></param>
+        </member>
+        <member name="M:Inke.Common.Extentions.ExceptionExtensions.MustIsNull``1(``0,System.String)">
+            <summary>
+            必须为空验证，不为空则抛出BusinessException异常，传入错误码生成对应的错误返回信息。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="code"></param>
+        </member>
+        <member name="T:System.StringExtensions">
+            <summary>
+            字符串类扩展方法
+            </summary>
+        </member>
+        <member name="M:System.StringExtensions.IsNullOrEmpty(System.String)">
+            <summary>
+            判断字符串为NULL或""
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.StringExtensions.NotNullOrEmpty(System.String)">
+            <summary>
+            判断字符串为非NULL或""
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.StringExtensions.Format(System.String,System.Object)">
+            <summary>
+            string formator,replece string.Format
+            </summary>
+            <example>string result = StrFormater.Format(@"Hello @Name! Welcome to C#!", new { Name = "World" });///</example>
+            <param name="template"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.StringExtensions.Contractions(System.String,System.Int32,System.String)">
+            <summary>
+            长字符串截断缩略
+            </summary>
+            <param name="s">字符串</param>
+            <param name="length">最大长度</param>
+            <param name="replace">替代文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ConvertTo``1(System.Object)">
+            <summary>
+            结构类型转换
+            </summary>
+            <typeparam name="T">struct</typeparam>
+            <param name="obj">要转换的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ChangeType``1(System.Object)">
+            <summary>
+            类型尝试转换
+            </summary>
+            <typeparam name="T">struct</typeparam>
+            <param name="obj">要转换的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.TypeAssign``1(``0,``0)">
+            <summary>
+            把源实例的属性值赋值到目标实例的属性中，不可读/写的属性无法赋值
+            </summary>
+            <typeparam name="T">实例类型</typeparam>
+            <param name="source">源实例</param>
+            <param name="target">目标实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.TypeAssign``2(``0,``1)">
+            <summary>
+            把源实例的属性值赋值到目标实例的属性中，不可读/写的属性无法赋值
+            </summary>
+            <typeparam name="T1">源实例类型</typeparam>
+            <typeparam name="T2">目标实例类型</typeparam>
+            <param name="source">源实例</param>
+            <param name="target">目标实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToHexString(System.Byte[])">
+            <summary>
+            获取byte数组转换为十六进制字符串
+            </summary>
+            <param name="byteArray"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.FromHexString(System.String)">
+            <summary>
+            获取十六进制字符串转换为byte数组
+            </summary>
+            <param name="hexString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToDecimal(System.String)">
+            <summary>
+            字符串转换为Decimal，失败返回0
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToDecimal(System.String,System.Decimal)">
+            <summary>
+            字符串转换Decimal，如果失败使用指定值
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToInt32(System.String)">
+            <summary>
+            字符串转换Int32，失败返回0
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToInt32(System.String,System.Int32)">
+            <summary>
+            字符串转换Int32，失败返回指定值
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToInt32(System.Object)">
+            <summary>
+            对象转换为Int32，失败返回0
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToInt32(System.Object,System.Int32)">
+            <summary>
+            对象转换为Int32，失败返回指定值
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToFloat(System.String)">
+            <summary>
+            字符串转换为Float，失败返回0
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToFloat(System.String,System.Single)">
+            <summary>
+            字符串转换Float，失败返回指定值
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToDateTime(System.String,System.DateTime)">
+            <summary>
+            字符串转换时间值，失败返回指定值
+            </summary>
+            <param name="strDate"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.Formart(System.DateTime)">
+            <summary>
+            将时间转换为，{0}/年/月/日/时/分/秒 前
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToGuid(System.String)">
+            <summary>
+            字符串转换为Decimal，失败返回0
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Extentions.TypeExtentions.ToGuid(System.String,System.Guid)">
+            <summary>
+            字符串转换Decimal，如果失败使用指定值
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Helpers.CheckInput.CheckMobile(System.String)">
+            <summary>
+            检查字符串是否为手机号
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Helpers.DateFormat.FormatDateToDate(System.String)">
+            <summary>
+            格式化日期为纯日期格式（yyyy-MM-dd）
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Helpers.DateFormat.FormatDateToDateTime(System.String)">
+            <summary>
+            格式化日期为纯日期格式（yyyy-MM-dd 00:00:00）
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Inke.Common.Helpers.DESer">
+            <summary>
+            DES加解密帮助类
+            </summary>
+        </member>
+        <member name="M:Inke.Common.Helpers.DESer.Encryption(System.String)">
+            <summary>
+            DES加密
+            </summary>
+            <param name="clearText">明文</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Inke.Common.Helpers.DESer.Decryption(System.String)">
+            <summary>
+            DES解密
+            </summary>
+            <param name="cipherText">密文</param>
+            <returns>明文</returns>
+        </member>
+        <member name="T:Inke.Common.Helpers.Filler">
+            <summary>
+            将弱类型填充为强类型列表的帮助类
+            </summary>
+        </member>
+        <member name="M:Inke.Common.Helpers.Filler.FillModel``1(System.Data.DataTable)">
+            <summary>
+            Datatable转换为List
+            </summary>
+        </member>
+        <member name="T:Inke.Common.Helpers.MD5er">
+            <summary>
+            MD5加密帮助类
+            </summary>
+        </member>
+        <member name="M:Inke.Common.Helpers.MD5er.Encrypt(System.String)">
+            <summary>
+            32位加密转大写
+            </summary>
+            <param name="clearText">明文</param>
+            <returns>32位大写密文</returns>
+        </member>
+        <member name="T:Inke.Common.Helpers.DataTableConvert">
+            <summary>
+            DDataTable 转换成对象
+            </summary>
+        </member>
+        <member name="M:Inke.Common.Helpers.DataTableConvert.DataTableSelect(System.Data.DataTable,System.String)">
+            <summary>
+            过滤条件的Datatable
+            </summary>
+            <param name="dt">需要过滤的DataTable</param>
+            <param name="conditions">过滤的表达式</param>
+            <returns></returns>
+        </member>
+        <member name="T:Inke.Common.Helpers.EnumHelper">
+            <summary>
+            根据枚举获取对应的值和描述内容
+            </summary>
+        </member>
+        <member name="M:Inke.Common.Helpers.EnumHelper.ToEnumDescriptionString(System.Int32,System.Type)">
+            <summary>  
+            扩展方法：根据枚举值得到属性Description中的描述, 如果没有定义此属性则返回空串  
+            </summary>  
+            <param name="value"></param>  
+            <param name="enumType"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:Inke.Common.Helpers.EnumHelper.GetNVCFromEnumValue(System.Type)">
+            <summary>  
+            根据枚举类型得到其所有的 值 与 枚举定义Description属性 的集合  
+            </summary>  
+            <param name="enumType"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:Inke.Common.Helpers.EnumHelper.ToEnumValueString(System.Int32,System.Type)">
+            <summary>  
+            扩展方法：根据枚举值得到相应的枚举定义字符串  
+            </summary>  
+            <param name="value"></param>  
+            <param name="enumType"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:Inke.Common.Helpers.EnumHelper.GetEnumStringFromEnumValue(System.Type)">
+            <summary>  
+            根据枚举类型得到其所有的 值 与 枚举定义字符串 的集合  
+            </summary>  
+            <param name="enumType"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:Inke.Common.Helpers.EnumHelper.GetEnumDescriptToJosn(System.Type)">
+            <summary>
+            把枚举（描述|数字值）转换为josn格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Helpers.EnumHelper.GetEnumNameToJosn(System.Type)">
+            <summary>
+            把枚举（名称|数字值）转换为josn格式
+            在前端页面需要 JOSN.parse()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Helpers.EnumHelper.ConvertEnumToEntity(System.Type)">
+            <summary>
+            把枚举转换为对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Inke.Common.Helpers.XmlUtil">
+            <summary>
+            Xml序列化与反序列化
+            </summary>
+        </member>
+        <member name="M:Inke.Common.Helpers.XmlUtil.Deserialize``1(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="xml">XML字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Helpers.XmlUtil.Serializer``1(``0)">
+            <summary>
+            序列化
+            </summary>
+            <param name="obj">对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:Inke.Common.Paginations.IPaginationResult`1">
+            <summary>
+            分页结果集
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Inke.Common.Paginations.IPaginationResult`1.Items">
+            <summary>
+            结果集
+            </summary>
+        </member>
+        <member name="P:Inke.Common.Paginations.IPaginationResult`1.TotalCount">
+            <summary>
+            数据总行数
+            </summary>
+        </member>
+        <member name="T:Inke.Common.Paginations.PaginationData">
+            <summary>
+            分页查询结果（DAL）
+            </summary>
+        </member>
+        <member name="M:Inke.Common.Paginations.PaginationHelper.GetPaging(System.Int32)">
+            <summary>
+            封装分页对象
+            </summary>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Paginations.PaginationHelper.GetPagingByDescend(System.Int32)">
+            <summary>
+            倒序
+            </summary>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Paginations.PaginationHelper.GetPagingByDescend(System.Int32,System.Int32)">
+            <summary>
+            倒序
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inke.Common.Paginations.PaginationHelper.GetPageSize(System.Nullable{System.Int32})">
+            <summary>
+            获取pageSize
+            </summary>
+        </member>
+        <member name="M:Inke.Common.Paginations.PaginationHelper.GetMaxPageCount(System.Nullable{System.Int32})">
+            <summary>
+            获取最大的pageSize
+            </summary>
+        </member>
+        <member name="T:Inke.Common.Paginations.PaginationParameter">
+            <summary>
+            分页参数
+            </summary>
+        </member>
+        <member name="T:Inke.Common.Paginations.PaginationResult`1">
+            <summary>
+            分页结果集
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Inke.Common.Paginations.PaginationResult`1.Items">
+            <summary>
+            结果集
+            </summary>
+        </member>
+        <member name="P:Inke.Common.Paginations.PaginationResult`1.TotalCount">
+            <summary>
+            数据总行数
+            </summary>
+        </member>
+        <member name="F:Inke.Common.Paginations.SortingDirection.Ascending">
+            <summary>
+                升序
+            </summary>
+        </member>
+        <member name="F:Inke.Common.Paginations.SortingDirection.Descending">
+            <summary>
+                降序
+            </summary>
+        </member>
+        <member name="M:Inke.Common.Paginations.SortingParameter`1.#ctor(`0,Inke.Common.Paginations.SortingDirection)">
+            <summary>
+            
+            </summary>
+            <param name="sortBy"></param>
+            <param name="direction"></param>
+        </member>
+    </members>
+</doc>

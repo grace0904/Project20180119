@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>WebApiTestClient-obadneil</id>
+    <version>1.2.1</version>
+    <title>A Simple Test Client for ASP.NET Web API</title>
+    <authors>NeilQ</authors>
+    <owners>NeilQ</owners>
+    <licenseUrl>https://github.com/NeilQ/WebApiTestClient/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/NeilQ/WebApiTestClient</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A simple Test Client built on top of ASP.NET Web API Help Page. Optimized the JSON display ui of http response.</description>
+    <summary>A simple Test Client built on top of ASP.NET Web API Help Page. Optimized the JSON display ui of http response.</summary>
+    <releaseNotes>Optimized the JSON display ui of http response.</releaseNotes>
+    <language>en-US</language>
+    <tags>ASP.NET Web API Test Client</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.HelpPage" version="5.2.2" />
+      <dependency id="knockoutjs" version="3.2.0" />
+      <dependency id="jQuery.UI.Combined" version="1.9.2" />
+    </dependencies>
+  </metadata>
+</package>

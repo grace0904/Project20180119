@@ -1,0 +1,2405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InkeServer.DataMapping.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="CalcArrears_Result">
+    <Property Name="ItemName" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Total" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="CalcCardRecharge_Result">
+    <Property Name="Cash" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="CashGivenMoney" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="Bank" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="BankGivenMoney" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="Title" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="CalcConsumption_Result">
+    <Property Name="Consumption" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="CalcCustomerStream_Result">
+    <Property Name="MemberTotal" Type="Int32" />
+    <Property Name="CustomerTotal" Type="Int32" />
+    <Property Name="Title" Type="DateTime" />
+  </ComplexType>
+  <ComplexType Name="CalcCustomerStreamByAge_Result">
+    <Property Name="AgeRange" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Turnover" Type="Int32" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="CalcCustomerStreamBySex_Result">
+    <Property Name="ManTotal" Type="Int32" />
+    <Property Name="WomanTotal" Type="Int32" />
+    <Property Name="Title" Type="DateTime" />
+  </ComplexType>
+  <ComplexType Name="CalcDiscountDeduction_Result">
+    <Property Name="DiscountMoney" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="CouponMoney" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="ReduceMantissaMoney" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="IntegralMoney" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="Title" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="CalcPayByType_Result">
+    <Property Name="Cash" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="Bank" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="Member" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="Alipay" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="Wechat" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="GroupCoupon" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="Title" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="CalcPeopleAndAVG_Result">
+    <Property Name="OrderCount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Order_People" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PeopleAVG" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Title" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="CalcProductPrice_Result">
+    <Property Name="MerchantBaseInfo_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Total" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="CalcTurnover_Result">
+    <Property Name="MemberTotal" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CustomerTotal" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Title" Type="DateTime" />
+  </ComplexType>
+  <ComplexType Name="CalcTurnoverByAge_Result">
+    <Property Name="AgeRange" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Turnover" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Title" Type="DateTime" />
+  </ComplexType>
+  <ComplexType Name="CalcTurnoverBySex_Result">
+    <Property Name="ManTotal" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WomanTotal" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Title" Type="DateTime" />
+  </ComplexType>
+  <ComplexType Name="DateSplit_Result">
+    <Property Name="id" Type="Int32" />
+    <Property Name="begintime" Type="DateTime" />
+    <Property Name="endtime" Type="DateTime" />
+  </ComplexType>
+  <ComplexType Name="DateSplitByDMY_Result">
+    <Property Name="id" Type="Int32" />
+    <Property Name="begintime" Type="DateTime" />
+    <Property Name="endtime" Type="DateTime" />
+  </ComplexType>
+  <ComplexType Name="NumSplit_Result">
+    <Property Name="ID" Type="Int32" />
+    <Property Name="BeginNum" Type="Int32" />
+    <Property Name="EndNum" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="StrToTable_Result">
+    <Property Name="str2table" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="TimeSplit_Result">
+    <Property Name="ID" Type="Int32" />
+    <Property Name="BeginTime" Type="DateTime" />
+    <Property Name="EndTime" Type="DateTime" />
+  </ComplexType>
+  <EntityType Name="Bas_ActivityImages">
+    <Key>
+      <PropertyRef Name="ActivityImageID" />
+    </Key>
+    <Property Name="ActivityImageID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ActivityID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsSort" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bas_AppClients">
+    <Key>
+      <PropertyRef Name="App_ID" />
+    </Key>
+    <Property Name="App_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="App_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="App_Key" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="App_Secret" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="App_Linkman" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="App_LinkPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="App_Memo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bas_AutoPromotion">
+    <Key>
+      <PropertyRef Name="Promotion_ID" />
+    </Key>
+    <Property Name="Promotion_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PromotionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PromotionType" Type="Int32" Nullable="false" />
+    <Property Name="MultiplePromotion" Type="Int32" />
+    <Property Name="BirthDayStartDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BirthDayEndDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ValidityBirthDay" Type="Int32" />
+    <Property Name="ValidityType" Type="Int32" />
+    <Property Name="DateFrom" Type="DateTime" Precision="3" />
+    <Property Name="DateTo" Type="DateTime" Precision="3" />
+    <Property Name="ConsumeFrom" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ConsumeTo" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IntegralTotalFrom" Type="Int32" />
+    <Property Name="IntegralTotalTo" Type="Int32" />
+    <Property Name="ChargeAmountFrom" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ChargeAmountTo" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalDateStart" Type="DateTime" Precision="3" />
+    <Property Name="TotalDateEnd" Type="DateTime" Precision="3" />
+    <Property Name="FestivalName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FestivalDate" Type="DateTime" Precision="0" />
+    <Property Name="BeforeDays" Type="Int32" />
+    <Property Name="ProductId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProductQuantityFrom" Type="Int32" />
+    <Property Name="ProductQuantityTo" Type="Int32" />
+    <Property Name="PromotionShopIds" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="PromotionGender" Type="Int32" />
+    <Property Name="PromotionCardTypeIds" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="MemberType" Type="Int32" />
+    <Property Name="Coupon_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CouponQuantity" Type="Int32" />
+    <Property Name="GivenIntegral" Type="Int32" />
+    <Property Name="GivenIntegralMultiple" Type="Int32" />
+    <Property Name="State" Type="Int32" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StartUseDate" Type="DateTime" Precision="3" />
+    <Property Name="LastExecDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Bas_AutoPromotionTime">
+    <Key>
+      <PropertyRef Name="AutoPromotionTime_Id" />
+    </Key>
+    <Property Name="AutoPromotionTime_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AutoPromotion_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TimeType" Type="Int32" Nullable="false" />
+    <Property Name="Weekday" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MonthDay" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="YearMonth" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="YearDay" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HourBegin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MinuteBegin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HourEnd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MinuteEnd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bas_BonusRecord">
+    <Key>
+      <PropertyRef Name="BonusRecord_ID" />
+    </Key>
+    <Property Name="BonusRecord_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BonusClass" Type="Int32" Nullable="false" />
+    <Property Name="Employee_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BonusCash" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Record_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Bas_BonusSet">
+    <Key>
+      <PropertyRef Name="BonusSet_ID" />
+    </Key>
+    <Property Name="BonusSet_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BonusClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Record_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Position_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ComputingMethod" Type="Int32" Nullable="false" />
+    <Property Name="BonusCash" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BonusProportion" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_BossReport">
+    <Key>
+      <PropertyRef Name="BossReport_ID" />
+    </Key>
+    <Property Name="BossReport_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BossReportName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SendTime" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="ReceiveMobilePhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ShopList" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessBeginHour" Type="Int32" Nullable="false" />
+    <Property Name="BusinessBeginMinute" Type="Int32" Nullable="false" />
+    <Property Name="BusinessDate" Type="Int32" Nullable="false" />
+    <Property Name="BusinessEndHour" Type="Int32" Nullable="false" />
+    <Property Name="BusinessEndMinute" Type="Int32" Nullable="false" />
+    <Property Name="SendCycle" Type="Int32" />
+    <Property Name="MemberIncrease" Type="Int32" Nullable="false" />
+    <Property Name="CardIncrease" Type="Int32" Nullable="false" />
+    <Property Name="ConsumeTotal" Type="Int32" />
+    <Property Name="MemberConsumeTotal" Type="Int32" Nullable="false" />
+    <Property Name="MemberRechargeTotal" Type="Int32" Nullable="false" />
+    <Property Name="MemberRechargeGiveTotal" Type="Int32" Nullable="false" />
+    <Property Name="IndividualConsumeTotal" Type="Int32" Nullable="false" />
+    <Property Name="MemberReductionTotal" Type="Int32" Nullable="false" />
+    <Property Name="CouponRechargeQuantity" Type="Int32" Nullable="false" />
+    <Property Name="CouponUseQuantity" Type="Int32" Nullable="false" />
+    <Property Name="MemberAddIntegral" Type="Int32" Nullable="false" />
+    <Property Name="MemberReductionIntegral" Type="Int32" Nullable="false" />
+    <Property Name="MemberMoneyTotal" Type="Int32" Nullable="false" />
+    <Property Name="MemberIntegralTotal" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastExecDate" Type="DateTime" Precision="3" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bas_Card">
+    <Key>
+      <PropertyRef Name="Card_ID" />
+    </Key>
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Card_Num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_Status" Type="Int32" Nullable="false" />
+    <Property Name="CardBatch_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_Cash" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Card_Integral" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Card_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Discount_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_Validity" Type="Int32" />
+    <Property Name="Card_FDate" Type="DateTime" Precision="3" />
+    <Property Name="Card_LDate" Type="DateTime" Precision="3" />
+    <Property Name="Card_OpenDate" Type="DateTime" Precision="3" />
+    <Property Name="Employee_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_Pic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_CardBatch">
+    <Key>
+      <PropertyRef Name="CardBatch_ID" />
+    </Key>
+    <Property Name="CardBatch_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Batch_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Bas_CardDiscountType">
+    <Key>
+      <PropertyRef Name="Discount_ID" />
+    </Key>
+    <Property Name="Discount_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Discount_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ConsumeGetIntegral" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ConsumeCash" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RechargeGetIntegral" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RechargeCash" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OpenCardGetIntegral" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Discount" Type="Int32" Nullable="false" />
+    <Property Name="Apply" Type="Int32" Nullable="false" />
+    <Property Name="Card_Pic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RechargeAutoUpdate" Type="Int32" />
+    <Property Name="RechargeMoney" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RechargeUpdateTo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ConsumeAutoUpdate" Type="Int32" />
+    <Property Name="ConsumeMoney" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ConsumeUpdateTo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ComboGroup">
+    <Key>
+      <PropertyRef Name="ComboGroup_ID" />
+    </Key>
+    <Property Name="ComboGroup_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Group_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaxNum" Type="Int32" Nullable="false" />
+    <Property Name="MinNum" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bas_ComboProduct">
+    <Key>
+      <PropertyRef Name="ComboProduct_ID" />
+    </Key>
+    <Property Name="ComboProduct_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ComboGroup_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Product_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OptionalNum" Type="Int32" Nullable="false" />
+    <Property Name="InfluencePrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IsRequired" Type="Int32" Nullable="false" />
+    <Property Name="IsSelected" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_Coupon">
+    <Key>
+      <PropertyRef Name="Coupon_ID" />
+    </Key>
+    <Property Name="Coupon_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MerchantBaseInfo_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coupon_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Coupon_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Coupon_BriefCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coupon_Class" Type="Int32" Nullable="false" />
+    <Property Name="Product_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coupon_ConsumeClass" Type="Int32" Nullable="false" />
+    <Property Name="Coupon_Cash" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Coupon_UserNum" Type="Int32" Nullable="false" />
+    <Property Name="Coupon_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coupon_BuyPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Coupon_DeductionPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Coupon_Validity" Type="Int32" Nullable="false" />
+    <Property Name="Coupon_FDate" Type="DateTime" Precision="3" />
+    <Property Name="Coupon_LDate" Type="DateTime" Precision="3" />
+    <Property Name="Coupon_DateNum" Type="Int32" />
+    <Property Name="Coupon_IntegralExchange" Type="Int32" Nullable="false" />
+    <Property Name="Coupon_Integral" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Coupon_BPic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coupon_SPic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coupon_Status" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bas_DeliveryAddress">
+    <Key>
+      <PropertyRef Name="Address_ID" />
+    </Key>
+    <Property Name="Address_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Consignee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsDefault" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bas_GivenCoupon">
+    <Key>
+      <PropertyRef Name="GivenCoupon_ID" />
+    </Key>
+    <Property Name="GivenCoupon_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Record_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GivenCoupon_Type" Type="Int32" Nullable="false" />
+    <Property Name="Coupon_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CouponQuantity" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Bas_IntegralProducts">
+    <Key>
+      <PropertyRef Name="IntegralProduct_ID" />
+    </Key>
+    <Property Name="IntegralProduct_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dictionary_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IntegralProduct_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IntegralProduct_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IntegralProduct_SpellCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IntegralProduct_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IntegralProduct_Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IntegralProduct_BPic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IntegralProduct_SPic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IntegralProduct_Memo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_MarketingAnalyze">
+    <Key>
+      <PropertyRef Name="MarketingAnalyze_ID" />
+    </Key>
+    <Property Name="MarketingAnalyze_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MarketingAnalyze_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AutoExec" Type="Int32" />
+    <Property Name="AgeStart" Type="Int32" />
+    <Property Name="AgeEnd" Type="Int32" />
+    <Property Name="Sex" Type="Int32" />
+    <Property Name="CardDiscountType_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ResidueIntegralStart" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ResidueIntegralEnd" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ResidueMoneyStart" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ResidueMoneyEnd" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OpenCardValidity" Type="Int32" />
+    <Property Name="OpenCardDateStart" Type="DateTime" Precision="3" />
+    <Property Name="OpenCardDateEnd" Type="DateTime" Precision="3" />
+    <Property Name="BirthdayValidity" Type="Int32" />
+    <Property Name="BirthdayStart" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BirthdayEnd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ConsumeDateStart" Type="DateTime" Precision="3" />
+    <Property Name="ConsumeDateEnd" Type="DateTime" Precision="3" />
+    <Property Name="ConsumeCountStart" Type="Int32" />
+    <Property Name="ConsumeCountEnd" Type="Int32" />
+    <Property Name="SimpleConsumeMoneyStart" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimpleConsumeMoneyEnd" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CountCunsumeMoneyStart" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CountCunsumeMoneyEnd" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RechargeCountStart" Type="Int32" />
+    <Property Name="RechargeCountEnd" Type="Int32" />
+    <Property Name="SimpleRechargeMoneyStart" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimpleRechargeMoneyEnd" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CountRechargeMoneyStart" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CountRechargeMoneyEnd" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SimpleConsumePeopleStart" Type="Int32" />
+    <Property Name="SimpleConsumePeopleEnd" Type="Int32" />
+    <Property Name="CountIntegralDeductionStart" Type="Int32" />
+    <Property Name="CountIntegralDeductionEnd" Type="Int32" />
+    <Property Name="NotConsumeDay" Type="Int32" />
+    <Property Name="IntegralTotalStart" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IntegralTotalEnd" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ConsumeProduct_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountConsumeProductStart" Type="Int32" />
+    <Property Name="CountConsumeProductEnd" Type="Int32" />
+    <Property Name="ConsumeCoupon_ID" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="StatisticsTotal" Type="Int32" />
+    <Property Name="IssueTotal" Type="Int32" />
+    <Property Name="GivenIntegral" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="State" Type="Int32" Nullable="false" />
+    <Property Name="LastExeTime" Type="DateTime" Precision="3" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bas_Member">
+    <Key>
+      <PropertyRef Name="Member_ID" />
+    </Key>
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_HomePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Member_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_Logo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Member_RegisterTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Member_Memo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Operation" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_Merchant">
+    <Key>
+      <PropertyRef Name="Merchant_ID" />
+    </Key>
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Server_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MerchantClass_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_Linkman" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_QQ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_Prov" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_Area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_FDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Merchant_LDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Merchant_Status" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_OpenApp" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_OpenWeb" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_OpenWeixin" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Merchant_Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bas_MerchantBaseInfo">
+    <Key>
+      <PropertyRef Name="MerchantBaseInfo_ID" />
+    </Key>
+    <Property Name="MerchantBaseInfo_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MerchantBaseInfo_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BaseInfoClass" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bas_MerchantConfig">
+    <Key>
+      <PropertyRef Name="MerchantConfig_ID" />
+    </Key>
+    <Property Name="MerchantConfig_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessScope_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SmsCount" Type="Int32" />
+    <Property Name="ConsumeAutoUpdate" Type="Int32" />
+    <Property Name="RechargeAutoUpdate" Type="Int32" />
+    <Property Name="Pop" Type="Int32" />
+    <Property Name="DiscountRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IntegralRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CashRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IntegraClear" Type="Int32" Nullable="false" />
+    <Property Name="IntegraEndTime" Type="DateTime" Precision="3" />
+    <Property Name="IntegraClearTime" Type="DateTime" Precision="3" />
+    <Property Name="IntegraClearBeforeSms" Type="Int32" />
+    <Property Name="IntegraClearBeforeDate" Type="Int32" />
+    <Property Name="IntegraClearFinishSms" Type="Int32" />
+    <Property Name="SpanMonthAdjust" Type="Int32" />
+    <Property Name="ConsumeInputType" Type="Int32" />
+    <Property Name="DeductMoneyAutoInput" Type="Int32" />
+    <Property Name="ShowAffirm" Type="Int32" />
+    <Property Name="OnlyCardConsume" Type="Int32" />
+    <Property Name="NotEditRate" Type="Int32" />
+    <Property Name="CanCloseIntegra" Type="Int32" />
+    <Property Name="MemberMultiCard" Type="Int32" />
+    <Property Name="CardNumberNull" Type="Int32" />
+    <Property Name="IntegraConvertManualInput" Type="Int32" />
+    <Property Name="OpenTakeAway" Type="Int32" />
+    <Property Name="OpenReservation" Type="Int32" />
+    <Property Name="OpenSelfOrder" Type="Int32" />
+    <Property Name="OpenSelfPay" Type="Int32" />
+    <Property Name="taste" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MainScope" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SpecialRequire" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Introduce" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReduceMantissaSet" Type="Int32" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_MerchantPosition">
+    <Key>
+      <PropertyRef Name="Position_ID" />
+    </Key>
+    <Property Name="Position_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Position_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Position_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Position_Parent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_MerchantProducts">
+    <Key>
+      <PropertyRef Name="Product_ID" />
+    </Key>
+    <Property Name="Product_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MerchantBaseInfo_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Product_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Product_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Product_SpellCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Product_Unit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Product_Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Product_BPic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Product_SPic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Product_Discount" Type="Int32" Nullable="false" />
+    <Property Name="Combo" Type="Int32" Nullable="false" />
+    <Property Name="Product_Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ProductCombo">
+    <Key>
+      <PropertyRef Name="ProductCombo_ID" />
+    </Key>
+    <Property Name="ProductCombo_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Product_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ComboGroup_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Del" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bas_Shop">
+    <Key>
+      <PropertyRef Name="Shop_ID" />
+    </Key>
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_LinkMan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Prov_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Area_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CommerceGroup_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_RechargePassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_OpenDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Shop_EndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Shop_SmsCount" Type="Int32" Nullable="false" />
+    <Property Name="Shop_Logo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_BusinessTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_Status" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Deliveryamount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Takeoutcost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TakeOutTimeBegin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TakeOutTimeEnd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TakeOutStatus" Type="Boolean" />
+    <Property Name="PayOnDelivery" Type="Boolean" />
+    <Property Name="BookStatus" Type="Boolean" />
+    <Property Name="BookBasketStatus" Type="Boolean" />
+    <Property Name="AnticipationType" Type="Int32" />
+    <Property Name="AnticipationAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AnticipationRate" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BookSmsTel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BookSmsEmployeeID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TakeOutSmsTel" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TakeOutSmsEmployeeID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bas_ShopEmployee">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Employee_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Employee_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Employee_Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Employee_birthday" Type="DateTime" Precision="3" />
+    <Property Name="Employee_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Pic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Salary" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Position_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_Lead_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ShopIntegralProducts">
+    <Key>
+      <PropertyRef Name="ShopIntegralProduct_ID" />
+    </Key>
+    <Property Name="ShopIntegralProduct_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IntegralProduct_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dictionary_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SpellCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BPic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SPic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ProductNum" Type="Int32" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ShopPositionPower">
+    <Key>
+      <PropertyRef Name="ShopPostitionPowerID" />
+    </Key>
+    <Property Name="ShopPostitionPowerID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Position_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="PowerString" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bas_ShopProducts">
+    <Key>
+      <PropertyRef Name="ShopProduct_ID" />
+    </Key>
+    <Property Name="ShopProduct_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Product_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MerchantBaseInfo_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SpellCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BPic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SPic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Discount" Type="Int32" Nullable="false" />
+    <Property Name="Combo" Type="Int32" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GuQing" Type="Int32" />
+    <Property Name="ProductNum" Type="Int32" />
+    <Property Name="UseRepertory" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ShopSeat">
+    <Key>
+      <PropertyRef Name="Seat_ID" />
+    </Key>
+    <Property Name="Seat_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seat_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seat_Num" Type="Int32" Nullable="false" />
+    <Property Name="ShopSeatClass_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seat_Order" Type="Int32" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OptionTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ShopSeatClass">
+    <Key>
+      <PropertyRef Name="ShopSeatClass_ID" />
+    </Key>
+    <Property Name="ShopSeatClass_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ShopSeatClass_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_SmsTemplateCustom">
+    <Key>
+      <PropertyRef Name="Custom_ID" />
+    </Key>
+    <Property Name="Custom_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Custom_Content" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Custom_Status" Type="Int32" Nullable="false" />
+    <Property Name="Custom_Send" Type="Int32" Nullable="false" />
+    <Property Name="Custom_SendDate" Type="Int32" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SmsTemplate_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bas_UsableShop">
+    <Key>
+      <PropertyRef Name="UsableShop_ID" />
+    </Key>
+    <Property Name="UsableShop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UsableClass" Type="Int32" Nullable="false" />
+    <Property Name="Record_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bas_User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="User_LoginName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_LoginPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_Pic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_RegTime" Type="DateTime" Precision="3" />
+    <Property Name="User_RegIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_Status" Type="Int32" />
+    <Property Name="WeChat_Open_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="Operation" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bas_UserAddress">
+    <Key>
+      <PropertyRef Name="Address_ID" />
+    </Key>
+    <Property Name="Address_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LinkMan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsDefault" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Bas_WeChat">
+    <Key>
+      <PropertyRef Name="WeChat_ID" />
+    </Key>
+    <Property Name="WeChat_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Original_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WeChatType" Type="Int32" />
+    <Property Name="WeChatName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WechatNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="APPID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AppSecret" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Token" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EncodingAESKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mch_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bas_WeChatOpenID">
+    <Key>
+      <PropertyRef Name="WeChatOpen_ID" />
+    </Key>
+    <Property Name="WeChatOpen_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Open_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Bas_WeChatToken">
+    <Key>
+      <PropertyRef Name="WeChatToken_ID" />
+    </Key>
+    <Property Name="WeChatToken_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WeChat_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Original_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccessToken" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Access_Time" Type="DateTime" Precision="3" />
+    <Property Name="JsApiTicket" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Ticket_Time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BizSeqNos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BizSeqValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UseTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Formula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BizSeqType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bus_Advance">
+    <Key>
+      <PropertyRef Name="Advance_ID" />
+    </Key>
+    <Property Name="Advance_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BusinessClass" Type="Int32" />
+    <Property Name="Record_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayType" Type="Int32" />
+    <Property Name="PayMoney" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PayTime" Type="DateTime" Precision="3" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bus_AppInstruction">
+    <Key>
+      <PropertyRef Name="Instruction_ID" />
+    </Key>
+    <Property Name="Instruction_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InstructionType" Type="Int32" />
+    <Property Name="InstructionData" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="SendCallBack" Type="Int32" />
+    <Property Name="SendCallBackClient_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bus_Arrears">
+    <Key>
+      <PropertyRef Name="Arrears_ID" />
+    </Key>
+    <Property Name="Arrears_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Order_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Arrears_Money" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Arrears_Status" Type="Int32" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="PayType" Type="Int32" />
+    <Property Name="PayMoney" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Pay_Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayMemo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PayTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Adjust" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_AutoPromotionRecord">
+    <Key>
+      <PropertyRef Name="PromotionRecord_ID" />
+    </Key>
+    <Property Name="PromotionRecord_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Promotion_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PromotionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PromotionType" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="GivenIntegral" Type="Double" />
+    <Property Name="Coupon_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CouponQuantity" Type="Int32" />
+    <Property Name="BusinessClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Record_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ExecuteYear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExecuteTime" Type="DateTime" Precision="3" />
+    <Property Name="Adjust" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_BackOrders">
+    <Key>
+      <PropertyRef Name="Apply_ID" />
+    </Key>
+    <Property Name="Apply_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Order_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="ApplyTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bus_BalanceChange">
+    <Key>
+      <PropertyRef Name="BalanceChange_ID" />
+    </Key>
+    <Property Name="BalanceChange_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BusinessClass" Type="Int32" Nullable="false" />
+    <Property Name="Record_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CashAdd" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CashReduce" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Adjust" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_BookBasket">
+    <Key>
+      <PropertyRef Name="BookBasket_ID" />
+    </Key>
+    <Property Name="BookBasket_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Book_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Product_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShopProduct_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Units" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Count" Type="Int32" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Zuofa" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Combo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_BookOrders">
+    <Key>
+      <PropertyRef Name="Book_ID" />
+    </Key>
+    <Property Name="Book_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Business_Num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contacts" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="People" Type="Int32" />
+    <Property Name="BookTime" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="PayStatus" Type="Int32" />
+    <Property Name="Change" Type="Int32" />
+    <Property Name="ShopSeatClass_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Seat_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Reason" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Order_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="Terminal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bus_CardCoupon">
+    <Key>
+      <PropertyRef Name="CardCoupon_ID" />
+    </Key>
+    <Property Name="CardCoupon_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Coupon_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Coupon_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BusinessClass" Type="Int32" Nullable="false" />
+    <Property Name="Record_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="FDate" Type="DateTime" Precision="0" />
+    <Property Name="LDate" Type="DateTime" Precision="0" />
+    <Property Name="Order_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Adjust" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_CardRechargeRecord">
+    <Key>
+      <PropertyRef Name="RechargeRecord_ID" />
+    </Key>
+    <Property Name="RechargeRecord_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Business_Num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RechargeMoney" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayMoney" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GivenMoney" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayType" Type="Int32" Nullable="false" />
+    <Property Name="GivenIntegral" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="Adjust" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_CouponRechargeRecord">
+    <Key>
+      <PropertyRef Name="CouponRecord_ID" />
+    </Key>
+    <Property Name="CouponRecord_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Business_Num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Coupon_Record" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Coupon_Total" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayType" Type="Int32" Nullable="false" />
+    <Property Name="PayCash" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CardPayCash" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Employee_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="Adjust" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_IntegralAdjust">
+    <Key>
+      <PropertyRef Name="IntegralAdjust_ID" />
+    </Key>
+    <Property Name="IntegralAdjust_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Business_Num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AdjustType" Type="Int32" Nullable="false" />
+    <Property Name="AdjustIntegral" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_BussinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bus_IntegralChange">
+    <Key>
+      <PropertyRef Name="IntegralChange_ID" />
+    </Key>
+    <Property Name="IntegralChange_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BusinessClass" Type="Int32" Nullable="false" />
+    <Property Name="Record_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IntegralIncome" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IntegralConsume" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Adjust" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_IntegralExchange">
+    <Key>
+      <PropertyRef Name="Exchange_ID" />
+    </Key>
+    <Property Name="Exchange_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Business_Num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IntegralProduct_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShopIntegralProduct_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product_Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ProductQuantity" Type="Int32" />
+    <Property Name="Coupon_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coupon_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Coupon_Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CouponQuantity" Type="Int32" />
+    <Property Name="Exchange_Cash" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DeductIntegral" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Terminal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="Adjust" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_MarketingAnalyzeRecord">
+    <Key>
+      <PropertyRef Name="MarketingAnalyzeRecord_ID" />
+    </Key>
+    <Property Name="MarketingAnalyzeRecord_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MarketingAnalyze_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MarketingAnalyze_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MarketingAnalyzeType" Type="Int32" Nullable="false" />
+    <Property Name="GivenIntegral" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExecuteTime" Type="DateTime" Precision="3" />
+    <Property Name="Adjust" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_OrderBasket">
+    <Key>
+      <PropertyRef Name="Bask_ID" />
+    </Key>
+    <Property Name="Bask_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Order_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Product_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShopProduct_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Bask_Units" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Bask_Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Bask_Count" Type="Int32" />
+    <Property Name="Bask_Discount" Type="Int32" />
+    <Property Name="Bask_Total" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Bask_Zuofa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bask_Status" Type="Int32" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Bask_PrintStatus" Type="Int32" />
+    <Property Name="Bask_Terminal" Type="Int32" />
+    <Property Name="Bask_ScCount" Type="Int32" />
+    <Property Name="Bask_GivenCount" Type="Int32" />
+    <Property Name="Bask_ReturnCount" Type="Int32" />
+    <Property Name="Combo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Adjust" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_OrderDeliverys">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+    </Key>
+    <Property Name="Order_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Consignee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PayOnDelivery" Type="Boolean" Nullable="false" />
+    <Property Name="ExpectTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeliveryFee" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DeliveryTime" Type="DateTime" Precision="3" />
+    <Property Name="DeliveryMan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeliveryPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EstimateTime" Type="DateTime" Precision="3" />
+    <Property Name="Memo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bus_OrderPay">
+    <Key>
+      <PropertyRef Name="OrderPay_ID" />
+    </Key>
+    <Property Name="OrderPay_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PayType" Type="Int32" Nullable="false" />
+    <Property Name="PayMoney" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Order_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pay_JyNum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Adjust" Type="Int32" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_Orders">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+    </Key>
+    <Property Name="Order_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Business_Num" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Order_Class" Type="Int32" Nullable="false" />
+    <Property Name="Order_Process" Type="Int32" Nullable="false" />
+    <Property Name="Order_Status" Type="Int32" Nullable="false" />
+    <Property Name="Seat_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Order_People" Type="Int32" />
+    <Property Name="ConsumeMoney" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Discount" Type="Int32" />
+    <Property Name="DiscountMoney" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CouponMoney" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IntegralMoney" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ReduceMantissaMoney" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FinalMoney" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ActualIncomeMoney" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsGuaZhang" Type="Int32" />
+    <Property Name="GuaZhangMoney" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Order_GetIntegral" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CloseIntegral" Type="Int32" />
+    <Property Name="Employee_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OpenSeatTime" Type="DateTime" Precision="3" />
+    <Property Name="FinalTime" Type="DateTime" Precision="3" />
+    <Property Name="Order_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Order_Invoice" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Terminal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Adjust" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_Reservation">
+    <Key>
+      <PropertyRef Name="Reservation_ID" />
+    </Key>
+    <Property Name="Reservation_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Reservation_MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Reservation_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Reservation_People" Type="Int32" />
+    <Property Name="Reservation_Time" Type="DateTime" Precision="3" />
+    <Property Name="Reservation_Status" Type="Int32" />
+    <Property Name="Reservation_Change" Type="Int32" />
+    <Property Name="Seat_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="PayType" Type="Int32" />
+    <Property Name="PayMoney" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Order_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="Terminal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bus_ReservationBasket">
+    <Key>
+      <PropertyRef Name="ReservationBask_ID" />
+    </Key>
+    <Property Name="ReservationBask_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BusinessClass" Type="Int32" />
+    <Property Name="Record_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShopProduct_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Units" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Count" Type="Int32" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Zuofa" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Combo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bus_Sms">
+    <Key>
+      <PropertyRef Name="Sms_ID" />
+    </Key>
+    <Property Name="Sms_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SendTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SmsContent" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SmsQuantity" Type="Int32" Nullable="false" />
+    <Property Name="SmsType" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Operation" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Bus_SmsBusiness">
+    <Key>
+      <PropertyRef Name="SmsBusiness_Id" />
+    </Key>
+    <Property Name="SmsBusiness_Id" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SmsType" Type="Int32" />
+    <Property Name="BusinessClass" Type="Int32" />
+    <Property Name="Business_Num" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SendTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SmsContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SmsSendQuantity" Type="Int32" Nullable="false" />
+    <Property Name="SmsOkQuantity" Type="Int32" />
+    <Property Name="Back_SmsId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Back_Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Back_DTime" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Back_Desc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FailMsg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bus_SmsMember">
+    <Key>
+      <PropertyRef Name="SmsMember_ID" />
+    </Key>
+    <Property Name="SmsMember_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sms_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="SendTime" Type="DateTime" Precision="3" />
+    <Property Name="BackStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FailMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bus_SmsYZM">
+    <Key>
+      <PropertyRef Name="SmsYZM_Id" />
+    </Key>
+    <Property Name="SmsYZM_Id" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SmsYZM_Mob" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SmsYZM_Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SmsYZM_YZM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SmsYZM_Memo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SmsYZM_Status" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SmsYZM_Terminal" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SmsYZM_ReturnCode" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SmsYZM_Error" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bus_SmsYZMRecord">
+    <Key>
+      <PropertyRef Name="YZM_ID" />
+    </Key>
+    <Property Name="YZM_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="YZM_MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="YZM_Value" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="YZM_Class" Type="Int32" Nullable="false" />
+    <Property Name="YZM_Status" Type="Int32" Nullable="false" />
+    <Property Name="YZM_Time" Type="DateTime" Precision="3" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Terminal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bus_ThirdPay">
+    <Key>
+      <PropertyRef Name="ThirdPay_ID" />
+    </Key>
+    <Property Name="ThirdPay_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BusinessClass" Type="Int32" Nullable="false" />
+    <Property Name="Record_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayType" Type="Int32" Nullable="false" />
+    <Property Name="PayBussinessNum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PayMoney" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayStatus" Type="Int32" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="PayOverTime" Type="DateTime" Precision="3" />
+    <Property Name="BusinessJSON" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Log_CardOperationLogs">
+    <Key>
+      <PropertyRef Name="Log_Id" />
+    </Key>
+    <Property Name="Log_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Log_Type" Type="Int32" Nullable="false" />
+    <Property Name="Log_Content" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Member_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Log_MerchantLog">
+    <Key>
+      <PropertyRef Name="MerchantLog_ID" />
+    </Key>
+    <Property Name="MerchantLog_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MerchantLog_Type" Type="Int32" />
+    <Property Name="MerchantLog_Content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Log_SysLog">
+    <Key>
+      <PropertyRef Name="SysLog_ID" />
+    </Key>
+    <Property Name="SysLog_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SysLog_Type" Type="Int32" />
+    <Property Name="SysLog_Content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Mob_Activity">
+    <Key>
+      <PropertyRef Name="Activity_ID" />
+    </Key>
+    <Property Name="Activity_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Activity_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Pic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Summary" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Activity_Status" Type="Int32" />
+    <Property Name="Activity_IsInke" Type="Int32" />
+    <Property Name="Activity_StartTime" Type="DateTime" Precision="3" />
+    <Property Name="Activity_EndTime" Type="DateTime" Precision="3" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Mob_CardApply">
+    <Key>
+      <PropertyRef Name="Apply_ID" />
+    </Key>
+    <Property Name="Apply_ID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apply_Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Discount_ID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apply_Status" Type="Int32" />
+    <Property Name="Member_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Member_Sex" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Member_MobilePhone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="IsSend" Type="Int32" />
+    <Property Name="Apply_Address" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Byte" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Sys_Admins">
+    <Key>
+      <PropertyRef Name="Admin_Id" />
+    </Key>
+    <Property Name="Admin_Id" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Admin_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Admin_Password" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Admin_TrueName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Admin_Status" Type="Int32" Nullable="false" />
+    <Property Name="Grop_IdGroup" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Del" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_Area">
+    <Key>
+      <PropertyRef Name="Area_Id" />
+    </Key>
+    <Property Name="Area_Id" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Area_Code" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Area_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Father" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sys_BaseInfo">
+    <Key>
+      <PropertyRef Name="BaseInfo_ID" />
+    </Key>
+    <Property Name="BaseInfo_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BaseInfoClass" Type="Int32" Nullable="false" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Sys_BonusClass">
+    <Key>
+      <PropertyRef Name="BonusClass_ID" />
+    </Key>
+    <Property Name="BonusClass_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BonusClass_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BonusClass_Value" Type="Int32" />
+    <Property Name="BonusClass_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_City">
+    <Key>
+      <PropertyRef Name="City_Id" />
+    </Key>
+    <Property Name="City_Id" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City_Code" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="City_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Father" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sys_CommerceGroup">
+    <Key>
+      <PropertyRef Name="CommerceGroup_ID" />
+    </Key>
+    <Property Name="CommerceGroup_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Prov_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Area_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_MenuFunction">
+    <Key>
+      <PropertyRef Name="FunctionID" />
+    </Key>
+    <Property Name="FunctionID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FunctionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_MerchantContract">
+    <Key>
+      <PropertyRef Name="Contract_Id" />
+    </Key>
+    <Property Name="Contract_Id" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Contract_Num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Contract_CompanyLinkMan" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Contract_MerchantLinkMan" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Contract_FDate" Type="DateTime" Precision="3" />
+    <Property Name="Contract_LDate" Type="DateTime" Precision="3" />
+    <Property Name="Contract_Status" Type="Int32" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Merchant_Id" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Del" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_MerchantModule">
+    <Key>
+      <PropertyRef Name="MerchantModule_ID" />
+    </Key>
+    <Property Name="MerchantModule_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Module_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Module_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Module_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Module_Perent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Sys_Power">
+    <Key>
+      <PropertyRef Name="Power_ID" />
+    </Key>
+    <Property Name="Power_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Power_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Power_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ParentCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Level" Type="Int32" />
+    <Property Name="OperateButtonString" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sys_SystemModule">
+    <Key>
+      <PropertyRef Name="Module_ID" />
+    </Key>
+    <Property Name="Module_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Module_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Module_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TerminalType" Type="Int32" Nullable="false" />
+    <Property Name="Module_Perent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Bas_CommerceGroup">
+    <Key>
+      <PropertyRef Name="CommerceGroup_ID" />
+      <PropertyRef Name="GroupName" />
+    </Key>
+    <Property Name="CommerceGroup_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Province" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bas_MemberAddress">
+    <Key>
+      <PropertyRef Name="Addres_Id" />
+      <PropertyRef Name="IsDefault" />
+      <PropertyRef Name="Member_ID" />
+    </Key>
+    <Property Name="Addres_Id" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Member_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="PostCode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="IsDefault" Type="Byte" Nullable="false" />
+    <Property Name="Member_ID" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_MerchantClass">
+    <Key>
+      <PropertyRef Name="MerchantClass_Id" />
+      <PropertyRef Name="MerchantClass_Name" />
+      <PropertyRef Name="MerchantClass_Del" />
+    </Key>
+    <Property Name="MerchantClass_Id" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MerchantClass_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MerchantClass_Del" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_Province">
+    <Key>
+      <PropertyRef Name="Prov_Id" />
+      <PropertyRef Name="Prov_Code" />
+    </Key>
+    <Property Name="Prov_Id" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Prov_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prov_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sys_SmsTemplate">
+    <Key>
+      <PropertyRef Name="SmsTemplate_ID" />
+      <PropertyRef Name="SmsType" />
+    </Key>
+    <Property Name="SmsTemplate_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SmsTemplate_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SmsTemplate_EnName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SmsTemplate_Content" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SmsTemplate_BeforeDate" Type="Int32" />
+    <Property Name="SmsType" Type="Int32" Nullable="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bas_Account" EntityType="Self.Bas_Account" />
+    <EntitySet Name="Bas_ActivityImages" EntityType="Self.Bas_ActivityImages" />
+    <EntitySet Name="Bas_AppClients" EntityType="Self.Bas_AppClients" />
+    <EntitySet Name="Bas_AutoPromotion" EntityType="Self.Bas_AutoPromotion" />
+    <EntitySet Name="Bas_AutoPromotionTime" EntityType="Self.Bas_AutoPromotionTime" />
+    <EntitySet Name="Bas_BonusRecord" EntityType="Self.Bas_BonusRecord" />
+    <EntitySet Name="Bas_BonusSet" EntityType="Self.Bas_BonusSet" />
+    <EntitySet Name="Bas_BossReport" EntityType="Self.Bas_BossReport" />
+    <EntitySet Name="Bas_Card" EntityType="Self.Bas_Card" />
+    <EntitySet Name="Bas_CardBatch" EntityType="Self.Bas_CardBatch" />
+    <EntitySet Name="Bas_CardDiscountType" EntityType="Self.Bas_CardDiscountType" />
+    <EntitySet Name="Bas_ComboGroup" EntityType="Self.Bas_ComboGroup" />
+    <EntitySet Name="Bas_ComboProduct" EntityType="Self.Bas_ComboProduct" />
+    <EntitySet Name="Bas_Coupon" EntityType="Self.Bas_Coupon" />
+    <EntitySet Name="Bas_DeliveryAddress" EntityType="Self.Bas_DeliveryAddress" />
+    <EntitySet Name="Bas_GivenCoupon" EntityType="Self.Bas_GivenCoupon" />
+    <EntitySet Name="Bas_IntegralProducts" EntityType="Self.Bas_IntegralProducts" />
+    <EntitySet Name="Bas_MarketingAnalyze" EntityType="Self.Bas_MarketingAnalyze" />
+    <EntitySet Name="Bas_Member" EntityType="Self.Bas_Member" />
+    <EntitySet Name="Bas_Merchant" EntityType="Self.Bas_Merchant" />
+    <EntitySet Name="Bas_MerchantBaseInfo" EntityType="Self.Bas_MerchantBaseInfo" />
+    <EntitySet Name="Bas_MerchantConfig" EntityType="Self.Bas_MerchantConfig" />
+    <EntitySet Name="Bas_MerchantPosition" EntityType="Self.Bas_MerchantPosition" />
+    <EntitySet Name="Bas_MerchantProducts" EntityType="Self.Bas_MerchantProducts" />
+    <EntitySet Name="Bas_ProductCombo" EntityType="Self.Bas_ProductCombo" />
+    <EntitySet Name="Bas_Shop" EntityType="Self.Bas_Shop" />
+    <EntitySet Name="Bas_ShopEmployee" EntityType="Self.Bas_ShopEmployee" />
+    <EntitySet Name="Bas_ShopIntegralProducts" EntityType="Self.Bas_ShopIntegralProducts" />
+    <EntitySet Name="Bas_ShopPositionPower" EntityType="Self.Bas_ShopPositionPower" />
+    <EntitySet Name="Bas_ShopProducts" EntityType="Self.Bas_ShopProducts" />
+    <EntitySet Name="Bas_ShopSeat" EntityType="Self.Bas_ShopSeat" />
+    <EntitySet Name="Bas_ShopSeatClass" EntityType="Self.Bas_ShopSeatClass" />
+    <EntitySet Name="Bas_SmsTemplateCustom" EntityType="Self.Bas_SmsTemplateCustom" />
+    <EntitySet Name="Bas_UsableShop" EntityType="Self.Bas_UsableShop" />
+    <EntitySet Name="Bas_User" EntityType="Self.Bas_User" />
+    <EntitySet Name="Bas_UserAddress" EntityType="Self.Bas_UserAddress" />
+    <EntitySet Name="Bas_WeChat" EntityType="Self.Bas_WeChat" />
+    <EntitySet Name="Bas_WeChatOpenID" EntityType="Self.Bas_WeChatOpenID" />
+    <EntitySet Name="Bas_WeChatToken" EntityType="Self.Bas_WeChatToken" />
+    <EntitySet Name="BizSeqNos" EntityType="Self.BizSeqNos" />
+    <EntitySet Name="Bus_Advance" EntityType="Self.Bus_Advance" />
+    <EntitySet Name="Bus_AppInstruction" EntityType="Self.Bus_AppInstruction" />
+    <EntitySet Name="Bus_Arrears" EntityType="Self.Bus_Arrears" />
+    <EntitySet Name="Bus_AutoPromotionRecord" EntityType="Self.Bus_AutoPromotionRecord" />
+    <EntitySet Name="Bus_BackOrders" EntityType="Self.Bus_BackOrders" />
+    <EntitySet Name="Bus_BalanceChange" EntityType="Self.Bus_BalanceChange" />
+    <EntitySet Name="Bus_BookBasket" EntityType="Self.Bus_BookBasket" />
+    <EntitySet Name="Bus_BookOrders" EntityType="Self.Bus_BookOrders" />
+    <EntitySet Name="Bus_CardCoupon" EntityType="Self.Bus_CardCoupon" />
+    <EntitySet Name="Bus_CardRechargeRecord" EntityType="Self.Bus_CardRechargeRecord" />
+    <EntitySet Name="Bus_CouponRechargeRecord" EntityType="Self.Bus_CouponRechargeRecord" />
+    <EntitySet Name="Bus_IntegralAdjust" EntityType="Self.Bus_IntegralAdjust" />
+    <EntitySet Name="Bus_IntegralChange" EntityType="Self.Bus_IntegralChange" />
+    <EntitySet Name="Bus_IntegralExchange" EntityType="Self.Bus_IntegralExchange" />
+    <EntitySet Name="Bus_MarketingAnalyzeRecord" EntityType="Self.Bus_MarketingAnalyzeRecord" />
+    <EntitySet Name="Bus_OrderBasket" EntityType="Self.Bus_OrderBasket" />
+    <EntitySet Name="Bus_OrderDeliverys" EntityType="Self.Bus_OrderDeliverys" />
+    <EntitySet Name="Bus_OrderPay" EntityType="Self.Bus_OrderPay" />
+    <EntitySet Name="Bus_Orders" EntityType="Self.Bus_Orders" />
+    <EntitySet Name="Bus_Reservation" EntityType="Self.Bus_Reservation" />
+    <EntitySet Name="Bus_ReservationBasket" EntityType="Self.Bus_ReservationBasket" />
+    <EntitySet Name="Bus_Sms" EntityType="Self.Bus_Sms" />
+    <EntitySet Name="Bus_SmsBusiness" EntityType="Self.Bus_SmsBusiness" />
+    <EntitySet Name="Bus_SmsMember" EntityType="Self.Bus_SmsMember" />
+    <EntitySet Name="Bus_SmsYZM" EntityType="Self.Bus_SmsYZM" />
+    <EntitySet Name="bus_SmsYZMRecord" EntityType="Self.bus_SmsYZMRecord" />
+    <EntitySet Name="Bus_ThirdPay" EntityType="Self.Bus_ThirdPay" />
+    <EntitySet Name="Log_CardOperationLogs" EntityType="Self.Log_CardOperationLogs" />
+    <EntitySet Name="Log_MerchantLog" EntityType="Self.Log_MerchantLog" />
+    <EntitySet Name="Log_SysLog" EntityType="Self.Log_SysLog" />
+    <EntitySet Name="Mob_Activity" EntityType="Self.Mob_Activity" />
+    <EntitySet Name="Mob_CardApply" EntityType="Self.Mob_CardApply" />
+    <EntitySet Name="Sys_Admins" EntityType="Self.Sys_Admins" />
+    <EntitySet Name="Sys_Area" EntityType="Self.Sys_Area" />
+    <EntitySet Name="Sys_BaseInfo" EntityType="Self.Sys_BaseInfo" />
+    <EntitySet Name="Sys_BonusClass" EntityType="Self.Sys_BonusClass" />
+    <EntitySet Name="Sys_City" EntityType="Self.Sys_City" />
+    <EntitySet Name="Sys_CommerceGroup" EntityType="Self.Sys_CommerceGroup" />
+    <EntitySet Name="Sys_MenuFunction" EntityType="Self.Sys_MenuFunction" />
+    <EntitySet Name="Sys_MerchantContract" EntityType="Self.Sys_MerchantContract" />
+    <EntitySet Name="Sys_MerchantModule" EntityType="Self.Sys_MerchantModule" />
+    <EntitySet Name="Sys_Power" EntityType="Self.Sys_Power" />
+    <EntitySet Name="Sys_SystemModule" EntityType="Self.Sys_SystemModule" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Bas_CommerceGroup" EntityType="Self.Bas_CommerceGroup" />
+    <EntitySet Name="Bas_MemberAddress" EntityType="Self.Bas_MemberAddress" />
+    <EntitySet Name="Sys_MerchantClass" EntityType="Self.Sys_MerchantClass" />
+    <EntitySet Name="Sys_Province" EntityType="Self.Sys_Province" />
+    <EntitySet Name="Sys_SmsTemplate" EntityType="Self.Sys_SmsTemplate" />
+    <FunctionImport Name="CalcArrears" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcArrears_Result)">
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="timetype" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CalcCardRecharge" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcCardRecharge_Result)">
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="timetype" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CalcConsumption" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcConsumption_Result)">
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="timetype" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CalcCustomerStream" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcCustomerStream_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CalcCustomerStreamByAge" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcCustomerStreamByAge_Result)">
+      <Parameter Name="min" Mode="In" Type="Int32" />
+      <Parameter Name="max" Mode="In" Type="Int32" />
+      <Parameter Name="range" Mode="In" Type="Int32" />
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CalcCustomerStreamBySex" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcCustomerStreamBySex_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CalcDiscountDeduction" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcDiscountDeduction_Result)">
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="timetype" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CalcPayByType" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcPayByType_Result)">
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="timetype" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CalcPeopleAndAVG" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcPeopleAndAVG_Result)">
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="timetype" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CalcProductPrice" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcProductPrice_Result)">
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="timetype" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CalcTurnover" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcTurnover_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CalcTurnoverByAge" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcTurnoverByAge_Result)">
+      <Parameter Name="min" Mode="In" Type="Int32" />
+      <Parameter Name="max" Mode="In" Type="Int32" />
+      <Parameter Name="range" Mode="In" Type="Int32" />
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CalcTurnoverBySex" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.CalcTurnoverBySex_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="DateSplit" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.DateSplit_Result)">
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+      <Parameter Name="separator" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="DateSplitByDMY" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.DateSplitByDMY_Result)">
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+      <Parameter Name="type" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NumSplit" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.NumSplit_Result)">
+      <Parameter Name="beginnum" Mode="In" Type="Int32" />
+      <Parameter Name="endnum" Mode="In" Type="Int32" />
+      <Parameter Name="separator" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="StrToTable" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.StrToTable_Result)">
+      <Parameter Name="str" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TimeSplit" IsComposable="true" ReturnType="Collection(InkeServer.DataMapping.Model.TimeSplit_Result)">
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+      <Parameter Name="separator" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="Biz_GetSeqNo" ReturnType="Collection(String)">
+      <Parameter Name="BizSeqType" Mode="In" Type="String" />
+      <Parameter Name="Terminal" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_BossReport" ReturnType="Collection(String)">
+      <Parameter Name="Merchant_ID" Mode="In" Type="String" />
+      <Parameter Name="BossReport_ID" Mode="In" Type="String" />
+      <Parameter Name="StartTime" Mode="In" Type="DateTime" />
+      <Parameter Name="EndTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_BusinessDates">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="separator" Mode="In" Type="Double" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_BusinessHours">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="separator" Mode="In" Type="Double" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_BusinessTimeSlot" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_BusinessTimeSlot_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="range" Mode="In" Type="Double" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_CouponMemoryUsage" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_CouponMemoryUsage_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_CouponMemoryUsageByCouponID" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_CouponMemoryUsageByCouponID_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="couponid" Mode="In" Type="String" />
+      <Parameter Name="rangetype" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_CouponSettlement" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_CouponSettlement_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_CustomerStreamAnalysis" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_CustomerStreamAnalysis_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="analysis" Mode="In" Type="Int32" />
+      <Parameter Name="min" Mode="In" Type="Int32" />
+      <Parameter Name="max" Mode="In" Type="Int32" />
+      <Parameter Name="range" Mode="In" Type="Int32" />
+      <Parameter Name="rangetype" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_MarketingAnalysisByCard" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_MarketingAnalysisByCard_Result)">
+      <Parameter Name="marketinganalyze_id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_MembershipGrowth" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_MembershipGrowth_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="rangetype" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_NumberOfDiners" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_NumberOfDiners_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_PayTypeAnalysis" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_PayTypeAnalysis_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_ProductSalesRanking" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_ProductSalesRanking_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="types" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+      <Parameter Name="sort" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_RechargeDeductionSettlement" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_RechargeDeductionSettlement_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_ReportClose">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="statisticsProduct" Mode="In" Type="Int32" />
+      <Parameter Name="Operator" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_StoreTurnoverAnalysis" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_StoreTurnoverAnalysis_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="analysis" Mode="In" Type="Int32" />
+      <Parameter Name="min" Mode="In" Type="Int32" />
+      <Parameter Name="max" Mode="In" Type="Int32" />
+      <Parameter Name="range" Mode="In" Type="Int32" />
+      <Parameter Name="rangetype" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_TableTurnoverRate">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="CountType" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(InkeServer.DataMapping.Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(InkeServer.DataMapping.Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="SyncOrderInformation" ReturnType="Collection(Int32)">
+      <Parameter Name="Orders" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="IBoxPaySerial" EntityType="InkeServer.DataMapping.Model.IBoxPaySerial" />
+    <FunctionImport Name="Rpt_RecordCenterIndex" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_RecordCenterIndex_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="Bus_BookOrderPay" EntityType="InkeServer.DataMapping.Model.Bus_BookOrderPay" />
+    <EntitySet Name="Bas_MerchantImg" EntityType="InkeServer.DataMapping.Model.Bas_MerchantImg" />
+    <FunctionImport Name="Rpt_ProductSalse" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_ProductSalse_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="String" />
+      <Parameter Name="endtime" Mode="In" Type="String" />
+      <Parameter Name="merchantbaseInfoid" Mode="In" Type="String" />
+      <Parameter Name="sorttype" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_ReportBusiness">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="String" />
+      <Parameter Name="endtime" Mode="In" Type="String" />
+      <Parameter Name="discountid" Mode="In" Type="String" />
+      <Parameter Name="sex" Mode="In" Type="String" />
+      <Parameter Name="operator" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AddMerchantModule">
+      <Parameter Name="Merchant_ID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Rpt_RecordCenter" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_RecordCenter_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopids" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="DateTime" />
+      <Parameter Name="endtime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="Bas_ProductStorage" EntityType="InkeServer.DataMapping.Model.Bas_ProductStorage" />
+    <EntitySet Name="Bas_ProductStorageBatch" EntityType="InkeServer.DataMapping.Model.Bas_ProductStorageBatch" />
+    <FunctionImport Name="Rpt_ProductStorageStatistics" ReturnType="Collection(InkeServer.DataMapping.Model.Rpt_ProductStorageStatistics_Result)">
+      <Parameter Name="merchantid" Mode="In" Type="String" />
+      <Parameter Name="shopid" Mode="In" Type="String" />
+      <Parameter Name="begintime" Mode="In" Type="String" />
+      <Parameter Name="endtime" Mode="In" Type="String" />
+      <Parameter Name="productname" Mode="In" Type="String" />
+      <Parameter Name="productcode" Mode="In" Type="String" />
+      <Parameter Name="merchantbaseInfoid" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Rpt_BusinessTimeSlot_Result">
+    <Property Type="Time" Name="Title" Nullable="true" />
+    <Property Type="Int32" Name="Total" Nullable="true" />
+    <Property Type="String" Name="TotalPercent" Nullable="true" MaxLength="51" />
+    <Property Type="Decimal" Name="Customer" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="CustomerPercent" Nullable="true" MaxLength="51" />
+    <Property Type="Decimal" Name="Member" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="MemberPercent" Nullable="true" MaxLength="51" />
+    <Property Type="Decimal" Name="TotalMoney" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="TotalMoneyPercent" Nullable="true" MaxLength="51" />
+  </ComplexType>
+  <ComplexType Name="Rpt_CouponMemoryUsage_Result">
+    <Property Type="String" Name="Coupon_ID" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Coupon_BuyPrice" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="Coupon_Name" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Unused" Nullable="false" />
+    <Property Type="String" Name="UnusedPercent" Nullable="true" MaxLength="31" />
+    <Property Type="Int32" Name="Used" Nullable="false" />
+    <Property Type="String" Name="UsedPercent" Nullable="true" MaxLength="31" />
+    <Property Type="Int32" Name="Overdue" Nullable="false" />
+    <Property Type="String" Name="OverduePercent" Nullable="true" MaxLength="31" />
+    <Property Type="Int32" Name="Total" Nullable="false" />
+    <Property Type="String" Name="TotalPercent" Nullable="true" MaxLength="31" />
+  </ComplexType>
+  <ComplexType Name="Rpt_CouponMemoryUsageByCouponID_Result">
+    <Property Type="String" Name="Coupon_ID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Coupon_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Unused" Nullable="true" />
+    <Property Type="Int32" Name="Used" Nullable="true" />
+    <Property Type="Int32" Name="Overdue" Nullable="true" />
+    <Property Type="Int32" Name="Total" Nullable="true" />
+    <Property Type="DateTime" Name="Title" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Rpt_CouponSettlement_Result">
+    <Property Type="String" Name="Shop_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Coupon_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Unused" Nullable="true" />
+    <Property Type="Int32" Name="Used" Nullable="true" />
+    <Property Type="Int32" Name="Overdue" Nullable="true" />
+    <Property Type="Int32" Name="Total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Rpt_CustomerStreamAnalysis_Result">
+    <Property Type="DateTime" Name="Title" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="MemberTotal" Nullable="true" />
+    <Property Type="Int32" Name="CustomerTotal" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Rpt_MarketingAnalysisByCard_Result">
+    <Property Type="String" Name="MarketingAnalyze_Name" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Card_ID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Card_BusinessID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Card_Num" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Member_ID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Member_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Member_MobilePhone" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Member_Birthday" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Member_RegisterTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Member_Sex" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="LastConsumeTime" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Card_Cash" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Card_Integral" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="ConsumeCount" Nullable="true" />
+    <Property Type="Decimal" Name="ConsumeMoney" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="DeductionCount" Nullable="true" />
+    <Property Type="Decimal" Name="DeductionMoney" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="RechargeCount" Nullable="true" />
+    <Property Type="Decimal" Name="RechargeMoney" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="UnusedCoupon" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Rpt_MembershipGrowth_Result">
+    <Property Type="DateTime" Name="Title" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Rpt_NumberOfDiners_Result">
+    <Property Type="Int32" Name="Min0Max3" Nullable="true" />
+    <Property Type="Int32" Name="Min4Max6" Nullable="true" />
+    <Property Type="Int32" Name="Min7Max9" Nullable="true" />
+    <Property Type="Int32" Name="Min10Max13" Nullable="true" />
+    <Property Type="Int32" Name="Min14" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Rpt_PayTypeAnalysis_Result">
+    <Property Type="Decimal" Name="Cash" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="Bank" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="Member" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="Alipay" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="Wechat" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="Group" Nullable="true" Precision="38" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="Rpt_ProductSalesRanking_Result">
+    <Property Type="String" Name="Product_ID" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Product_Name" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Ranking" Nullable="true" />
+    <Property Type="Int32" Name="Total" Nullable="true" />
+    <Property Type="String" Name="Percent" Nullable="true" MaxLength="31" />
+  </ComplexType>
+  <ComplexType Name="Rpt_RechargeDeductionSettlement_Result">
+    <Property Type="Decimal" Name="Recharge" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Deduction" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Settlement" Nullable="true" Precision="19" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="Rpt_StoreTurnoverAnalysis_Result">
+    <Property Type="DateTime" Name="Title" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="MemberTotal" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CustomerTotal" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="IBoxPaySerial">
+    <Key>
+      <PropertyRef Name="SerialNo" />
+    </Key>
+    <Property Name="SerialNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ThirdPay_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="Rpt_RecordCenterIndex_Result">
+    <Property Type="Decimal" Name="TotalConsume" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="CustomConsume" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="MemberConsume" Nullable="true" Precision="38" Scale="2" />
+  </ComplexType>
+  <EntityType Name="Bus_BookOrderPay">
+    <Key>
+      <PropertyRef Name="BookOrderPay_ID" />
+    </Key>
+    <Property Name="BookOrderPay_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayType" Type="Int32" Nullable="false" />
+    <Property Name="PayMoney" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="PayTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Book_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Card_BusinessID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pay_JyNum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Adjust" Type="Int32" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bas_MerchantImg">
+    <Key>
+      <PropertyRef Name="Img_ID" />
+    </Key>
+    <Property Name="Img_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Img_Url" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Img_Type" Type="Int32" />
+    <Property Name="Img_IsIndex" Type="Int32" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="Rpt_ProductSalse_Result">
+    <Property Type="String" Name="MerchantBaseInfo_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Shop_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Product_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Product_Code" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Product_Price" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="ProductNum" Nullable="true" />
+    <Property Type="Int32" Name="SalesQuantity" Nullable="false" />
+    <Property Type="Int32" Name="GivenQuantity" Nullable="false" />
+    <Property Type="Int32" Name="ReturnQuantity" Nullable="false" />
+    <Property Type="Decimal" Name="SalesMoney" Nullable="false" Precision="38" Scale="2" />
+    <Property Type="Int32" Name="StorageQuantity" Nullable="false" />
+    <Property Type="Decimal" Name="StoragePrice" Nullable="false" Precision="38" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="Rpt_RecordCenter_Result">
+    <Property Type="Decimal" Name="CustomerConsume" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="MemberConsume" Nullable="true" Precision="38" Scale="2" />
+  </ComplexType>
+  <EntityType Name="Bas_ProductStorage">
+    <Key>
+      <PropertyRef Name="ProductStorage_ID" />
+    </Key>
+    <Property Name="ProductStorage_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShopProduct_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StorageNum" Type="Int32" Nullable="false" />
+    <Property Name="ProductPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="StarageTime" Type="DateTime" Precision="3" />
+    <Property Name="ProductStorageBatch_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LowerLimit" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Opertaor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Bas_ProductStorageBatch">
+    <Key>
+      <PropertyRef Name="ProductStorageBatch_ID" />
+    </Key>
+    <Property Name="ProductStorageBatch_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StorageBatch_Num" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Handler" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StorageTime" Type="DateTime" Precision="3" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="Rpt_ProductStorageStatistics_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Product_ID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MerchantBaseInfo_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Product_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Product_Code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Product_Unit" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Shop_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="StorageTotal" Nullable="true" />
+    <Property Type="Int32" Name="SaleTotal" Nullable="true" />
+    <Property Type="Int32" Name="InitialStorageTotal" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Bas_Account">
+    <Key>
+      <PropertyRef Name="Account_ID" />
+    </Key>
+    <Property Name="Account_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Account_Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Account_Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Account_Memo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Account_Status" Type="Int32" />
+    <Property Name="Account_LoginPOS" Type="Int32" />
+    <Property Name="Account_LoginKFT" Type="Int32" />
+    <Property Name="Account_LoginCRM" Type="Int32" />
+    <Property Name="Employee_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Position_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Merchant_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Shop_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="OperationTime" Type="DateTime" Precision="3" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Del" Type="Int32" />
+    <Property Name="OptionTimestamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Account_LoginINPOS" Type="Int32" />
+  </EntityType>
+</Schema>

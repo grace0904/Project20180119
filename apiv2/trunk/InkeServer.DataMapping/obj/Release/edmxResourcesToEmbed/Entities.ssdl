@@ -1,0 +1,2383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InkeServer.DataMapping.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bas_Account">
+    <Key>
+      <PropertyRef Name="Account_ID" />
+    </Key>
+    <Property Name="Account_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Account_Login" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Account_Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Account_Memo" Type="varchar" MaxLength="100" />
+    <Property Name="Account_Status" Type="int" />
+    <Property Name="Account_LoginPOS" Type="int" />
+    <Property Name="Account_LoginKFT" Type="int" />
+    <Property Name="Account_LoginCRM" Type="int" />
+    <Property Name="Employee_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Position_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="Account_LoginINPOS" Type="int" />
+  </EntityType>
+  <EntityType Name="Bas_ActivityImages">
+    <Key>
+      <PropertyRef Name="ActivityImageID" />
+    </Key>
+    <Property Name="ActivityImageID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ActivityID" Type="varchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="varchar(max)" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="IsSort" Type="int" />
+  </EntityType>
+  <EntityType Name="Bas_AppClients">
+    <Key>
+      <PropertyRef Name="App_ID" />
+    </Key>
+    <Property Name="App_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="App_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="App_Key" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="App_Secret" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="App_Linkman" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="App_LinkPhone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="App_Memo" Type="varchar" MaxLength="500" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bas_AutoPromotion">
+    <Key>
+      <PropertyRef Name="Promotion_ID" />
+    </Key>
+    <Property Name="Promotion_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_Id" Type="varchar" MaxLength="50" />
+    <Property Name="PromotionName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PromotionType" Type="int" Nullable="false" />
+    <Property Name="MultiplePromotion" Type="int" />
+    <Property Name="BirthDayStartDate" Type="varchar" MaxLength="50" />
+    <Property Name="BirthDayEndDate" Type="varchar" MaxLength="50" />
+    <Property Name="ValidityBirthDay" Type="int" />
+    <Property Name="ValidityType" Type="int" />
+    <Property Name="DateFrom" Type="datetime" />
+    <Property Name="DateTo" Type="datetime" />
+    <Property Name="ConsumeFrom" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ConsumeTo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IntegralTotalFrom" Type="int" />
+    <Property Name="IntegralTotalTo" Type="int" />
+    <Property Name="ChargeAmountFrom" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ChargeAmountTo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalDateStart" Type="datetime" />
+    <Property Name="TotalDateEnd" Type="datetime" />
+    <Property Name="FestivalName" Type="varchar" MaxLength="50" />
+    <Property Name="FestivalDate" Type="date" />
+    <Property Name="BeforeDays" Type="int" />
+    <Property Name="ProductId" Type="varchar" MaxLength="50" />
+    <Property Name="ProductQuantityFrom" Type="int" />
+    <Property Name="ProductQuantityTo" Type="int" />
+    <Property Name="PromotionShopIds" Type="varchar" MaxLength="4000" />
+    <Property Name="PromotionGender" Type="int" />
+    <Property Name="PromotionCardTypeIds" Type="varchar" MaxLength="4000" />
+    <Property Name="MemberType" Type="int" />
+    <Property Name="Coupon_Id" Type="varchar" MaxLength="50" />
+    <Property Name="CouponQuantity" Type="int" />
+    <Property Name="GivenIntegral" Type="int" />
+    <Property Name="GivenIntegralMultiple" Type="int" />
+    <Property Name="State" Type="int" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="StartUseDate" Type="datetime" />
+    <Property Name="LastExecDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Bas_AutoPromotionTime">
+    <Key>
+      <PropertyRef Name="AutoPromotionTime_Id" />
+    </Key>
+    <Property Name="AutoPromotionTime_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AutoPromotion_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TimeType" Type="int" Nullable="false" />
+    <Property Name="Weekday" Type="varchar" MaxLength="10" />
+    <Property Name="MonthDay" Type="varchar" MaxLength="10" />
+    <Property Name="YearMonth" Type="varchar" MaxLength="10" />
+    <Property Name="YearDay" Type="varchar" MaxLength="10" />
+    <Property Name="HourBegin" Type="varchar" MaxLength="10" />
+    <Property Name="MinuteBegin" Type="varchar" MaxLength="10" />
+    <Property Name="HourEnd" Type="varchar" MaxLength="10" />
+    <Property Name="MinuteEnd" Type="varchar" MaxLength="10" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bas_BonusRecord">
+    <Key>
+      <PropertyRef Name="BonusRecord_ID" />
+    </Key>
+    <Property Name="BonusRecord_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BonusClass" Type="int" Nullable="false" />
+    <Property Name="Employee_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BonusCash" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Record_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="AddTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Bas_BonusSet">
+    <Key>
+      <PropertyRef Name="BonusSet_ID" />
+    </Key>
+    <Property Name="BonusSet_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BonusClass" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Record_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Position_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ComputingMethod" Type="int" Nullable="false" />
+    <Property Name="BonusCash" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BonusProportion" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_BossReport">
+    <Key>
+      <PropertyRef Name="BossReport_ID" />
+    </Key>
+    <Property Name="BossReport_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BossReportName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SendTime" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ReceiveMobilePhone" Type="text" Nullable="false" />
+    <Property Name="ShopList" Type="text" />
+    <Property Name="Memo" Type="text" />
+    <Property Name="BusinessBeginHour" Type="int" Nullable="false" />
+    <Property Name="BusinessBeginMinute" Type="int" Nullable="false" />
+    <Property Name="BusinessDate" Type="int" Nullable="false" />
+    <Property Name="BusinessEndHour" Type="int" Nullable="false" />
+    <Property Name="BusinessEndMinute" Type="int" Nullable="false" />
+    <Property Name="SendCycle" Type="int" />
+    <Property Name="MemberIncrease" Type="int" Nullable="false" />
+    <Property Name="CardIncrease" Type="int" Nullable="false" />
+    <Property Name="ConsumeTotal" Type="int" />
+    <Property Name="MemberConsumeTotal" Type="int" Nullable="false" />
+    <Property Name="MemberRechargeTotal" Type="int" Nullable="false" />
+    <Property Name="MemberRechargeGiveTotal" Type="int" Nullable="false" />
+    <Property Name="IndividualConsumeTotal" Type="int" Nullable="false" />
+    <Property Name="MemberReductionTotal" Type="int" Nullable="false" />
+    <Property Name="CouponRechargeQuantity" Type="int" Nullable="false" />
+    <Property Name="CouponUseQuantity" Type="int" Nullable="false" />
+    <Property Name="MemberAddIntegral" Type="int" Nullable="false" />
+    <Property Name="MemberReductionIntegral" Type="int" Nullable="false" />
+    <Property Name="MemberMoneyTotal" Type="int" Nullable="false" />
+    <Property Name="MemberIntegralTotal" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="LastExecDate" Type="datetime" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bas_Card">
+    <Key>
+      <PropertyRef Name="Card_ID" />
+    </Key>
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_Num" Type="varchar" MaxLength="50" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_Status" Type="int" Nullable="false" />
+    <Property Name="CardBatch_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_Cash" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Card_Integral" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Card_Password" Type="varchar" MaxLength="50" />
+    <Property Name="Discount_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_Validity" Type="int" />
+    <Property Name="Card_FDate" Type="datetime" />
+    <Property Name="Card_LDate" Type="datetime" />
+    <Property Name="Card_OpenDate" Type="datetime" />
+    <Property Name="Employee_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_Pic" Type="varchar" MaxLength="100" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_CardBatch">
+    <Key>
+      <PropertyRef Name="CardBatch_ID" />
+    </Key>
+    <Property Name="CardBatch_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Batch_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Bas_CardDiscountType">
+    <Key>
+      <PropertyRef Name="Discount_ID" />
+    </Key>
+    <Property Name="Discount_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Discount_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ConsumeGetIntegral" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ConsumeCash" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RechargeGetIntegral" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RechargeCash" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OpenCardGetIntegral" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Discount" Type="int" Nullable="false" />
+    <Property Name="Apply" Type="int" Nullable="false" />
+    <Property Name="Card_Pic" Type="varchar" MaxLength="100" />
+    <Property Name="Memo" Type="varchar" MaxLength="500" />
+    <Property Name="RechargeAutoUpdate" Type="int" />
+    <Property Name="RechargeMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RechargeUpdateTo" Type="varchar" MaxLength="50" />
+    <Property Name="ConsumeAutoUpdate" Type="int" />
+    <Property Name="ConsumeMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ConsumeUpdateTo" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ComboGroup">
+    <Key>
+      <PropertyRef Name="ComboGroup_ID" />
+    </Key>
+    <Property Name="ComboGroup_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Group_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaxNum" Type="int" Nullable="false" />
+    <Property Name="MinNum" Type="int" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bas_ComboProduct">
+    <Key>
+      <PropertyRef Name="ComboProduct_ID" />
+    </Key>
+    <Property Name="ComboProduct_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ComboGroup_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OptionalNum" Type="int" Nullable="false" />
+    <Property Name="InfluencePrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IsRequired" Type="int" Nullable="false" />
+    <Property Name="IsSelected" Type="int" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“inkeserver30.dbo.Bas_CommerceGroup”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Bas_CommerceGroup">
+    <Key>
+      <PropertyRef Name="CommerceGroup_ID" />
+      <PropertyRef Name="GroupName" />
+    </Key>
+    <Property Name="CommerceGroup_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GroupName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Province" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Area" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Bas_Coupon">
+    <Key>
+      <PropertyRef Name="Coupon_ID" />
+    </Key>
+    <Property Name="Coupon_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MerchantBaseInfo_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Coupon_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Coupon_Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Coupon_BriefCode" Type="varchar" MaxLength="50" />
+    <Property Name="Coupon_Class" Type="int" Nullable="false" />
+    <Property Name="Product_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Coupon_ConsumeClass" Type="int" Nullable="false" />
+    <Property Name="Coupon_Cash" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Coupon_UserNum" Type="int" Nullable="false" />
+    <Property Name="Coupon_Unit" Type="varchar" MaxLength="50" />
+    <Property Name="Coupon_BuyPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Coupon_DeductionPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Coupon_Validity" Type="int" Nullable="false" />
+    <Property Name="Coupon_FDate" Type="datetime" />
+    <Property Name="Coupon_LDate" Type="datetime" />
+    <Property Name="Coupon_DateNum" Type="int" />
+    <Property Name="Coupon_IntegralExchange" Type="int" Nullable="false" />
+    <Property Name="Coupon_Integral" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Coupon_BPic" Type="varchar" MaxLength="50" />
+    <Property Name="Coupon_SPic" Type="varchar" MaxLength="50" />
+    <Property Name="Coupon_Status" Type="int" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Bas_DeliveryAddress">
+    <Key>
+      <PropertyRef Name="Address_ID" />
+    </Key>
+    <Property Name="Address_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Consignee" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="IsDefault" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bas_GivenCoupon">
+    <Key>
+      <PropertyRef Name="GivenCoupon_ID" />
+    </Key>
+    <Property Name="GivenCoupon_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Record_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GivenCoupon_Type" Type="int" Nullable="false" />
+    <Property Name="Coupon_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CouponQuantity" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bas_IntegralProducts">
+    <Key>
+      <PropertyRef Name="IntegralProduct_ID" />
+    </Key>
+    <Property Name="IntegralProduct_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Dictionary_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IntegralProduct_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IntegralProduct_Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IntegralProduct_SpellCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IntegralProduct_Unit" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IntegralProduct_Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IntegralProduct_BPic" Type="varchar" MaxLength="50" />
+    <Property Name="IntegralProduct_SPic" Type="varchar" MaxLength="50" />
+    <Property Name="IntegralProduct_Memo" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_MarketingAnalyze">
+    <Key>
+      <PropertyRef Name="MarketingAnalyze_ID" />
+    </Key>
+    <Property Name="MarketingAnalyze_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MarketingAnalyze_Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AutoExec" Type="int" />
+    <Property Name="AgeStart" Type="int" />
+    <Property Name="AgeEnd" Type="int" />
+    <Property Name="Sex" Type="int" />
+    <Property Name="CardDiscountType_ID" Type="varchar" MaxLength="50" />
+    <Property Name="ResidueIntegralStart" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ResidueIntegralEnd" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ResidueMoneyStart" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ResidueMoneyEnd" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OpenCardValidity" Type="int" />
+    <Property Name="OpenCardDateStart" Type="datetime" />
+    <Property Name="OpenCardDateEnd" Type="datetime" />
+    <Property Name="BirthdayValidity" Type="int" />
+    <Property Name="BirthdayStart" Type="varchar" MaxLength="50" />
+    <Property Name="BirthdayEnd" Type="varchar" MaxLength="50" />
+    <Property Name="ConsumeDateStart" Type="datetime" />
+    <Property Name="ConsumeDateEnd" Type="datetime" />
+    <Property Name="ConsumeCountStart" Type="int" />
+    <Property Name="ConsumeCountEnd" Type="int" />
+    <Property Name="SimpleConsumeMoneyStart" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimpleConsumeMoneyEnd" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CountCunsumeMoneyStart" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CountCunsumeMoneyEnd" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RechargeCountStart" Type="int" />
+    <Property Name="RechargeCountEnd" Type="int" />
+    <Property Name="SimpleRechargeMoneyStart" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimpleRechargeMoneyEnd" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CountRechargeMoneyStart" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CountRechargeMoneyEnd" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SimpleConsumePeopleStart" Type="int" />
+    <Property Name="SimpleConsumePeopleEnd" Type="int" />
+    <Property Name="CountIntegralDeductionStart" Type="int" />
+    <Property Name="CountIntegralDeductionEnd" Type="int" />
+    <Property Name="NotConsumeDay" Type="int" />
+    <Property Name="IntegralTotalStart" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IntegralTotalEnd" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ConsumeProduct_ID" Type="varchar" MaxLength="50" />
+    <Property Name="CountConsumeProductStart" Type="int" />
+    <Property Name="CountConsumeProductEnd" Type="int" />
+    <Property Name="ConsumeCoupon_ID" Type="varchar" MaxLength="8000" />
+    <Property Name="StatisticsTotal" Type="int" />
+    <Property Name="IssueTotal" Type="int" />
+    <Property Name="GivenIntegral" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="State" Type="int" Nullable="false" />
+    <Property Name="LastExeTime" Type="datetime" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bas_Member">
+    <Key>
+      <PropertyRef Name="Member_ID" />
+    </Key>
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_Sex" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Member_MobilePhone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_HomePhone" Type="varchar" MaxLength="50" />
+    <Property Name="Member_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Member_Birthday" Type="datetime" />
+    <Property Name="Member_Email" Type="varchar" MaxLength="50" />
+    <Property Name="Member_Logo" Type="varchar" MaxLength="100" />
+    <Property Name="Member_RegisterTime" Type="datetime" Nullable="false" />
+    <Property Name="Member_Memo" Type="varchar" MaxLength="500" />
+    <Property Name="User_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Operation" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“inkeserver30.dbo.Bas_MemberAddress”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Bas_MemberAddress">
+    <Key>
+      <PropertyRef Name="Addres_Id" />
+      <PropertyRef Name="IsDefault" />
+      <PropertyRef Name="Member_ID" />
+    </Key>
+    <Property Name="Addres_Id" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Member_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Address" Type="nvarchar" MaxLength="80" />
+    <Property Name="PostCode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="30" />
+    <Property Name="IsDefault" Type="tinyint" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bas_Merchant">
+    <Key>
+      <PropertyRef Name="Merchant_ID" />
+    </Key>
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Server_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Merchant_ShortName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MerchantClass_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_Linkman" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_Tel" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_Fax" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_Email" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_QQ" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_Prov" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_City" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_Area" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Merchant_FDate" Type="datetime" Nullable="false" />
+    <Property Name="Merchant_LDate" Type="datetime" Nullable="false" />
+    <Property Name="Merchant_Status" Type="int" Nullable="false" />
+    <Property Name="Merchant_OpenApp" Type="int" Nullable="false" />
+    <Property Name="Merchant_OpenWeb" Type="int" Nullable="false" />
+    <Property Name="Merchant_OpenWeixin" Type="int" Nullable="false" />
+    <Property Name="Merchant_Number" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Merchant_Memo" Type="varchar" MaxLength="100" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="OperationTime" Type="datetime" Nullable="false" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bas_MerchantBaseInfo">
+    <Key>
+      <PropertyRef Name="MerchantBaseInfo_ID" />
+    </Key>
+    <Property Name="MerchantBaseInfo_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MerchantBaseInfo_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BaseInfoClass" Type="int" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="OperationTime" Type="datetime" Nullable="false" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bas_MerchantConfig">
+    <Key>
+      <PropertyRef Name="MerchantConfig_ID" />
+    </Key>
+    <Property Name="MerchantConfig_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="BusinessScope_ID" Type="varchar" MaxLength="50" />
+    <Property Name="SmsCount" Type="int" />
+    <Property Name="ConsumeAutoUpdate" Type="int" />
+    <Property Name="RechargeAutoUpdate" Type="int" />
+    <Property Name="Pop" Type="int" />
+    <Property Name="DiscountRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IntegralRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CashRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IntegraClear" Type="int" Nullable="false" />
+    <Property Name="IntegraEndTime" Type="datetime" />
+    <Property Name="IntegraClearTime" Type="datetime" />
+    <Property Name="IntegraClearBeforeSms" Type="int" />
+    <Property Name="IntegraClearBeforeDate" Type="int" />
+    <Property Name="IntegraClearFinishSms" Type="int" />
+    <Property Name="SpanMonthAdjust" Type="int" />
+    <Property Name="ConsumeInputType" Type="int" />
+    <Property Name="DeductMoneyAutoInput" Type="int" />
+    <Property Name="ShowAffirm" Type="int" />
+    <Property Name="OnlyCardConsume" Type="int" />
+    <Property Name="NotEditRate" Type="int" />
+    <Property Name="CanCloseIntegra" Type="int" />
+    <Property Name="MemberMultiCard" Type="int" />
+    <Property Name="CardNumberNull" Type="int" />
+    <Property Name="IntegraConvertManualInput" Type="int" />
+    <Property Name="OpenTakeAway" Type="int" />
+    <Property Name="OpenReservation" Type="int" />
+    <Property Name="OpenSelfOrder" Type="int" />
+    <Property Name="OpenSelfPay" Type="int" />
+    <Property Name="taste" Type="text" />
+    <Property Name="MainScope" Type="varchar" MaxLength="500" />
+    <Property Name="SpecialRequire" Type="varchar" MaxLength="500" />
+    <Property Name="Introduce" Type="text" />
+    <Property Name="Number" Type="varchar" MaxLength="50" />
+    <Property Name="ReduceMantissaSet" Type="int" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_MerchantImg">
+    <Key>
+      <PropertyRef Name="Img_ID" />
+    </Key>
+    <Property Name="Img_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Img_Url" Type="varchar" MaxLength="500" />
+    <Property Name="Img_Type" Type="int" />
+    <Property Name="Img_IsIndex" Type="int" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Bas_MerchantPosition">
+    <Key>
+      <PropertyRef Name="Position_ID" />
+    </Key>
+    <Property Name="Position_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Position_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Position_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Position_Parent" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_MerchantProducts">
+    <Key>
+      <PropertyRef Name="Product_ID" />
+    </Key>
+    <Property Name="Product_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MerchantBaseInfo_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_SpellCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_Unit" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Product_Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Product_BPic" Type="varchar" MaxLength="100" />
+    <Property Name="Product_SPic" Type="varchar" MaxLength="100" />
+    <Property Name="Product_Discount" Type="int" Nullable="false" />
+    <Property Name="Combo" Type="int" Nullable="false" />
+    <Property Name="Product_Memo" Type="varchar" MaxLength="100" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ProductCombo">
+    <Key>
+      <PropertyRef Name="ProductCombo_ID" />
+    </Key>
+    <Property Name="ProductCombo_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ComboGroup_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Del" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bas_ProductStorage">
+    <Key>
+      <PropertyRef Name="ProductStorage_ID" />
+    </Key>
+    <Property Name="ProductStorage_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShopProduct_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StorageNum" Type="int" Nullable="false" />
+    <Property Name="ProductPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StarageTime" Type="datetime" />
+    <Property Name="ProductStorageBatch_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LowerLimit" Type="int" />
+    <Property Name="Memo" Type="varchar" MaxLength="200" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Opertaor" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bas_ProductStorageBatch">
+    <Key>
+      <PropertyRef Name="ProductStorageBatch_ID" />
+    </Key>
+    <Property Name="ProductStorageBatch_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StorageBatch_Num" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Handler" Type="varchar" MaxLength="50" />
+    <Property Name="StorageTime" Type="datetime" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bas_Shop">
+    <Key>
+      <PropertyRef Name="Shop_ID" />
+    </Key>
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_Tel" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_LinkMan" Type="varchar" MaxLength="50" />
+    <Property Name="Prov_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="City_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Area_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_Address" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="CommerceGroup_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_RechargePassword" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_OpenDate" Type="date" Nullable="false" />
+    <Property Name="Shop_EndDate" Type="date" Nullable="false" />
+    <Property Name="Shop_SmsCount" Type="int" Nullable="false" />
+    <Property Name="Shop_Logo" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_longitude" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_latitude" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_BusinessTime" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_Status" Type="int" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="Deliveryamount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Takeoutcost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TakeOutTimeBegin" Type="varchar" MaxLength="50" />
+    <Property Name="TakeOutTimeEnd" Type="varchar" MaxLength="50" />
+    <Property Name="TakeOutStatus" Type="bit" />
+    <Property Name="PayOnDelivery" Type="bit" />
+    <Property Name="BookStatus" Type="bit" />
+    <Property Name="BookBasketStatus" Type="bit" />
+    <Property Name="AnticipationType" Type="int" />
+    <Property Name="AnticipationAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AnticipationRate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BookSmsTel" Type="varchar(max)" />
+    <Property Name="BookSmsEmployeeID" Type="varchar(max)" />
+    <Property Name="TakeOutSmsTel" Type="varchar(max)" />
+    <Property Name="TakeOutSmsEmployeeID" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Bas_ShopEmployee">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Employee_Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Employee_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Employee_Sex" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Employee_birthday" Type="datetime" />
+    <Property Name="Employee_Tel" Type="varchar" MaxLength="50" />
+    <Property Name="Employee_Address" Type="varchar" MaxLength="50" />
+    <Property Name="Employee_Pic" Type="varchar" MaxLength="50" />
+    <Property Name="Employee_Salary" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Position_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Employee_Lead_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ShopIntegralProducts">
+    <Key>
+      <PropertyRef Name="ShopIntegralProduct_ID" />
+    </Key>
+    <Property Name="ShopIntegralProduct_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IntegralProduct_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Dictionary_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SpellCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BPic" Type="varchar" MaxLength="50" />
+    <Property Name="SPic" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="ProductNum" Type="int" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ShopPositionPower">
+    <Key>
+      <PropertyRef Name="ShopPostitionPowerID" />
+    </Key>
+    <Property Name="ShopPostitionPowerID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Position_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="PowerString" Type="text" />
+  </EntityType>
+  <EntityType Name="Bas_ShopProducts">
+    <Key>
+      <PropertyRef Name="ShopProduct_ID" />
+    </Key>
+    <Property Name="ShopProduct_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MerchantBaseInfo_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SpellCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Unit" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BPic" Type="varchar" MaxLength="100" />
+    <Property Name="SPic" Type="varchar" MaxLength="100" />
+    <Property Name="Discount" Type="int" Nullable="false" />
+    <Property Name="Combo" Type="int" Nullable="false" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="GuQing" Type="int" />
+    <Property Name="ProductNum" Type="int" />
+    <Property Name="UseRepertory" Type="int" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ShopSeat">
+    <Key>
+      <PropertyRef Name="Seat_ID" />
+    </Key>
+    <Property Name="Seat_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Seat_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Seat_Num" Type="int" Nullable="false" />
+    <Property Name="ShopSeatClass_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Seat_Order" Type="int" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OptionTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_ShopSeatClass">
+    <Key>
+      <PropertyRef Name="ShopSeatClass_ID" />
+    </Key>
+    <Property Name="ShopSeatClass_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShopSeatClass_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Bas_SmsTemplateCustom">
+    <Key>
+      <PropertyRef Name="Custom_ID" />
+    </Key>
+    <Property Name="Custom_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Custom_Content" Type="nvarchar" MaxLength="200" />
+    <Property Name="Custom_Status" Type="int" Nullable="false" />
+    <Property Name="Custom_Send" Type="int" Nullable="false" />
+    <Property Name="Custom_SendDate" Type="int" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SmsTemplate_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Bas_UsableShop">
+    <Key>
+      <PropertyRef Name="UsableShop_ID" />
+    </Key>
+    <Property Name="UsableShop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UsableClass" Type="int" Nullable="false" />
+    <Property Name="Record_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Bas_User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="User_LoginName" Type="varchar" MaxLength="50" />
+    <Property Name="User_LoginPassword" Type="varchar" MaxLength="50" />
+    <Property Name="User_MobilePhone" Type="varchar" MaxLength="50" />
+    <Property Name="User_NickName" Type="varchar" MaxLength="50" />
+    <Property Name="User_Email" Type="varchar" MaxLength="50" />
+    <Property Name="User_Pic" Type="varchar" MaxLength="50" />
+    <Property Name="User_RegTime" Type="datetime" />
+    <Property Name="User_RegIP" Type="varchar" MaxLength="50" />
+    <Property Name="User_Status" Type="int" />
+    <Property Name="WeChat_Open_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="Operation" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Bas_UserAddress">
+    <Key>
+      <PropertyRef Name="Address_ID" />
+    </Key>
+    <Property Name="Address_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LinkMan" Type="varchar" MaxLength="50" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="IsDefault" Type="int" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="AddTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Bas_WeChat">
+    <Key>
+      <PropertyRef Name="WeChat_ID" />
+    </Key>
+    <Property Name="WeChat_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Original_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WeChatType" Type="int" />
+    <Property Name="WeChatName" Type="varchar" MaxLength="50" />
+    <Property Name="WechatNumber" Type="varchar" MaxLength="50" />
+    <Property Name="APPID" Type="varchar" MaxLength="50" />
+    <Property Name="AppSecret" Type="varchar" MaxLength="50" />
+    <Property Name="Token" Type="varchar" MaxLength="50" />
+    <Property Name="EncodingAESKey" Type="varchar" MaxLength="50" />
+    <Property Name="Mch_ID" Type="varchar" MaxLength="50" />
+    <Property Name="PayKey" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Bas_WeChatOpenID">
+    <Key>
+      <PropertyRef Name="WeChatOpen_ID" />
+    </Key>
+    <Property Name="WeChatOpen_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Open_ID" Type="varchar" MaxLength="50" />
+    <Property Name="User_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Bas_WeChatToken">
+    <Key>
+      <PropertyRef Name="WeChatToken_ID" />
+    </Key>
+    <Property Name="WeChatToken_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="WeChat_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Original_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AccessToken" Type="varchar" MaxLength="256" />
+    <Property Name="Access_Time" Type="datetime" />
+    <Property Name="JsApiTicket" Type="varchar" MaxLength="128" />
+    <Property Name="Ticket_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BizSeqNos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BizSeqValue" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="UseTime" Type="datetime" Nullable="false" />
+    <Property Name="Formula" Type="varchar" MaxLength="50" />
+    <Property Name="BizSeqType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bus_Advance">
+    <Key>
+      <PropertyRef Name="Advance_ID" />
+    </Key>
+    <Property Name="Advance_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BusinessClass" Type="int" />
+    <Property Name="Record_ID" Type="varchar" MaxLength="50" />
+    <Property Name="PayType" Type="int" />
+    <Property Name="PayMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PayTime" Type="datetime" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Bus_AppInstruction">
+    <Key>
+      <PropertyRef Name="Instruction_ID" />
+    </Key>
+    <Property Name="Instruction_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="InstructionType" Type="int" />
+    <Property Name="InstructionData" Type="varchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="SendCallBack" Type="int" />
+    <Property Name="SendCallBackClient_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Bus_Arrears">
+    <Key>
+      <PropertyRef Name="Arrears_ID" />
+    </Key>
+    <Property Name="Arrears_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Order_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Arrears_Money" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Arrears_Status" Type="int" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="PayType" Type="int" />
+    <Property Name="PayMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Pay_Card_ID" Type="varchar" MaxLength="50" />
+    <Property Name="PayMemo" Type="varchar" MaxLength="500" />
+    <Property Name="PayTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Adjust" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_AutoPromotionRecord">
+    <Key>
+      <PropertyRef Name="PromotionRecord_ID" />
+    </Key>
+    <Property Name="PromotionRecord_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Promotion_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PromotionName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PromotionType" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="GivenIntegral" Type="float" />
+    <Property Name="Coupon_ID" Type="varchar" MaxLength="50" />
+    <Property Name="CouponQuantity" Type="int" />
+    <Property Name="BusinessClass" Type="varchar" MaxLength="50" />
+    <Property Name="Record_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="ExecuteYear" Type="varchar" MaxLength="50" />
+    <Property Name="ExecuteTime" Type="datetime" />
+    <Property Name="Adjust" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_BackOrders">
+    <Key>
+      <PropertyRef Name="Apply_ID" />
+    </Key>
+    <Property Name="Apply_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Order_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ApplyTime" Type="datetime" Nullable="false" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Bus_BalanceChange">
+    <Key>
+      <PropertyRef Name="BalanceChange_ID" />
+    </Key>
+    <Property Name="BalanceChange_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BusinessClass" Type="int" Nullable="false" />
+    <Property Name="Record_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CashAdd" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CashReduce" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="Adjust" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_BookBasket">
+    <Key>
+      <PropertyRef Name="BookBasket_ID" />
+    </Key>
+    <Property Name="BookBasket_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Book_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_ID" Type="varchar" MaxLength="50" />
+    <Property Name="ShopProduct_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Units" Type="varchar" MaxLength="50" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Count" Type="int" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Zuofa" Type="varchar" MaxLength="500" />
+    <Property Name="Combo" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="User_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_BookOrderPay">
+    <Key>
+      <PropertyRef Name="BookOrderPay_ID" />
+    </Key>
+    <Property Name="BookOrderPay_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PayType" Type="int" Nullable="false" />
+    <Property Name="PayMoney" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayTime" Type="datetime" Nullable="false" />
+    <Property Name="Book_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" />
+    <Property Name="User_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Pay_JyNum" Type="varchar" MaxLength="50" />
+    <Property Name="Adjust" Type="int" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_BookOrders">
+    <Key>
+      <PropertyRef Name="Book_ID" />
+    </Key>
+    <Property Name="Book_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Business_Num" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SN" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Contacts" Type="varchar" MaxLength="50" />
+    <Property Name="People" Type="int" />
+    <Property Name="BookTime" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="PayStatus" Type="int" />
+    <Property Name="Change" Type="int" />
+    <Property Name="ShopSeatClass_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Seat_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Reason" Type="varchar" MaxLength="500" />
+    <Property Name="Memo" Type="varchar" MaxLength="500" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Order_ID" Type="varchar" MaxLength="50" />
+    <Property Name="User_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="Terminal" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Bus_CardCoupon">
+    <Key>
+      <PropertyRef Name="CardCoupon_ID" />
+    </Key>
+    <Property Name="CardCoupon_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Coupon_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Coupon_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BusinessClass" Type="int" Nullable="false" />
+    <Property Name="Record_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="FDate" Type="date" />
+    <Property Name="LDate" Type="date" />
+    <Property Name="Order_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="Adjust" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_CardRechargeRecord">
+    <Key>
+      <PropertyRef Name="RechargeRecord_ID" />
+    </Key>
+    <Property Name="RechargeRecord_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Business_Num" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RechargeMoney" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayMoney" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GivenMoney" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayType" Type="int" Nullable="false" />
+    <Property Name="GivenIntegral" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Employee_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="Adjust" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_CouponRechargeRecord">
+    <Key>
+      <PropertyRef Name="CouponRecord_ID" />
+    </Key>
+    <Property Name="CouponRecord_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Business_Num" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Coupon_Record" Type="varchar(max)" Nullable="false" />
+    <Property Name="Coupon_Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayType" Type="int" Nullable="false" />
+    <Property Name="PayCash" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CardPayCash" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Employee_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="Adjust" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_IntegralAdjust">
+    <Key>
+      <PropertyRef Name="IntegralAdjust_ID" />
+    </Key>
+    <Property Name="IntegralAdjust_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Business_Num" Type="varchar" MaxLength="50" />
+    <Property Name="AdjustType" Type="int" Nullable="false" />
+    <Property Name="AdjustIntegral" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_BussinessID" Type="varchar" MaxLength="50" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Bus_IntegralChange">
+    <Key>
+      <PropertyRef Name="IntegralChange_ID" />
+    </Key>
+    <Property Name="IntegralChange_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BusinessClass" Type="int" Nullable="false" />
+    <Property Name="Record_ID" Type="varchar" MaxLength="50" />
+    <Property Name="IntegralIncome" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IntegralConsume" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Adjust" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_IntegralExchange">
+    <Key>
+      <PropertyRef Name="Exchange_ID" />
+    </Key>
+    <Property Name="Exchange_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Business_Num" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IntegralProduct_ID" Type="varchar" MaxLength="50" />
+    <Property Name="ShopIntegralProduct_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Product_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Product_Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ProductQuantity" Type="int" />
+    <Property Name="Coupon_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Coupon_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Coupon_Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CouponQuantity" Type="int" />
+    <Property Name="Exchange_Cash" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DeductIntegral" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="User_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Terminal" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="Adjust" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_MarketingAnalyzeRecord">
+    <Key>
+      <PropertyRef Name="MarketingAnalyzeRecord_ID" />
+    </Key>
+    <Property Name="MarketingAnalyzeRecord_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MarketingAnalyze_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MarketingAnalyze_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MarketingAnalyzeType" Type="int" Nullable="false" />
+    <Property Name="GivenIntegral" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="50" />
+    <Property Name="ExecuteTime" Type="datetime" />
+    <Property Name="Adjust" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_OrderBasket">
+    <Key>
+      <PropertyRef Name="Bask_ID" />
+    </Key>
+    <Property Name="Bask_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Order_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_ID" Type="varchar" MaxLength="50" />
+    <Property Name="ShopProduct_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Bask_Units" Type="varchar" MaxLength="50" />
+    <Property Name="Bask_Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Bask_Count" Type="int" />
+    <Property Name="Bask_Discount" Type="int" />
+    <Property Name="Bask_Total" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Bask_Zuofa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bask_Status" Type="int" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="40" />
+    <Property Name="User_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Bask_PrintStatus" Type="int" />
+    <Property Name="Bask_Terminal" Type="int" />
+    <Property Name="Bask_ScCount" Type="int" />
+    <Property Name="Bask_GivenCount" Type="int" />
+    <Property Name="Bask_ReturnCount" Type="int" />
+    <Property Name="Combo" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="Del" Type="int" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="Adjust" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_OrderDeliverys">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+    </Key>
+    <Property Name="Order_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Consignee" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="PayOnDelivery" Type="bit" Nullable="false" />
+    <Property Name="ExpectTime" Type="datetime" Nullable="false" />
+    <Property Name="DeliveryFee" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DeliveryTime" Type="datetime" />
+    <Property Name="DeliveryMan" Type="varchar" MaxLength="50" />
+    <Property Name="DeliveryPhone" Type="varchar" MaxLength="50" />
+    <Property Name="EstimateTime" Type="datetime" />
+    <Property Name="Memo" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Bus_OrderPay">
+    <Key>
+      <PropertyRef Name="OrderPay_ID" />
+    </Key>
+    <Property Name="OrderPay_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PayType" Type="int" Nullable="false" />
+    <Property Name="PayMoney" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayTime" Type="datetime" Nullable="false" />
+    <Property Name="Order_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" />
+    <Property Name="User_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Pay_JyNum" Type="varchar" MaxLength="50" />
+    <Property Name="Adjust" Type="int" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_Orders">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+    </Key>
+    <Property Name="Order_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Business_Num" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SN" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Order_Class" Type="int" Nullable="false" />
+    <Property Name="Order_Process" Type="int" Nullable="false" />
+    <Property Name="Order_Status" Type="int" Nullable="false" />
+    <Property Name="Seat_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Order_People" Type="int" />
+    <Property Name="ConsumeMoney" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="DiscountMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CouponMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IntegralMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ReduceMantissaMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FinalMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ActualIncomeMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IsGuaZhang" Type="int" />
+    <Property Name="GuaZhangMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Order_GetIntegral" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CloseIntegral" Type="int" />
+    <Property Name="Employee_ID" Type="varchar" MaxLength="50" />
+    <Property Name="OpenSeatTime" Type="datetime" />
+    <Property Name="FinalTime" Type="datetime" />
+    <Property Name="Order_Password" Type="varchar" MaxLength="50" />
+    <Property Name="Order_Invoice" Type="varchar" MaxLength="100" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="500" />
+    <Property Name="Terminal" Type="varchar" MaxLength="50" />
+    <Property Name="Adjust" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_Reservation">
+    <Key>
+      <PropertyRef Name="Reservation_ID" />
+    </Key>
+    <Property Name="Reservation_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Reservation_MobilePhone" Type="varchar" MaxLength="50" />
+    <Property Name="Reservation_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Reservation_People" Type="int" />
+    <Property Name="Reservation_Time" Type="datetime" />
+    <Property Name="Reservation_Status" Type="int" />
+    <Property Name="Reservation_Change" Type="int" />
+    <Property Name="Seat_ID" Type="varchar" MaxLength="50" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="PayType" Type="int" />
+    <Property Name="PayMoney" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="500" />
+    <Property Name="Memo" Type="varchar" MaxLength="500" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Order_ID" Type="varchar" MaxLength="50" />
+    <Property Name="User_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+    <Property Name="Terminal" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Bus_ReservationBasket">
+    <Key>
+      <PropertyRef Name="ReservationBask_ID" />
+    </Key>
+    <Property Name="ReservationBask_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BusinessClass" Type="int" />
+    <Property Name="Record_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Product_ID" Type="varchar" MaxLength="50" />
+    <Property Name="ShopProduct_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Units" Type="varchar" MaxLength="50" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Count" Type="int" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Zuofa" Type="varchar" MaxLength="500" />
+    <Property Name="Combo" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="User_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Bus_Sms">
+    <Key>
+      <PropertyRef Name="Sms_ID" />
+    </Key>
+    <Property Name="Sms_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SendTime" Type="datetime" Nullable="false" />
+    <Property Name="SmsContent" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="SmsQuantity" Type="int" Nullable="false" />
+    <Property Name="SmsType" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Memo" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Operation" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Bus_SmsBusiness">
+    <Key>
+      <PropertyRef Name="SmsBusiness_Id" />
+    </Key>
+    <Property Name="SmsBusiness_Id" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="SmsType" Type="int" />
+    <Property Name="BusinessClass" Type="int" />
+    <Property Name="Business_Num" Type="varchar" MaxLength="40" />
+    <Property Name="SendTime" Type="datetime" Nullable="false" />
+    <Property Name="SmsContent" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="SmsSendQuantity" Type="int" Nullable="false" />
+    <Property Name="SmsOkQuantity" Type="int" />
+    <Property Name="Back_SmsId" Type="nvarchar" MaxLength="100" />
+    <Property Name="Back_Status" Type="nvarchar" MaxLength="20" />
+    <Property Name="Back_DTime" Type="nvarchar" MaxLength="20" />
+    <Property Name="Back_Desc" Type="nvarchar" MaxLength="100" />
+    <Property Name="FailMsg" Type="nvarchar" MaxLength="500" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bus_SmsMember">
+    <Key>
+      <PropertyRef Name="SmsMember_ID" />
+    </Key>
+    <Property Name="SmsMember_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sms_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="SendTime" Type="datetime" />
+    <Property Name="BackStatus" Type="varchar" MaxLength="50" />
+    <Property Name="FailMsg" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Bus_SmsYZM">
+    <Key>
+      <PropertyRef Name="SmsYZM_Id" />
+    </Key>
+    <Property Name="SmsYZM_Id" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="SmsYZM_Mob" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SmsYZM_Time" Type="datetime" Nullable="false" />
+    <Property Name="SmsYZM_YZM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SmsYZM_Memo" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="SmsYZM_Status" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SmsYZM_Terminal" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="SmsYZM_ReturnCode" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="SmsYZM_Error" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="bus_SmsYZMRecord">
+    <Key>
+      <PropertyRef Name="YZM_ID" />
+    </Key>
+    <Property Name="YZM_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="YZM_MobilePhone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="YZM_Value" Type="varchar" MaxLength="10" />
+    <Property Name="YZM_Class" Type="int" Nullable="false" />
+    <Property Name="YZM_Status" Type="int" Nullable="false" />
+    <Property Name="YZM_Time" Type="datetime" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Terminal" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Bus_ThirdPay">
+    <Key>
+      <PropertyRef Name="ThirdPay_ID" />
+    </Key>
+    <Property Name="ThirdPay_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BusinessClass" Type="int" Nullable="false" />
+    <Property Name="Record_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Merchant_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="PayType" Type="int" Nullable="false" />
+    <Property Name="PayBussinessNum" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PayMoney" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PayStatus" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="PayOverTime" Type="datetime" />
+    <Property Name="BusinessJSON" Type="text" />
+  </EntityType>
+  <EntityType Name="IBoxPaySerial">
+    <Key>
+      <PropertyRef Name="SerialNo" />
+    </Key>
+    <Property Name="SerialNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ThirdPay_ID" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Log_CardOperationLogs">
+    <Key>
+      <PropertyRef Name="Log_Id" />
+    </Key>
+    <Property Name="Log_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shop_Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Log_Type" Type="int" Nullable="false" />
+    <Property Name="Log_Content" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="Operator" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Member_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Card_Id" Type="varchar" MaxLength="50" />
+    <Property Name="Card_BusinessID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Log_MerchantLog">
+    <Key>
+      <PropertyRef Name="MerchantLog_ID" />
+    </Key>
+    <Property Name="MerchantLog_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MerchantLog_Type" Type="int" />
+    <Property Name="MerchantLog_Content" Type="varchar" MaxLength="500" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Log_SysLog">
+    <Key>
+      <PropertyRef Name="SysLog_ID" />
+    </Key>
+    <Property Name="SysLog_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SysLog_Type" Type="int" />
+    <Property Name="SysLog_Content" Type="varchar" MaxLength="500" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Mob_Activity">
+    <Key>
+      <PropertyRef Name="Activity_ID" />
+    </Key>
+    <Property Name="Activity_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Activity_Title" Type="varchar" MaxLength="50" />
+    <Property Name="Activity_Pic" Type="varchar" MaxLength="100" />
+    <Property Name="Activity_Summary" Type="varchar" MaxLength="500" />
+    <Property Name="Activity_Content" Type="text" />
+    <Property Name="Activity_Status" Type="int" />
+    <Property Name="Activity_IsInke" Type="int" />
+    <Property Name="Activity_StartTime" Type="datetime" />
+    <Property Name="Activity_EndTime" Type="datetime" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="OperationTime" Type="datetime" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Mob_CardApply">
+    <Key>
+      <PropertyRef Name="Apply_ID" />
+    </Key>
+    <Property Name="Apply_ID" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Apply_Time" Type="datetime" Nullable="false" />
+    <Property Name="Discount_ID" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Shop_ID" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Apply_Status" Type="int" />
+    <Property Name="Member_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Member_Sex" Type="nvarchar" MaxLength="4" />
+    <Property Name="Member_MobilePhone" Type="nvarchar" MaxLength="11" />
+    <Property Name="IsSend" Type="int" />
+    <Property Name="Apply_Address" Type="nvarchar" MaxLength="80" />
+    <Property Name="Message" Type="varchar" MaxLength="500" />
+    <Property Name="Memo" Type="varchar" MaxLength="500" />
+    <Property Name="Del" Type="tinyint" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="OperationTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Sys_Admins">
+    <Key>
+      <PropertyRef Name="Admin_Id" />
+    </Key>
+    <Property Name="Admin_Id" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Admin_Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Admin_Password" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="Admin_TrueName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Admin_Status" Type="int" Nullable="false" />
+    <Property Name="Grop_IdGroup" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Del" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_Area">
+    <Key>
+      <PropertyRef Name="Area_Id" />
+    </Key>
+    <Property Name="Area_Id" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Area_Code" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="Area_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Father" Type="nvarchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="Sys_BaseInfo">
+    <Key>
+      <PropertyRef Name="BaseInfo_ID" />
+    </Key>
+    <Property Name="BaseInfo_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BaseInfoClass" Type="int" Nullable="false" />
+    <Property Name="Del" Type="int" />
+  </EntityType>
+  <EntityType Name="Sys_BonusClass">
+    <Key>
+      <PropertyRef Name="BonusClass_ID" />
+    </Key>
+    <Property Name="BonusClass_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BonusClass_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="BonusClass_Value" Type="int" />
+    <Property Name="BonusClass_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Sys_City">
+    <Key>
+      <PropertyRef Name="City_Id" />
+    </Key>
+    <Property Name="City_Id" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="City_Code" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="City_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Father" Type="nvarchar" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="Sys_CommerceGroup">
+    <Key>
+      <PropertyRef Name="CommerceGroup_ID" />
+    </Key>
+    <Property Name="CommerceGroup_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Prov_ID" Type="varchar" MaxLength="50" />
+    <Property Name="City_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Area_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_MenuFunction">
+    <Key>
+      <PropertyRef Name="FunctionID" />
+    </Key>
+    <Property Name="FunctionID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FunctionName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“inkeserver30.dbo.Sys_MerchantClass”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Sys_MerchantClass">
+    <Key>
+      <PropertyRef Name="MerchantClass_Id" />
+      <PropertyRef Name="MerchantClass_Name" />
+      <PropertyRef Name="MerchantClass_Del" />
+    </Key>
+    <Property Name="MerchantClass_Id" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="MerchantClass_Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MerchantClass_Del" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_MerchantContract">
+    <Key>
+      <PropertyRef Name="Contract_Id" />
+    </Key>
+    <Property Name="Contract_Id" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Contract_Num" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contract_CompanyLinkMan" Type="nvarchar" MaxLength="30" />
+    <Property Name="Contract_MerchantLinkMan" Type="nvarchar" MaxLength="30" />
+    <Property Name="Contract_FDate" Type="datetime" />
+    <Property Name="Contract_LDate" Type="datetime" />
+    <Property Name="Contract_Status" Type="int" Nullable="false" />
+    <Property Name="Memo" Type="ntext" />
+    <Property Name="Merchant_Id" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" Nullable="false" />
+    <Property Name="Del" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sys_MerchantModule">
+    <Key>
+      <PropertyRef Name="MerchantModule_ID" />
+    </Key>
+    <Property Name="MerchantModule_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Module_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Module_Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Module_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Module_Perent" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="OptionTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Sys_Power">
+    <Key>
+      <PropertyRef Name="Power_ID" />
+    </Key>
+    <Property Name="Power_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Power_Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Power_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentCode" Type="varchar" MaxLength="50" />
+    <Property Name="Level" Type="int" />
+    <Property Name="OperateButtonString" Type="text" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“inkeserver30.dbo.Sys_Province”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Sys_Province">
+    <Key>
+      <PropertyRef Name="Prov_Id" />
+      <PropertyRef Name="Prov_Code" />
+    </Key>
+    <Property Name="Prov_Id" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Prov_Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prov_Name" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“inkeserver30.dbo.Sys_SmsTemplate”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Sys_SmsTemplate">
+    <Key>
+      <PropertyRef Name="SmsTemplate_ID" />
+      <PropertyRef Name="SmsType" />
+    </Key>
+    <Property Name="SmsTemplate_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SmsTemplate_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="SmsTemplate_EnName" Type="nvarchar" MaxLength="20" />
+    <Property Name="SmsTemplate_Content" Type="nvarchar" MaxLength="200" />
+    <Property Name="SmsTemplate_BeforeDate" Type="int" />
+    <Property Name="SmsType" Type="int" Nullable="false" />
+    <Property Name="Merchant_ID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sys_SystemModule">
+    <Key>
+      <PropertyRef Name="Module_ID" />
+    </Key>
+    <Property Name="Module_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Module_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Module_Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TerminalType" Type="int" Nullable="false" />
+    <Property Name="Module_Perent" Type="varchar" MaxLength="50" />
+    <Property Name="Memo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Function Name="AddMerchantModule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Merchant_ID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Biz_GetSeqNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BizSeqType" Type="varchar" Mode="In" />
+    <Parameter Name="Terminal" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="CalcArrears" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="timetype" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="ItemName" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="13" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcCardRecharge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="timetype" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Cash" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="CashGivenMoney" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="Bank" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="BankGivenMoney" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="Title" Type="varchar" MaxLength="13" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcConsumption" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="timetype" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Consumption" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="13" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcCustomerStream" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MemberTotal" Type="int" />
+          <Property Name="CustomerTotal" Type="int" />
+          <Property Name="Title" Type="datetime" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcCustomerStreamByAge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="min" Type="int" Mode="In" />
+    <Parameter Name="max" Type="int" Mode="In" />
+    <Parameter Name="range" Type="int" Mode="In" />
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="AgeRange" Type="varchar" MaxLength="50" />
+          <Property Name="Turnover" Type="int" />
+          <Property Name="Title" Type="varchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcCustomerStreamBySex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="ManTotal" Type="int" />
+          <Property Name="WomanTotal" Type="int" />
+          <Property Name="Title" Type="datetime" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcDiscountDeduction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="timetype" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="DiscountMoney" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="CouponMoney" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="ReduceMantissaMoney" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="IntegralMoney" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="Title" Type="varchar" MaxLength="13" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcPayByType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="timetype" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Cash" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="Bank" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="Member" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="Alipay" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="Wechat" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="GroupCoupon" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="Title" Type="varchar" MaxLength="13" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcPeopleAndAVG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="timetype" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="OrderCount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Order_People" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PeopleAVG" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Title" Type="varchar" MaxLength="13" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcProductPrice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="timetype" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MerchantBaseInfo_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="13" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcTurnover" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MemberTotal" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CustomerTotal" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Title" Type="datetime" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcTurnoverByAge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="min" Type="int" Mode="In" />
+    <Parameter Name="max" Type="int" Mode="In" />
+    <Parameter Name="range" Type="int" Mode="In" />
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="AgeRange" Type="varchar" MaxLength="50" />
+          <Property Name="Turnover" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Title" Type="datetime" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="CalcTurnoverBySex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="ManTotal" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="WomanTotal" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Title" Type="datetime" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="DateSplit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <Parameter Name="separator" Type="float" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="id" Type="int" />
+          <Property Name="begintime" Type="datetime" />
+          <Property Name="endtime" Type="datetime" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="DateSplitByDMY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <Parameter Name="type" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="id" Type="int" />
+          <Property Name="begintime" Type="datetime" />
+          <Property Name="endtime" Type="datetime" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="NumSplit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="beginnum" Type="int" Mode="In" />
+    <Parameter Name="endnum" Type="int" Mode="In" />
+    <Parameter Name="separator" Type="float" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="ID" Type="int" />
+          <Property Name="BeginNum" Type="int" />
+          <Property Name="EndNum" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="PadLeft" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="num" Type="varchar" Mode="In" />
+    <Parameter Name="paddingChar" Type="char" Mode="In" />
+    <Parameter Name="totalWidth" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Rpt_BossReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Merchant_ID" Type="varchar" Mode="In" />
+    <Parameter Name="BossReport_ID" Type="varchar" Mode="In" />
+    <Parameter Name="StartTime" Type="datetime" Mode="In" />
+    <Parameter Name="EndTime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_BusinessDates" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="separator" Type="float" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_BusinessHours" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="separator" Type="float" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_BusinessTimeSlot" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="range" Type="float" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_CouponMemoryUsage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_CouponMemoryUsageByCouponID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="couponid" Type="varchar" Mode="In" />
+    <Parameter Name="rangetype" Type="varchar" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_CouponSettlement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_CustomerStreamAnalysis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="analysis" Type="int" Mode="In" />
+    <Parameter Name="min" Type="int" Mode="In" />
+    <Parameter Name="max" Type="int" Mode="In" />
+    <Parameter Name="range" Type="int" Mode="In" />
+    <Parameter Name="rangetype" Type="varchar" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_MarketingAnalysisByCard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="marketinganalyze_id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Rpt_MembershipGrowth" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="rangetype" Type="varchar" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_NumberOfDiners" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_PayTypeAnalysis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_ProductSalesRanking" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar" Mode="In" />
+    <Parameter Name="types" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <Parameter Name="sort" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Rpt_ProductSalse" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="varchar" Mode="In" />
+    <Parameter Name="endtime" Type="varchar" Mode="In" />
+    <Parameter Name="merchantbaseInfoid" Type="varchar" Mode="In" />
+    <Parameter Name="sorttype" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Rpt_ProductStorageStatistics" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopid" Type="varchar" Mode="In" />
+    <Parameter Name="begintime" Type="varchar" Mode="In" />
+    <Parameter Name="endtime" Type="varchar" Mode="In" />
+    <Parameter Name="productname" Type="varchar" Mode="In" />
+    <Parameter Name="productcode" Type="varchar" Mode="In" />
+    <Parameter Name="merchantbaseInfoid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Rpt_RechargeDeductionSettlement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_RecordCenter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_RecordCenterIndex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_ReportBusiness" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="varchar" Mode="In" />
+    <Parameter Name="endtime" Type="varchar" Mode="In" />
+    <Parameter Name="discountid" Type="varchar" Mode="In" />
+    <Parameter Name="sex" Type="varchar" Mode="In" />
+    <Parameter Name="operator" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Rpt_ReportClose" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="statisticsProduct" Type="int" Mode="In" />
+    <Parameter Name="Operator" Type="varchar(max)" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_StoreTurnoverAnalysis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="analysis" Type="int" Mode="In" />
+    <Parameter Name="min" Type="int" Mode="In" />
+    <Parameter Name="max" Type="int" Mode="In" />
+    <Parameter Name="range" Type="int" Mode="In" />
+    <Parameter Name="rangetype" Type="varchar" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Rpt_TableTurnoverRate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="merchantid" Type="varchar" Mode="In" />
+    <Parameter Name="shopids" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CountType" Type="varchar" Mode="In" />
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="StrToTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="str" Type="varchar(max)" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="str2table" Type="varchar" MaxLength="50" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="SyncOrderInformation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Orders" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="TimeSplit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="begintime" Type="datetime" Mode="In" />
+    <Parameter Name="endtime" Type="datetime" Mode="In" />
+    <Parameter Name="separator" Type="float" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="ID" Type="int" />
+          <Property Name="BeginTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <EntityContainer Name="InkeServerDataMappingModelStoreContainer">
+    <EntitySet Name="Bas_Account" EntityType="Self.Bas_Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ActivityImages" EntityType="Self.Bas_ActivityImages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_AppClients" EntityType="Self.Bas_AppClients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_AutoPromotion" EntityType="Self.Bas_AutoPromotion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_AutoPromotionTime" EntityType="Self.Bas_AutoPromotionTime" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_BonusRecord" EntityType="Self.Bas_BonusRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_BonusSet" EntityType="Self.Bas_BonusSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_BossReport" EntityType="Self.Bas_BossReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_Card" EntityType="Self.Bas_Card" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_CardBatch" EntityType="Self.Bas_CardBatch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_CardDiscountType" EntityType="Self.Bas_CardDiscountType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ComboGroup" EntityType="Self.Bas_ComboGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ComboProduct" EntityType="Self.Bas_ComboProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_Coupon" EntityType="Self.Bas_Coupon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_DeliveryAddress" EntityType="Self.Bas_DeliveryAddress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_GivenCoupon" EntityType="Self.Bas_GivenCoupon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_IntegralProducts" EntityType="Self.Bas_IntegralProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_MarketingAnalyze" EntityType="Self.Bas_MarketingAnalyze" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_Member" EntityType="Self.Bas_Member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_Merchant" EntityType="Self.Bas_Merchant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_MerchantBaseInfo" EntityType="Self.Bas_MerchantBaseInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_MerchantConfig" EntityType="Self.Bas_MerchantConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_MerchantImg" EntityType="Self.Bas_MerchantImg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_MerchantPosition" EntityType="Self.Bas_MerchantPosition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_MerchantProducts" EntityType="Self.Bas_MerchantProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ProductCombo" EntityType="Self.Bas_ProductCombo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ProductStorage" EntityType="Self.Bas_ProductStorage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ProductStorageBatch" EntityType="Self.Bas_ProductStorageBatch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_Shop" EntityType="Self.Bas_Shop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ShopEmployee" EntityType="Self.Bas_ShopEmployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ShopIntegralProducts" EntityType="Self.Bas_ShopIntegralProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ShopPositionPower" EntityType="Self.Bas_ShopPositionPower" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ShopProducts" EntityType="Self.Bas_ShopProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ShopSeat" EntityType="Self.Bas_ShopSeat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_ShopSeatClass" EntityType="Self.Bas_ShopSeatClass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_SmsTemplateCustom" EntityType="Self.Bas_SmsTemplateCustom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_UsableShop" EntityType="Self.Bas_UsableShop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_User" EntityType="Self.Bas_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_UserAddress" EntityType="Self.Bas_UserAddress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_WeChat" EntityType="Self.Bas_WeChat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_WeChatOpenID" EntityType="Self.Bas_WeChatOpenID" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_WeChatToken" EntityType="Self.Bas_WeChatToken" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BizSeqNos" EntityType="Self.BizSeqNos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_Advance" EntityType="Self.Bus_Advance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_AppInstruction" EntityType="Self.Bus_AppInstruction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_Arrears" EntityType="Self.Bus_Arrears" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_AutoPromotionRecord" EntityType="Self.Bus_AutoPromotionRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_BackOrders" EntityType="Self.Bus_BackOrders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_BalanceChange" EntityType="Self.Bus_BalanceChange" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_BookBasket" EntityType="Self.Bus_BookBasket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_BookOrderPay" EntityType="Self.Bus_BookOrderPay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_BookOrders" EntityType="Self.Bus_BookOrders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_CardCoupon" EntityType="Self.Bus_CardCoupon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_CardRechargeRecord" EntityType="Self.Bus_CardRechargeRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_CouponRechargeRecord" EntityType="Self.Bus_CouponRechargeRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_IntegralAdjust" EntityType="Self.Bus_IntegralAdjust" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_IntegralChange" EntityType="Self.Bus_IntegralChange" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_IntegralExchange" EntityType="Self.Bus_IntegralExchange" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_MarketingAnalyzeRecord" EntityType="Self.Bus_MarketingAnalyzeRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_OrderBasket" EntityType="Self.Bus_OrderBasket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_OrderDeliverys" EntityType="Self.Bus_OrderDeliverys" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_OrderPay" EntityType="Self.Bus_OrderPay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_Orders" EntityType="Self.Bus_Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_Reservation" EntityType="Self.Bus_Reservation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_ReservationBasket" EntityType="Self.Bus_ReservationBasket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_Sms" EntityType="Self.Bus_Sms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_SmsBusiness" EntityType="Self.Bus_SmsBusiness" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_SmsMember" EntityType="Self.Bus_SmsMember" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_SmsYZM" EntityType="Self.Bus_SmsYZM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bus_SmsYZMRecord" EntityType="Self.bus_SmsYZMRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bus_ThirdPay" EntityType="Self.Bus_ThirdPay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IBoxPaySerial" EntityType="Self.IBoxPaySerial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Log_CardOperationLogs" EntityType="Self.Log_CardOperationLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Log_MerchantLog" EntityType="Self.Log_MerchantLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Log_SysLog" EntityType="Self.Log_SysLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mob_Activity" EntityType="Self.Mob_Activity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mob_CardApply" EntityType="Self.Mob_CardApply" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Admins" EntityType="Self.Sys_Admins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Area" EntityType="Self.Sys_Area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_BaseInfo" EntityType="Self.Sys_BaseInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_BonusClass" EntityType="Self.Sys_BonusClass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_City" EntityType="Self.Sys_City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_CommerceGroup" EntityType="Self.Sys_CommerceGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_MenuFunction" EntityType="Self.Sys_MenuFunction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_MerchantContract" EntityType="Self.Sys_MerchantContract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_MerchantModule" EntityType="Self.Sys_MerchantModule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_Power" EntityType="Self.Sys_Power" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sys_SystemModule" EntityType="Self.Sys_SystemModule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bas_CommerceGroup" EntityType="Self.Bas_CommerceGroup" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Bas_CommerceGroup].[CommerceGroup_ID] AS [CommerceGroup_ID], 
+    [Bas_CommerceGroup].[GroupName] AS [GroupName], 
+    [Bas_CommerceGroup].[Province] AS [Province], 
+    [Bas_CommerceGroup].[City] AS [City], 
+    [Bas_CommerceGroup].[Area] AS [Area], 
+    [Bas_CommerceGroup].[Address] AS [Address]
+    FROM [dbo].[Bas_CommerceGroup] AS [Bas_CommerceGroup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Bas_MemberAddress" EntityType="Self.Bas_MemberAddress" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Bas_MemberAddress].[Addres_Id] AS [Addres_Id], 
+    [Bas_MemberAddress].[Member_Name] AS [Member_Name], 
+    [Bas_MemberAddress].[Address] AS [Address], 
+    [Bas_MemberAddress].[PostCode] AS [PostCode], 
+    [Bas_MemberAddress].[Phone] AS [Phone], 
+    [Bas_MemberAddress].[IsDefault] AS [IsDefault], 
+    [Bas_MemberAddress].[Member_ID] AS [Member_ID]
+    FROM [dbo].[Bas_MemberAddress] AS [Bas_MemberAddress]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Sys_MerchantClass" EntityType="Self.Sys_MerchantClass" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Sys_MerchantClass].[MerchantClass_Id] AS [MerchantClass_Id], 
+    [Sys_MerchantClass].[MerchantClass_Name] AS [MerchantClass_Name], 
+    [Sys_MerchantClass].[MerchantClass_Del] AS [MerchantClass_Del]
+    FROM [dbo].[Sys_MerchantClass] AS [Sys_MerchantClass]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Sys_Province" EntityType="Self.Sys_Province" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Sys_Province].[Prov_Id] AS [Prov_Id], 
+    [Sys_Province].[Prov_Code] AS [Prov_Code], 
+    [Sys_Province].[Prov_Name] AS [Prov_Name]
+    FROM [dbo].[Sys_Province] AS [Sys_Province]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Sys_SmsTemplate" EntityType="Self.Sys_SmsTemplate" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Sys_SmsTemplate].[SmsTemplate_ID] AS [SmsTemplate_ID], 
+    [Sys_SmsTemplate].[SmsTemplate_Name] AS [SmsTemplate_Name], 
+    [Sys_SmsTemplate].[SmsTemplate_EnName] AS [SmsTemplate_EnName], 
+    [Sys_SmsTemplate].[SmsTemplate_Content] AS [SmsTemplate_Content], 
+    [Sys_SmsTemplate].[SmsTemplate_BeforeDate] AS [SmsTemplate_BeforeDate], 
+    [Sys_SmsTemplate].[SmsType] AS [SmsType], 
+    [Sys_SmsTemplate].[Merchant_ID] AS [Merchant_ID]
+    FROM [dbo].[Sys_SmsTemplate] AS [Sys_SmsTemplate]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

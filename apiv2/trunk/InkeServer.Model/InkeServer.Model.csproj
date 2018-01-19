@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3EC908A0-7AA1-4418-A6DA-9A5937BB2053}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InkeServer.Model</RootNamespace>
+    <AssemblyName>InkeServer.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\InkeServer.Model.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AccountInfo.cs" />
+    <Compile Include="Account\AccountInfoResult.cs" />
+    <Compile Include="Account\AccountQueryRequest.cs" />
+    <Compile Include="Account\AddOrUpdateAccountRequest.cs" />
+    <Compile Include="AutoPromotion\AutoPromotionInfo.cs" />
+    <Compile Include="AutoPromotion\AutoPromotionInfoResult.cs" />
+    <Compile Include="AutoPromotion\PromotionCouponUsedRecord.cs" />
+    <Compile Include="AutoPromotion\PromotionStatistics.cs" />
+    <Compile Include="AutoPromotion\PromotionStatisticsRequest.cs" />
+    <Compile Include="Cache\WeChat.cs" />
+    <Compile Include="ComboProduct\GetComboProductQueryResult.cs" />
+    <Compile Include="Coupons\AvailableCouponQueryRequest.cs" />
+    <Compile Include="Coupons\CouponIDAndName.cs" />
+    <Compile Include="Coupons\GivenCouponInfo.cs" />
+    <Compile Include="AutoPromotion\AddAndUpdatePromotionRequest.cs" />
+    <Compile Include="AutoPromotion\AutoPromotion.cs" />
+    <Compile Include="AutoPromotion\AutoPromotionName.cs" />
+    <Compile Include="AutoPromotion\AutoPromotionQueryResult.cs" />
+    <Compile Include="AutoPromotion\AutoPromotionQueryRequest.cs" />
+    <Compile Include="AutoPromotion\AutoPromotionTime.cs" />
+    <Compile Include="AutoPromotion\PromotionRecord.cs" />
+    <Compile Include="AutoPromotion\PromotionRecordSearch.cs" />
+    <Compile Include="AutoPromotion\RecordIDAndStatusRequest.cs" />
+    <Compile Include="MarketAnalysis\MarketAnalysisStstistics.cs" />
+    <Compile Include="MarketAnalysis\MarketingAnalyzeCouponUsedRecord.cs" />
+    <Compile Include="MarketAnalysis\MarketingAnalyzeIDAndName.cs" />
+    <Compile Include="MarketAnalysis\MarketAnalysis.cs" />
+    <Compile Include="MarketAnalysis\MarketAnalysisAddOrUpdateRequest.cs" />
+    <Compile Include="MarketAnalysis\MarketAnalysisID.cs" />
+    <Compile Include="MarketAnalysis\MarketAnalysisInfoResult.cs" />
+    <Compile Include="MarketAnalysis\MarketAnalysisQueryRequest.cs" />
+    <Compile Include="MarketAnalysis\MarketAnalysisQueryResult.cs" />
+    <Compile Include="MarketAnalysis\MarketingAnalyzeCard.cs" />
+    <Compile Include="MarketAnalysis\MarketingAnalyzeDetailsRequest.cs" />
+    <Compile Include="MarketAnalysis\MarketingAnalyzeDetialsResult.cs" />
+    <Compile Include="MarketAnalysis\MarketingAnalyzeExecRequest.cs" />
+    <Compile Include="MarketAnalysis\MarketingAnalyzeNameRequest.cs" />
+    <Compile Include="MarketAnalysis\MarketingAnalyzeRecord.cs" />
+    <Compile Include="MarketAnalysis\MarketingAnalyzeRecordRequest.cs" />
+    <Compile Include="MarketAnalysis\MarketingAnalyzeResulMemberID.cs" />
+    <Compile Include="MarketAnalysis\MarketingAnalyzeResultDistinctRequest.cs" />
+    <Compile Include="MemberCard\MemberCardRequest.cs" />
+    <Compile Include="MemberCard\MemberCardResult.cs" />
+    <Compile Include="Member\MemberQueryRequest.cs" />
+    <Compile Include="Member\MemberQueryResult.cs" />
+    <Compile Include="MerchantImg\AddOrUpdateMerchantImg.cs" />
+    <Compile Include="MerchantImg\MerchantImgDelete.cs" />
+    <Compile Include="MerchantImg\MerchantImgListRequest.cs" />
+    <Compile Include="MerchantImg\MerchantImg.cs" />
+    <Compile Include="MerchantProduct\MerchantProductIDAndName.cs" />
+    <Compile Include="PostitionPower\ShopPositionPowerInfoResult.cs" />
+    <Compile Include="PostitionPower\SysPositionPower.cs" />
+    <Compile Include="RecordCenter\ArrearsRecordInfo.cs" />
+    <Compile Include="RecordCenter\ArrearsRecordRequest.cs" />
+    <Compile Include="RecordCenter\ArrearsRecordResult.cs" />
+    <Compile Include="BaseInfo\MerchantBaseInfo.cs" />
+    <Compile Include="BaseInfo\MerchantBaseInfoIDAndName.cs" />
+    <Compile Include="BaseInfo\MerchantBaseInsert.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\MerchantBasePageQueryRequest.cs" />
+    <Compile Include="BaseInfo\MerchantBaseQueryRequest.cs" />
+    <Compile Include="BaseInfo\MerchantBaseQueryResult.cs" />
+    <Compile Include="BaseInfo\MerchantBaseUpdate.cs" />
+    <Compile Include="BaseInfo\ShopAndBaseInfoRequest.cs" />
+    <Compile Include="Bases\SortingRequest.cs" />
+    <Compile Include="CardCoupon\CardCouponInfo.cs" />
+    <Compile Include="CardDiscountType\CardDiscountTypeAddOrUpdate.cs" />
+    <Compile Include="CardDiscountType\CardDiscountTypeInfo.cs" />
+    <Compile Include="RecordCenter\MembershipCardInfo.cs" />
+    <Compile Include="RecordCenter\MembershipCardPageRequest.cs" />
+    <Compile Include="RecordCenter\MembershipCardPageResult.cs" />
+    <Compile Include="RecordCenter\CardRechargeRecordInfo.cs" />
+    <Compile Include="RecordCenter\CardRechargeRecordInfoRequest.cs" />
+    <Compile Include="RecordCenter\CardRechargeRecordInfoResult.cs" />
+    <Compile Include="RecordCenter\CardRechargeRecordPageRequest.cs" />
+    <Compile Include="ComboGroup\AddOrUpdateComboGroupRequest.cs" />
+    <Compile Include="ComboGroup\ComboGroupInfo.cs" />
+    <Compile Include="ComboProduct\AddOrUpdateComboProduct.cs" />
+    <Compile Include="ComboProduct\ComboGroupProductInfoRequest.cs" />
+    <Compile Include="ComboProduct\ComboGroupProductInfoResult.cs" />
+    <Compile Include="ComboProduct\ComboProductInfo.cs" />
+    <Compile Include="ComboProduct\GetComboProductListRequest.cs" />
+    <Compile Include="ComboProduct\GetComboProductPageRequest.cs" />
+    <Compile Include="Common\MerchantIdPageRequest.cs" />
+    <Compile Include="Common\MerchantIdRequest.cs" />
+    <Compile Include="Common\OperationBaseRequest.cs" />
+    <Compile Include="Common\RecordIDRequest.cs" />
+    <Compile Include="RecordCenter\CouponRechargeInfo.cs" />
+    <Compile Include="RecordCenter\CouponRechargePageRequest.cs" />
+    <Compile Include="RecordCenter\CouponRechargePageResult.cs" />
+    <Compile Include="RecordCenter\CouponRechargeRecordInfoRequest.cs" />
+    <Compile Include="RecordCenter\CouponRechargeRecordInfoResult.cs" />
+    <Compile Include="Coupons\AddOrUpdateCouponsRequest.cs" />
+    <Compile Include="Coupons\CouponInfo.cs" />
+    <Compile Include="Coupons\CouponInfoResult.cs" />
+    <Compile Include="Coupons\CouponsQueryRequest.cs" />
+    <Compile Include="Employee\EmployeeIDAndName.cs" />
+    <Compile Include="FileUpload\FileBusinessType.cs" />
+    <Compile Include="FileUpload\FileUploadResult.cs" />
+    <Compile Include="FileUpload\FileUploadStatus.cs" />
+    <Compile Include="RecordCenter\IntegralAdjustInfo.cs" />
+    <Compile Include="RecordCenter\IntegralAdjustPageRequest.cs" />
+    <Compile Include="RecordCenter\IntegralAdjustPageResult.cs" />
+    <Compile Include="RecordCenter\IntegralExchangeInfo.cs" />
+    <Compile Include="RecordCenter\IntegralExchangePageRequest.cs" />
+    <Compile Include="RecordCenter\IntegralExchangePageResult.cs" />
+    <Compile Include="MerchantConfig\MerchantConfigAndName.cs" />
+    <Compile Include="MerchantConfig\MerchantConfigData.cs" />
+    <Compile Include="MerchantConfig\MerchantConfigUpdateRequest.cs" />
+    <Compile Include="MerchantPosition\PositionAddOrUpdateRequest.cs" />
+    <Compile Include="ComboGroup\ComboGroupIDAndName.cs" />
+    <Compile Include="MerchantProduct\AddOrUpdateMerchantProduct.cs" />
+    <Compile Include="MerchantProduct\GetProductInfoRequest.cs" />
+    <Compile Include="MerchantProduct\MerchantAndBaseInfoRequest.cs" />
+    <Compile Include="MerchantProduct\MerchantProductInfo.cs" />
+    <Compile Include="MerchantProduct\MerchantProductInfoResult.cs" />
+    <Compile Include="MerchantProduct\MerchantProductQueryRequest.cs" />
+    <Compile Include="ComboGroup\ProComboListAndMerComboListData.cs" />
+    <Compile Include="Common\MerchantShopAndBaseInfo.cs" />
+    <Compile Include="MerchantScoreProduct\AddOrUpdateMerchantScoreProduct.cs" />
+    <Compile Include="MerchantScoreProduct\MerchantScoreProductInfo.cs" />
+    <Compile Include="MerchantScoreProduct\MerchantScoreProductInfoResult.cs" />
+    <Compile Include="MerchantScoreProduct\MerchantScoreProductQueyRequest.cs" />
+    <Compile Include="OrderBasket\OrderBasket.cs" />
+    <Compile Include="OrderBasket\OrderBasketInfo.cs" />
+    <Compile Include="OrderPay\OrderPay.cs" />
+    <Compile Include="Order\Order.cs" />
+    <Compile Include="Order\OrderInfo.cs" />
+    <Compile Include="ProductCombo\ProductComboInfo.cs" />
+    <Compile Include="RecordCenter\RecordCenterIndex\ArrearsRecorde.cs" />
+    <Compile Include="RecordCenter\RecordCenterIndex\CashRecorde.cs" />
+    <Compile Include="RecordCenter\ConsumeRecordInfo.cs" />
+    <Compile Include="RecordCenter\ConsumeRecordInfoRequest.cs" />
+    <Compile Include="RecordCenter\ConsumeRecordInfoResult.cs" />
+    <Compile Include="RecordCenter\ConsumeRecordRequest.cs" />
+    <Compile Include="RecordCenter\RecordCenterIndex\ExchangeRecorde.cs" />
+    <Compile Include="RecordCenter\RecordCenterIndex\ExpenseCalendar.cs" />
+    <Compile Include="RecordCenter\RecordCenterIndex\RechargeRecorde.cs" />
+    <Compile Include="RecordCenter\RecordCenterIndex\RecordCenterIndexRequest.cs" />
+    <Compile Include="RecordCenter\RecordCenterIndex\RecordCenterIndexResult.cs" />
+    <Compile Include="ReportCenter\BossPhone\BossPhoneInsert.cs" />
+    <Compile Include="ReportCenter\BossPhone\BossPhoneUpdate.cs" />
+    <Compile Include="ReportCenter\BossPhone\BossReportRecordInfoResult.cs" />
+    <Compile Include="ReportCenter\BossPhone\BossReportRecordResult.cs" />
+    <Compile Include="ReportCenter\BusinessReport\BusinessReportRequest.cs" />
+    <Compile Include="ReportCenter\BusinessReport\BusinessReportResult.cs" />
+    <Compile Include="ReportCenter\BusinessReport\PayConsume.cs" />
+    <Compile Include="ReportCenter\BusinessStatistics\BusinessStatisticsRequest.cs" />
+    <Compile Include="ReportCenter\BusinessStatistics\CouponMemoryUsageBarRequest.cs" />
+    <Compile Include="ReportCenter\BusinessStatistics\CouponMemoryUsageRequest.cs" />
+    <Compile Include="ReportCenter\BusinessStatistics\CouponMemoryUsageResult.cs" />
+    <Compile Include="ReportCenter\BusinessStatistics\ProductSaleRequest.cs" />
+    <Compile Include="ReportCenter\BusinessStatistics\StatisticsProductResult.cs" />
+    <Compile Include="ReportCenter\CrossShopSettlement\CouponSettlementResult.cs" />
+    <Compile Include="ReportCenter\StatisticsByTImeRequest.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\BusinessTimeSlotRequest.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\BusinessTimeSlotResult.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\CustomerStreamAnalysisRequest.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\MembershipGrowthRequest.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\MembershipGrowthResult.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\NumberOfDinersRequest.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\NumberOfDinersResult.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\PayTypeAnalysisRequest.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\PayTypeAnalysisResult.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\ProductSalesRankingRequest.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\ProductSalesRankingResult.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\StoreTurnoverAnalysis\AgeRangeAnalysis.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\StoreTurnoverAnalysis\MemberAnalysis.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\StoreTurnoverAnalysis\SexAnalysis.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\StoreTurnoverAnalysis\StoreTurnoverAnalysisRequest.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\StoreTurnoverAnalysis\StoreTurnoverAnalysisResult.cs" />
+    <Compile Include="ReportCenter\StoreDataAnalysis\TableTurnoverRateRequest.cs" />
+    <Compile Include="ShopBook\ShopBookResult.cs" />
+    <Compile Include="ShopBook\ShopBookUpdate.cs" />
+    <Compile Include="ShopIntegral\ShopAndProductTypeResult.cs" />
+    <Compile Include="ShopIntegral\ShopIntegralProductInfo.cs" />
+    <Compile Include="ShopIntegral\ShopIntegralProductListRequest.cs" />
+    <Compile Include="ShopIntegral\ShopIntegralProductPageResult.cs" />
+    <Compile Include="ShopIntegral\ShopIntegralProductsResult.cs" />
+    <Compile Include="ShopIntegral\ShopIntegralProductsUpdate.cs" />
+    <Compile Include="ShopProducts\ShopInfoAndProductTypeList.cs" />
+    <Compile Include="ShopProducts\ShopProductInfo.cs" />
+    <Compile Include="ShopProducts\ShopProductInsert.cs" />
+    <Compile Include="ShopProducts\ShopProductInsertList.cs" />
+    <Compile Include="ShopProducts\ShopProductPageResult.cs" />
+    <Compile Include="ShopProducts\ShopProductsRequest.cs" />
+    <Compile Include="ShopProducts\ShopProductUpdate.cs" />
+    <Compile Include="ShopSeatClass\SeatClassIdAndName.cs" />
+    <Compile Include="ShopSeatClass\SeatClassIdAndNameList.cs" />
+    <Compile Include="ShopSeatClass\SeatClassInsert.cs" />
+    <Compile Include="ShopSeatClass\SeatClassQueryRequest.cs" />
+    <Compile Include="ShopSeatClass\SeatClassQueryResult.cs" />
+    <Compile Include="Common\MerchantAndShopIdRequest.cs" />
+    <Compile Include="Employee\EmploeeQueryRequest.cs" />
+    <Compile Include="Employee\EmploeeQueryResult.cs" />
+    <Compile Include="Employee\EmployeeInfo.cs" />
+    <Compile Include="Employee\EmployeeAddOrUpdateRequest.cs" />
+    <Compile Include="Login\LoginResult.cs" />
+    <Compile Include="Bases\BaseRequest.cs" />
+    <Compile Include="Bases\BaseResult.cs" />
+    <Compile Include="Bases\PaginationRequest.cs" />
+    <Compile Include="Cache\CacheData.cs" />
+    <Compile Include="Cache\CacheRequest.cs" />
+    <Compile Include="Login\LoginRequest.cs" />
+    <Compile Include="MerchantConfig\MerchantConfigInfo.cs" />
+    <Compile Include="Cache\MerchantModuleInfo.cs" />
+    <Compile Include="MerchantPosition\MerchantPositionInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopSeatClass\SeatClassUpdate.cs" />
+    <Compile Include="ShopSeat\ShopAndSeatClassList.cs" />
+    <Compile Include="ShopSeatClass\ShopSeatClassInfo.cs" />
+    <Compile Include="ShopSeat\ShopSeatClassQueryRequest.cs" />
+    <Compile Include="ShopSeat\ShopSeatClassResult.cs" />
+    <Compile Include="ShopSeat\ShopSeatInfobyIDResult.cs" />
+    <Compile Include="ShopSeat\ShopSeatInfoRequest.cs" />
+    <Compile Include="ShopSeat\ShopSeatInfoResult.cs" />
+    <Compile Include="ShopSeat\ShopSeatInfo.cs" />
+    <Compile Include="ShopSeat\ShopSeatInsert.cs" />
+    <Compile Include="ShopSeat\ShopSeatUpdate.cs" />
+    <Compile Include="Shop\ShopID.cs" />
+    <Compile Include="Shop\ShopIdAndName.cs" />
+    <Compile Include="Shop\ShopIdAndNameList.cs" />
+    <Compile Include="Shop\ShopInfo.cs" />
+    <Compile Include="PostitionPower\ShopPositionPowerInfo.cs" />
+    <Compile Include="Shop\ShopIdRequest.cs" />
+    <Compile Include="Shop\ShopUpdate.cs" />
+    <Compile Include="Shop\UsableShopEnableID.cs" />
+    <Compile Include="Sms\SmsSendCustom.cs" />
+    <Compile Include="Sms\SmsTemplateCustom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sms\SmsTemplateIDAndName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sms\SmsTemplateList.cs" />
+    <Compile Include="Sms\SmsTemplateRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sms\SmsTemplateUpdate.cs" />
+    <Compile Include="Stock\AddOrUpdateStockRequest.cs" />
+    <Compile Include="Stock\StockInfoResult.cs" />
+    <Compile Include="Stock\StockQueryRequest.cs" />
+    <Compile Include="Stock\StockQueryResult.cs" />
+    <Compile Include="Stock\AddStorageProduct.cs" />
+    <Compile Include="Stock\StorageBatchID.cs" />
+    <Compile Include="Stock\StorageProductInfoReuslt.cs" />
+    <Compile Include="Stock\StorageStatisticsResult.cs" />
+    <Compile Include="SysLogs\SysLogInfo.cs" />
+    <Compile Include="SysLogs\SysLogInsert.cs" />
+    <Compile Include="SysLogs\SysLogQueryRequest.cs" />
+    <Compile Include="Cache\SysPowerInfo.cs" />
+    <Compile Include="SysLogs\SysLogSortBy.cs" />
+    <Compile Include="TakeOut\EmployeePositionInfo.cs" />
+    <Compile Include="TakeOut\TakeOutResult.cs" />
+    <Compile Include="TakeOut\TakeOutUpdate.cs" />
+    <Compile Include="RecordCenter\ThirdPayRequest.cs" />
+    <Compile Include="RecordCenter\ThirdPayResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

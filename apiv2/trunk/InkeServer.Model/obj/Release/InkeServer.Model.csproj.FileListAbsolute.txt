@@ -1,0 +1,6 @@
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\InkeServer.Model\bin\Release\InkeServer.Model.dll.config
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\InkeServer.Model\bin\Release\InkeServer.Model.dll
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\InkeServer.Model\bin\Release\InkeServer.Model.pdb
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\InkeServer.Model\obj\Release\InkeServer.Model.dll
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\InkeServer.Model\obj\Release\InkeServer.Model.pdb
+E:\work\inke\svn\inke\pc\Inke_API_V2\trunk\InkeServer.Model\obj\Release\InkeServer.Model.csprojResolveAssemblyReference.cache
